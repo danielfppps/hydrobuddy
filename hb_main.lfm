@@ -346,7 +346,7 @@ object Form1: TForm1
   OnWindowStateChange = FormWindowStateChange
   ParentBiDiMode = False
   Position = poDesktopCenter
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '1.2.6.0'
   Visible = True
   object PageControl1: TPageControl
     Left = 0
@@ -359,8 +359,8 @@ object Form1: TForm1
     TabOrder = 0
     object TabSheet4: TTabSheet
       Caption = 'Welcome'
-      ClientHeight = 638
-      ClientWidth = 828
+      ClientHeight = 635
+      ClientWidth = 826
       object PageControl2: TPageControl
         Left = 0
         Height = 648
@@ -371,8 +371,8 @@ object Form1: TForm1
         TabOrder = 0
         object TabSheet5: TTabSheet
           Caption = 'Introduction'
-          ClientHeight = 613
-          ClientWidth = 822
+          ClientHeight = 610
+          ClientWidth = 820
           object Image1: TImage
             Left = 0
             Height = 627
@@ -23302,10 +23302,10 @@ object Form1: TForm1
         end
         object ComboBox1: TComboBox
           Left = 17
-          Height = 29
+          Height = 33
           Top = 128
           Width = 188
-          ItemHeight = 0
+          ItemHeight = 25
           OnSelect = ComboBox1Select
           Sorted = True
           TabOrder = 4
@@ -23445,10 +23445,10 @@ object Form1: TForm1
       end
       object ComboBox3: TComboBox
         Left = 44
-        Height = 27
+        Height = 33
         Top = 551
         Width = 53
-        ItemHeight = 0
+        ItemHeight = 25
         ItemIndex = 0
         Items.Strings = (
           'Si'
@@ -26809,9 +26809,9 @@ object Form1: TForm1
   end
   object LabelVersion: TLabel
     Left = 408
-    Height = 17
+    Height = 25
     Top = 384
-    Width = 17
+    Width = 24
     Caption = '1.5'
     ParentColor = False
     Visible = False

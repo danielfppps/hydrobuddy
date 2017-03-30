@@ -21,10 +21,10 @@ const
   {$ENDIF}
 
   {$IFDEF WINDOWS}
-  water_quality_db = 'water_quality_win.dbf' ;
+  water_quality_db = 'waterquality_win.dbf' ;
   formulations_db = 'formulations_win.dbf' ;
   substances_db = 'substances_win.dbf'    ;
-  substances_used = 'substances_used_win.dbf' ;
+  substances_used_db = 'substances_used_win.dbf' ;
   {$ENDIF}
 
 type

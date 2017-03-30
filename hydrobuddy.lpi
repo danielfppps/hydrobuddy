@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
-    <Version Value="10"/>
+    <Version Value="9"/>
     <PathDelim Value="\"/>
     <General>
       <MainUnit Value="0"/>
       <Title Value="HydroBuddy - an Open source nutrient calculator"/>
       <UseXPManifest Value="True"/>
       <Icon Value="0"/>
+      <ActiveWindowIndexAtStart Value="0"/>
     </General>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
@@ -47,8 +48,9 @@
       <Unit0>
         <Filename Value="hydrobuddy.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="6"/>
+        <EditorIndex Value="5"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1"/>
         <CursorPos X="13" Y="15"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
@@ -61,11 +63,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HB_Main"/>
-        <EditorIndex Value="5"/>
-        <CursorPos X="35" Y="2116"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="19"/>
+        <CursorPos X="21" Y="27"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
-          <Item0 X="34" Y="741"/>
+          <Item0 X="34" Y="741" ID="0"/>
           <Item1 X="3" Y="1438" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
@@ -77,7 +82,9 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <UnitName Value="hb_load_salts"/>
+        <EditorIndex Value="0"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="267"/>
         <CursorPos X="59" Y="269"/>
         <UsageCount Value="200"/>
@@ -127,9 +134,11 @@
         <ComponentName Value="Form4"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <UnitName Value="hb_addweight"/>
+        <EditorIndex Value="1"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="11"/>
-        <CursorPos Y="34"/>
+        <CursorPos X="1" Y="34"/>
         <UsageCount Value="230"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -140,7 +149,10 @@
         <ComponentName Value="Form5"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="12"/>
+        <UnitName Value="hb_commercialnutrient"/>
+        <EditorIndex Value="11"/>
+        <WindowIndex Value="1"/>
+        <TopLine Value="1"/>
         <CursorPos X="26" Y="370"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
@@ -151,7 +163,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form6"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="13"/>
+        <UnitName Value="hb_waterquality"/>
+        <EditorIndex Value="12"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="55"/>
         <CursorPos X="14" Y="75"/>
         <UsageCount Value="204"/>
@@ -162,7 +176,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form7"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="15"/>
+        <UnitName Value="hb_insprecision"/>
+        <EditorIndex Value="14"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="4"/>
         <CursorPos X="42" Y="25"/>
         <UsageCount Value="202"/>
@@ -173,7 +189,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form8"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="11"/>
+        <UnitName Value="hb_stockanalysis"/>
+        <EditorIndex Value="10"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="18"/>
         <CursorPos X="45" Y="19"/>
         <UsageCount Value="200"/>
@@ -185,7 +203,9 @@
         <ComponentName Value="Form9"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="10"/>
+        <UnitName Value="hb_persubstance"/>
+        <EditorIndex Value="9"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="8"/>
         <CursorPos X="32" Y="23"/>
         <UsageCount Value="216"/>
@@ -197,9 +217,11 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form10"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <UnitName Value="hb_datasetname"/>
+        <EditorIndex Value="2"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="16"/>
-        <CursorPos Y="42"/>
+        <CursorPos X="1" Y="42"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit14>
@@ -208,7 +230,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form11"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="9"/>
+        <UnitName Value="hb_analysis"/>
+        <EditorIndex Value="8"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="13"/>
         <CursorPos X="71" Y="40"/>
         <UsageCount Value="200"/>
@@ -223,7 +247,9 @@
       </Unit16>
       <Unit17>
         <Filename Value="descriptivestatistics.pas"/>
-        <EditorIndex Value="8"/>
+        <UnitName Value="descriptivestatistics"/>
+        <EditorIndex Value="7"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="132"/>
         <CursorPos X="24" Y="160"/>
         <UsageCount Value="100"/>
@@ -246,7 +272,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form12"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="7"/>
+        <UnitName Value="hb_freedom"/>
+        <EditorIndex Value="6"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="14"/>
         <CursorPos X="15" Y="30"/>
         <UsageCount Value="204"/>
@@ -262,7 +290,6 @@
       </Unit21>
       <Unit22>
         <Filename Value="pingsend.pas"/>
-        <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="76"/>
         <UsageCount Value="100"/>
       </Unit22>
@@ -277,7 +304,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form13"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="14"/>
+        <UnitName Value="hb_ph"/>
+        <EditorIndex Value="13"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="50"/>
         <CursorPos X="26" Y="72"/>
         <UsageCount Value="132"/>
@@ -288,7 +317,9 @@
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form14"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <UnitName Value="hb_ratios"/>
+        <EditorIndex Value="3"/>
+        <WindowIndex Value="1"/>
         <TopLine Value="38"/>
         <CursorPos X="46" Y="59"/>
         <UsageCount Value="130"/>
@@ -339,129 +370,104 @@
       </Unit31>
       <Unit32>
         <Filename Value="synaser.pas"/>
-        <EditorIndex Value="-1"/>
         <TopLine Value="1887"/>
         <CursorPos X="58" Y="1902"/>
         <UsageCount Value="9"/>
       </Unit32>
     </Units>
-    <JumpHistory Count="29" HistoryIndex="28">
+    <JumpHistory Count="23" HistoryIndex="22">
       <Position1>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="20" Column="21"/>
+        <Caret Line="472" Column="28" TopLine="457"/>
       </Position1>
       <Position2>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="472" Column="28" TopLine="457"/>
+        <Filename Value="hb_waterquality.pas"/>
+        <Caret Line="62" Column="48" TopLine="44"/>
       </Position2>
       <Position3>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="15" Column="49"/>
+        <Filename Value="hb_waterquality.pas"/>
+        <Caret Line="304" Column="36" TopLine="300"/>
       </Position3>
       <Position4>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="17" Column="28"/>
+        <Filename Value="hb_addweight.pas"/>
+        <Caret Line="41" Column="38" TopLine="32"/>
       </Position4>
       <Position5>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="24" Column="28"/>
+        <Caret Line="376" Column="25" TopLine="357"/>
       </Position5>
       <Position6>
-        <Filename Value="hb_waterquality.pas"/>
-        <Caret Line="62" Column="48" TopLine="44"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="384" Column="45" TopLine="360"/>
       </Position6>
       <Position7>
-        <Filename Value="hb_waterquality.pas"/>
-        <Caret Line="304" Column="36" TopLine="300"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="637" Column="13" TopLine="622"/>
       </Position7>
       <Position8>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="17" Column="28"/>
+        <Caret Line="1512" Column="13" TopLine="1488"/>
       </Position8>
       <Position9>
-        <Filename Value="hb_addweight.pas"/>
-        <Caret Line="41" Column="38" TopLine="32"/>
-      </Position9>
-      <Position10>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="376" Column="25" TopLine="357"/>
-      </Position10>
-      <Position11>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="384" Column="45" TopLine="360"/>
-      </Position11>
-      <Position12>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="637" Column="13" TopLine="622"/>
-      </Position12>
-      <Position13>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="1512" Column="13" TopLine="1488"/>
-      </Position13>
-      <Position14>
         <Filename Value="hb_main.pas"/>
         <Caret Line="231" Column="25" TopLine="217"/>
+      </Position9>
+      <Position10>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="262" Column="16" TopLine="248"/>
+      </Position10>
+      <Position11>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="315" Column="24" TopLine="294"/>
+      </Position11>
+      <Position12>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="151" Column="3" TopLine="44"/>
+      </Position12>
+      <Position13>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="263" Column="59" TopLine="246"/>
+      </Position13>
+      <Position14>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="307" Column="13" TopLine="263"/>
       </Position14>
       <Position15>
         <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="48" TopLine="28"/>
+        <Caret Line="256" Column="5" TopLine="240"/>
       </Position15>
       <Position16>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="262" Column="16" TopLine="248"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="371" Column="40" TopLine="358"/>
       </Position16>
       <Position17>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="315" Column="24" TopLine="294"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="396" Column="30" TopLine="372"/>
       </Position17>
       <Position18>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="151" Column="3" TopLine="44"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3057" Column="37" TopLine="3033"/>
       </Position18>
       <Position19>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="288" TopLine="267"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3201" Column="37" TopLine="3177"/>
       </Position19>
       <Position20>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="263" Column="59" TopLine="246"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="396" Column="39" TopLine="382"/>
       </Position20>
       <Position21>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="307" Column="13" TopLine="263"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="20" Column="48" TopLine="16"/>
       </Position21>
       <Position22>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="256" Column="5" TopLine="240"/>
+        <Filename Value="hydrobuddy.lpr"/>
+        <Caret Line="133" Column="19" TopLine="107"/>
       </Position22>
       <Position23>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="371" Column="40" TopLine="358"/>
+        <Caret Line="2116" Column="35" TopLine="1"/>
       </Position23>
-      <Position24>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="396" Column="30" TopLine="372"/>
-      </Position24>
-      <Position25>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="3057" Column="37" TopLine="3033"/>
-      </Position25>
-      <Position26>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="3201" Column="37" TopLine="3177"/>
-      </Position26>
-      <Position27>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="396" Column="39" TopLine="382"/>
-      </Position27>
-      <Position28>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="20" Column="48" TopLine="16"/>
-      </Position28>
-      <Position29>
-        <Filename Value="hydrobuddy.lpr"/>
-        <Caret Line="133" Column="19" TopLine="107"/>
-      </Position29>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
@@ -475,6 +481,9 @@
         <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
+    <CodeGeneration>
+      <TargetOS Value="win64"/>
+    </CodeGeneration>
     <Linking>
       <Options>
         <Win32>
@@ -482,6 +491,9 @@
         </Win32>
       </Options>
     </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="3">
@@ -496,4 +508,5 @@
       </Item3>
     </Exceptions>
   </Debugging>
+  <EditorMacros Count="0"/>
 </CONFIG>
