@@ -1,0 +1,20 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TForm8','FORMDATA',[
+  'TPF0'#6'TForm8'#5'Form8'#4'Left'#3'^'#1#6'Height'#3#175#1#3'Top'#3#2#1#5'Wid'
+  +'th'#3#158#1#18'HorzScrollBar.Page'#3#156#1#19'HorzScrollBar.Range'#3'x'#1#18
+  +'VertScrollBar.Page'#3#173#1#19'VertScrollBar.Range'#3#145#1#11'BorderStyle'
+  +#7#12'bsToolWindow'#7'Caption'#6#23'Stock Solution Analysis'#12'ClientHeight'
+  +#3#175#1#11'ClientWidth'#3#158#1#9'FormStyle'#7#11'fsStayOnTop'#10'LCLVersio'
+  +'n'#6#6'0.9.31'#0#6'TLabel'#6'Label3'#4'Left'#2'8'#6'Height'#2#16#3'Top'#2#23
+  +#5'Width'#3#250#0#7'Caption'#6',Composition values below are given as (W/V)%'
+  +#11'ParentColor'#8#0#0#7'TButton'#7'Button1'#4'Left'#3'('#1#6'Height'#2#25#3
+  +'Top'#3#136#1#5'Width'#2'`'#7'Caption'#6#5'Close'#7'OnClick'#7#12'Button1Cli'
+  +'ck'#8'TabOrder'#2#0#0#0#11'TStringGrid'#11'StringGrid1'#4'Left'#2'0'#6'Heig'
+  +'ht'#3'8'#1#3'Top'#2'@'#5'Width'#3'X'#1#8'ColCount'#2#3#7'Columns'#14#1#13'T'
+  +'itle.Caption'#6#16'Element or Oxide'#0#1#9'Alignment'#7#8'taCenter'#15'Titl'
+  +'e.Alignment'#7#8'taCenter'#13'Title.Caption'#6#10'Solution A'#0#1#9'Alignme'
+  +'nt'#7#8'taCenter'#15'Title.Alignment'#7#8'taCenter'#13'Title.Caption'#6#10
+  +'Solution B'#0#0#15'DefaultColWidth'#2'n'#16'DefaultRowHeight'#2#18#9'FixedC'
+  +'ols'#2#0#8'RowCount'#2#17#8'TabOrder'#2#1#0#0#0
+]);

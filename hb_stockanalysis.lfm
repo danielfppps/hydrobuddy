@@ -1,0 +1,59 @@
+object Form8: TForm8
+  Left = 350
+  Height = 431
+  Top = 258
+  Width = 414
+  HorzScrollBar.Page = 412
+  HorzScrollBar.Range = 376
+  VertScrollBar.Page = 429
+  VertScrollBar.Range = 401
+  BorderStyle = bsToolWindow
+  Caption = 'Stock Solution Analysis'
+  ClientHeight = 431
+  ClientWidth = 414
+  FormStyle = fsStayOnTop
+  LCLVersion = '0.9.31'
+  object Label3: TLabel
+    Left = 56
+    Height = 16
+    Top = 23
+    Width = 250
+    Caption = 'Composition values below are given as (W/V)%'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 296
+    Height = 25
+    Top = 392
+    Width = 96
+    Caption = 'Close'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 48
+    Height = 312
+    Top = 64
+    Width = 344
+    ColCount = 3
+    Columns = <    
+      item
+        Title.Caption = 'Element or Oxide'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Solution A'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Solution B'
+      end>
+    DefaultColWidth = 110
+    DefaultRowHeight = 18
+    FixedCols = 0
+    RowCount = 17
+    TabOrder = 1
+  end
+end

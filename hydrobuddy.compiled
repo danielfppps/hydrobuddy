@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="/usr/bin/fpc" Date="1488055450"/>
+  <Params Value=" -MObjFPC -Scgi -Cg -O1 -g -gl -l -vewnhibq -Fl/opt/gnome/lib -Fu/usr/share/lazarus/1.6.4/components/tachart/lib/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.6.4/components/ideintf/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.6.4/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.6.4/lcl/units/x86_64-linux/gtk2 -Fu/usr/share/lazarus/1.6.4/lcl/units/x86_64-linux -Fu/usr/share/lazarus/1.6.4/components/lazutils/lib/x86_64-linux -Fu/usr/share/lazarus/1.6.4/packager/units/x86_64-linux -Fu/media/daniel/296df88f-1ffe-481a-bf44-068297244e40/Dropbox/HydroBuddy_Source/ -dLCL -dLCLgtk2 hydrobuddy.lpr"/>
+</CONFIG>

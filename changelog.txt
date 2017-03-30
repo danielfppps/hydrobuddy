@@ -1,0 +1,114 @@
+v.1.50 
+
+- created new installer using FreePascal, installer source is also now included as well
+- Fixed problem with fixed weights feature when using concentrated solutions
+- Fixed problem when running the program under non-administrator in windows. The program now requests an adequate path if it doesn't find the DB files
+- Added new feature to fine-tune nutrient solution in results page, simply edit the weights next to each salt on the spreadsheet.
+
+v.1.40 - Long Term Release - 
+
+This release covers some important improvements/changes from previous versions.
+
+- Rolled back GTK interface for Windows, it didn't add anything and made the program lose compatibility with emulators and generated a lot of errors on Windows 7 and XP. The program now uses the windows interface as it used before. Note that linux still uses GTK as it is the default UI on that operating system. The program should now be compatible again with emulators (wine, crossfire, etc)
+
+- Added updater to linux version, it is an experimental feature and the program must be run as root to update (I know, not the best but working on it)
+
+- Added choice to add and calculate Si as Si or SiO2
+
+- Added independent assignations of K/K2O, P/P2O5, Si/SiO2 through dropdown menus 
+
+- Added Commercial nutrient comparison feature (allows you to add many commercial formualtions and compare them right next to each other)
+
+- Added W/V and W/W% distinction on "add commercial nutrient" module
+
+- Fixed calcium phosphate formula
+
+- Fixed sodium borate iron issue
+
+I hope you enjoy this release :o)
+
+
+
+v.1.31 - Long Term Release -
+
+This release is the culmination of a lot of effort :o) From this release binaries for Mac and Linux will be available for download as well as binaries for Windows. The program is now installed using a Full fledged installer that makes installing easier on all the different platforms :o) Check the website at http://scienceinhydroponics.com for more details. 
+
+- Fixed updating of user defined costs when updating to a new version (costs are no longer overwritten)
+- Fixed issue dealing with exception when a salt was not used
+- Changed "degree of freedom" selection to drop down combo box (makes more sense)
+- Fixed other small bugs
+
+
+v.1.30 - Major release
+
+- Changed the UI to use the GTK 2 tool kit for better compatibility with Mac and Linux machines when compiling native binaries
+- Changed results from listboxes to string grids which offer much clearer output
+- Added nutrient ratio analysis button to results tab. Custom nutrient ratios can also be calculated besides the defaults. This is very useful for nutrient solution evaluation.
+- Fixed several errors dealing with Fe on some metal salts
+- Fixed zinc monohydrate compositions values
+- Added concentration units selection. Calculations can now be done in mM, mN, M and ppm
+- Instant conversion between different concentration units is implemented 
+- Added liquid/density options in the substance edition screen so that calculated liquids can be displayed as mL instead of grams or ounces.
+- Fixed a few bugs dealing with the data log tab regarding the default database selection, analysis button, etc.
+- Added new update functionality which allows new database fields to be added to existing databases
+- Added new pH/KH/GH fields to water quality analysis. Although these values are not yet used by the program they can be saved and converted between drops/ppm. Future versions will use this values to warn users about potential problems.
+- Added many more UI icons to make the program look better :o)
+- Several additional bug fixes and small feature additions :o)
+
+v.1.20 - Major release
+
+- Fixed an error with the updating of the formulation combobox on startup
+- Added check for update.ini on startup to prevent errors on some virtual machines
+- Added new updating functionality which updates databases without overwritting user-additions
+- Added many formulations from various online sources
+- Implemented some reliability checks on the preparation of concentrated solutions so that users
+  do not prepare solutions with obvious chemical incompatibilities
+- Redid several aspects of the calculation procedure to allow the setting of "fixed minimal quantities" of any
+  one of the used salts. By selecting a given weight within the substance selection screen the program will use
+  a certain minimum weight as a contraint
+- Made the degree of freedom used in calculations a selectable variable (users can now select different elements as  
+  degrees of freedom if the default does not give adequate results)
+- Added a "small window mode" so that users on netbooks can use the program
+- Made all windows fixed size in order to avoid problems/crashes related with the auto resize lazarus implementation
+- Added a lot of nice UI icons to make the program nicer :o)
+- Added ping check in order to avoid trying to update when there is no internet connection
+- Several small bug fixes... :o)
+
+
+v1.13
+
+Introduced a path fix to the updater which caused it to crash because it tried to overwrite itself
+
+v1.12
+
+Fixed another small issue with the K and P to K2O and P2O5 conversion when editing salts (mixed up constant). All problems related to this area should now be solved
+
+v1.11
+
+Added automatic update functionality including file downloading and uncompressing
+
+v1.10
+
+Changed the whole reporting code to a much more rational solution which generate a single matrix for all elements eliminating the previous issue where sulfur had to be calculated separately this also allows the calculator to output the ppm of elements that may be present but whose intended concentration is not input. For example when using sodium molybdate the calculator will show the amount of sodium from the Mo salt although Na intended concentration is 0
+
+Fixed an issue with P2O5 and K2O when adding or modifying salts. The values are now converted and displayed appropiately in both cases
+
+Changed the UI to enlarge some lists so that the whole list of elements can fit on the stock solution analysis and results tab. 
+
+v 1.04
+
+Fixed K-P mixup in Commercial nutrients form
+
+Fixed improper assignation of labels on main tab after first calculation when values are changed to 0
+
+v.1.03
+
+Corrected some percentages which were not correct within the database (mainly related with the waters of crystalization of some salts)
+
+v1.02
+
+Added a CheckBox to disable informative popups related to calculations
+
+v1.01 
+
+Fixed a small problem where fields didn't become reactivated properly when changing calculation type

@@ -1,0 +1,97 @@
+object Form13: TForm13
+  Left = 415
+  Height = 179
+  Top = 348
+  Width = 386
+  BorderStyle = bsToolWindow
+  Caption = 'Set pH/GH/KH'
+  ClientHeight = 179
+  ClientWidth = 386
+  FormStyle = fsStayOnTop
+  LCLVersion = '0.9.31'
+  object Label17: TLabel
+    Left = 116
+    Height = 16
+    Top = 43
+    Width = 17
+    Caption = 'pH'
+    ParentColor = False
+  end
+  object Label18: TLabel
+    Left = 25
+    Height = 16
+    Top = 75
+    Width = 108
+    Caption = 'GH (Total Hardness)'
+    ParentColor = False
+  end
+  object Label19: TLabel
+    Left = 56
+    Height = 16
+    Top = 109
+    Width = 77
+    Caption = 'KH (Alkalinity)'
+    ParentColor = False
+  end
+  object Edit17: TEdit
+    Left = 144
+    Height = 23
+    Top = 40
+    Width = 72
+    TabOrder = 0
+    Text = '0'
+  end
+  object Edit18: TEdit
+    Left = 144
+    Height = 23
+    Top = 72
+    Width = 72
+    TabOrder = 1
+    Text = '0'
+  end
+  object Edit19: TEdit
+    Left = 144
+    Height = 23
+    Top = 103
+    Width = 72
+    TabOrder = 2
+    Text = '0'
+  end
+  object RadioButton1: TRadioButton
+    Left = 264
+    Height = 19
+    Top = 56
+    Width = 51
+    Caption = 'Drops'
+    OnChange = RadioButton1Change
+    TabOrder = 3
+  end
+  object RadioButton2: TRadioButton
+    Left = 264
+    Height = 19
+    Top = 88
+    Width = 45
+    Caption = 'ppm'
+    Checked = True
+    OnChange = RadioButton2Change
+    TabOrder = 4
+    TabStop = True
+  end
+  object Label20: TLabel
+    Left = 264
+    Height = 16
+    Top = 24
+    Width = 90
+    Caption = 'GH and KH Units'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 256
+    Height = 25
+    Top = 136
+    Width = 98
+    Caption = 'Ok'
+    OnClick = Button1Click
+    TabOrder = 5
+  end
+end

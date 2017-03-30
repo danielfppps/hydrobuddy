@@ -1,0 +1,15 @@
+{ This is an automatically generated lazarus resource file }
+
+LazarusResources.Add('TForm11','FORMDATA',[
+  'TPF0'#7'TForm11'#6'Form11'#4'Left'#3#181#1#6'Height'#3#144#1#3'Top'#3#10#1#5
+  +'Width'#3#142#1#11'BorderStyle'#7#12'bsToolWindow'#7'Caption'#6#13'Data Anal'
+  +'ysis'#12'ClientHeight'#3#144#1#11'ClientWidth'#3#142#1#9'FormStyle'#7#11'fs'
+  +'StayOnTop'#10'LCLVersion'#6#6'0.9.31'#0#7'TButton'#7'Button1'#4'Left'#3'-'#1
+  +#6'Height'#2#25#3'Top'#3'`'#1#5'Width'#2'K'#7'Caption'#6#6'Close '#7'OnClick'
+  +#7#12'Button1Click'#8'TabOrder'#2#0#0#0#11'TStringGrid'#11'StringGrid1'#4'Le'
+  +'ft'#2#16#6'Height'#3'@'#1#3'Top'#2#16#5'Width'#3'x'#1#8'ColCount'#2#2#7'Col'
+  +'umns'#14#1#13'Title.Caption'#6#20'Logged Data Analysis'#5'Width'#3#250#0#0#1
+  +#9'Alignment'#7#8'taCenter'#15'Title.Alignment'#7#8'taCenter'#13'Title.Capti'
+  +'on'#6#6'Values'#5'Width'#2'd'#0#0#15'DefaultColWidth'#3#180#0#9'FixedCols'#2
+  +#0#8'RowCount'#2#25#8'TabOrder'#2#1#0#0#0
+]);

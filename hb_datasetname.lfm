@@ -1,0 +1,37 @@
+object Form10: TForm10
+  Left = 301
+  Height = 121
+  Top = 320
+  Width = 258
+  BorderStyle = bsToolWindow
+  Caption = 'Choose Data Set Name'
+  ClientHeight = 121
+  ClientWidth = 258
+  FormStyle = fsStayOnTop
+  LCLVersion = '0.9.31'
+  object Label1: TLabel
+    Left = 32
+    Height = 16
+    Top = 11
+    Width = 110
+    Caption = 'Input Data Set Name'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 88
+    Height = 25
+    Top = 72
+    Width = 75
+    Caption = 'OK'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 32
+    Height = 23
+    Top = 40
+    Width = 184
+    TabOrder = 1
+    Text = 'Enter New Data Set Name Here'
+  end
+end

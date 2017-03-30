@@ -1,0 +1,51 @@
+object Form4: TForm4
+  Left = 331
+  Height = 174
+  Top = 490
+  Width = 213
+  HorzScrollBar.Page = 191
+  HorzScrollBar.Range = 170
+  VertScrollBar.Page = 161
+  VertScrollBar.Range = 145
+  BorderStyle = bsToolWindow
+  Caption = 'Set Mass of Substance Used'
+  ClientHeight = 174
+  ClientWidth = 213
+  FormStyle = fsStayOnTop
+  LCLVersion = '1.6.4.0'
+  object Label1: TLabel
+    Left = 40
+    Height = 17
+    Top = 64
+    Width = 155
+    Caption = 'Mass of Substance Used (g)'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 32
+    Top = 24
+    Width = 144
+    AutoSize = False
+    Caption = '------'
+    ParentColor = False
+    WordWrap = True
+  end
+  object Edit1: TEdit
+    Left = 48
+    Height = 27
+    Top = 96
+    Width = 120
+    TabOrder = 0
+    Text = '0'
+  end
+  object Button1: TButton
+    Left = 64
+    Height = 25
+    Top = 136
+    Width = 75
+    Caption = 'Ok'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+end

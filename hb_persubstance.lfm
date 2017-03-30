@@ -1,0 +1,54 @@
+object Form9: TForm9
+  Left = 653
+  Height = 479
+  Top = 294
+  Width = 531
+  HorzScrollBar.Page = 531
+  HorzScrollBar.Range = 489
+  VertScrollBar.Page = 480
+  VertScrollBar.Range = 449
+  BorderStyle = bsToolWindow
+  Caption = 'Detailed Element Contribution Analysis'
+  ClientHeight = 479
+  ClientWidth = 531
+  FormStyle = fsStayOnTop
+  LCLVersion = '0.9.31'
+  object Button1: TButton
+    Left = 392
+    Height = 25
+    Top = 424
+    Width = 96
+    Caption = 'Close'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 40
+    Height = 360
+    Top = 40
+    Width = 448
+    AutoAdvance = aaNone
+    ColCount = 3
+    Columns = <    
+      item
+        Title.Caption = 'Substance Name'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Element'
+      end    
+      item
+        Alignment = taCenter
+        Title.Alignment = taCenter
+        Title.Caption = 'Contribution (ppm)'
+      end>
+    Constraints.MaxWidth = 448
+    DefaultColWidth = 145
+    DefaultRowHeight = 18
+    FixedCols = 0
+    RowCount = 1
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+end

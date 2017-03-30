@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="10"/>
+    <PathDelim Value="\"/>
+    <General>
+      <MainUnit Value="0"/>
+      <Title Value="HydroBuddy - an Open source nutrient calculator"/>
+      <UseXPManifest Value="True"/>
+      <Icon Value="0"/>
+    </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <MinorVersionNr Value="5"/>
+      <StringTable ProductVersion="1.0.0.0"/>
+    </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
+    <PublishOptions>
+      <Version Value="2"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="3">
+      <Item1>
+        <PackageName Value="LCLBase"/>
+        <MinVersion Major="1" Release="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="TAChartLazarusPkg"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+    </RequiredPackages>
+    <Units Count="33">
+      <Unit0>
+        <Filename Value="hydrobuddy.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="6"/>
+        <CursorPos X="13" Y="15"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="hb_main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="HB_Main"/>
+        <EditorIndex Value="5"/>
+        <CursorPos X="35" Y="2116"/>
+        <UsageCount Value="200"/>
+        <Bookmarks Count="2">
+          <Item0 X="34" Y="741"/>
+          <Item1 X="3" Y="1438" ID="1"/>
+        </Bookmarks>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="hb_load_salts.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="267"/>
+        <CursorPos X="59" Y="269"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form3"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="112"/>
+        <CursorPos X="29" Y="9"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="D:\lazarus\lcl\interfaces\win32\win32listsl.inc"/>
+        <TopLine Value="158"/>
+        <CursorPos Y="172"/>
+        <UsageCount Value="99"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="C:\Windows\Temp\Rar$DI01.576\sparsolv.pas"/>
+        <TopLine Value="13"/>
+        <CursorPos X="98" Y="16"/>
+        <UsageCount Value="2"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="densesolver.pas"/>
+        <IsPartOfProject Value="True"/>
+        <TopLine Value="3144"/>
+        <CursorPos X="8" Y="3181"/>
+        <UsageCount Value="200"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="D:\lazarus\lcl\include\control.inc"/>
+        <TopLine Value="2270"/>
+        <CursorPos X="74" Y="2283"/>
+        <UsageCount Value="84"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="hb_addweight.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form4"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="11"/>
+        <CursorPos Y="34"/>
+        <UsageCount Value="230"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="hb_commercialnutrient.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form5"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="12"/>
+        <CursorPos X="26" Y="370"/>
+        <UsageCount Value="224"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="hb_waterquality.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form6"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="13"/>
+        <TopLine Value="55"/>
+        <CursorPos X="14" Y="75"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="hb_insprecision.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form7"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="15"/>
+        <TopLine Value="4"/>
+        <CursorPos X="42" Y="25"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="hb_stockanalysis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form8"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="11"/>
+        <TopLine Value="18"/>
+        <CursorPos X="45" Y="19"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="hb_persubstance.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form9"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="8"/>
+        <CursorPos X="32" Y="23"/>
+        <UsageCount Value="216"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="hb_datasetname.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form10"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="16"/>
+        <CursorPos Y="42"/>
+        <UsageCount Value="209"/>
+        <Loaded Value="True"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="hb_analysis.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form11"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="13"/>
+        <CursorPos X="71" Y="40"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+      </Unit15>
+      <Unit16>
+        <Filename Value="D:\lazarus\components\codetools\definetemplates.pas"/>
+        <UnitName Value="DefineTemplates"/>
+        <TopLine Value="1054"/>
+        <CursorPos X="9" Y="1071"/>
+        <UsageCount Value="96"/>
+      </Unit16>
+      <Unit17>
+        <Filename Value="descriptivestatistics.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="132"/>
+        <CursorPos X="24" Y="160"/>
+        <UsageCount Value="100"/>
+        <Loaded Value="True"/>
+      </Unit17>
+      <Unit18>
+        <Filename Value="D:\lazarus\lcl\include\customcombobox.inc"/>
+        <TopLine Value="181"/>
+        <CursorPos Y="214"/>
+        <UsageCount Value="93"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="D:\lazarus\lcl\include\buttoncontrol.inc"/>
+        <TopLine Value="44"/>
+        <CursorPos X="11" Y="51"/>
+        <UsageCount Value="84"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="hb_freedom.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form12"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="14"/>
+        <CursorPos X="15" Y="30"/>
+        <UsageCount Value="204"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="ping.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Ping"/>
+        <TopLine Value="53"/>
+        <CursorPos X="26" Y="72"/>
+        <UsageCount Value="202"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="pingsend.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="3" Y="76"/>
+        <UsageCount Value="100"/>
+      </Unit22>
+      <Unit23>
+        <Filename Value="D:\lazarus\fpc\2.4.3\source\packages\fcl-db\src\base\db.pas"/>
+        <TopLine Value="370"/>
+        <CursorPos X="14" Y="389"/>
+        <UsageCount Value="77"/>
+      </Unit23>
+      <Unit24>
+        <Filename Value="hb_ph.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form13"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="14"/>
+        <TopLine Value="50"/>
+        <CursorPos X="26" Y="72"/>
+        <UsageCount Value="132"/>
+        <Loaded Value="True"/>
+      </Unit24>
+      <Unit25>
+        <Filename Value="hb_ratios.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form14"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="38"/>
+        <CursorPos X="46" Y="59"/>
+        <UsageCount Value="130"/>
+        <Loaded Value="True"/>
+      </Unit25>
+      <Unit26>
+        <Filename Value="D:\lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <TopLine Value="8144"/>
+        <CursorPos Y="8231"/>
+        <UsageCount Value="28"/>
+      </Unit26>
+      <Unit27>
+        <Filename Value="D:\lazarus\components\tachart\tatypes.pas"/>
+        <UnitName Value="TATypes"/>
+        <TopLine Value="536"/>
+        <CursorPos Y="553"/>
+        <UsageCount Value="25"/>
+      </Unit27>
+      <Unit28>
+        <Filename Value="D:\lazarus\lcl\lclproc.pas"/>
+        <UnitName Value="LCLProc"/>
+        <TopLine Value="1533"/>
+        <CursorPos Y="1544"/>
+        <UsageCount Value="10"/>
+      </Unit28>
+      <Unit29>
+        <Filename Value="hb_comparison.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form15"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="24"/>
+        <CursorPos X="28" Y="41"/>
+        <UsageCount Value="71"/>
+      </Unit29>
+      <Unit30>
+        <Filename Value="C:\lazarus\lcl\grids.pas"/>
+        <UnitName Value="Grids"/>
+        <TopLine Value="8853"/>
+        <CursorPos Y="8675"/>
+        <UsageCount Value="6"/>
+      </Unit30>
+      <Unit31>
+        <Filename Value="C:\lazarus\components\lazutils\winfileutil.inc"/>
+        <TopLine Value="306"/>
+        <CursorPos X="29" Y="335"/>
+        <UsageCount Value="9"/>
+      </Unit31>
+      <Unit32>
+        <Filename Value="synaser.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1887"/>
+        <CursorPos X="58" Y="1902"/>
+        <UsageCount Value="9"/>
+      </Unit32>
+    </Units>
+    <JumpHistory Count="29" HistoryIndex="28">
+      <Position1>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="20" Column="21"/>
+      </Position1>
+      <Position2>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="472" Column="28" TopLine="457"/>
+      </Position2>
+      <Position3>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="15" Column="49"/>
+      </Position3>
+      <Position4>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="17" Column="28"/>
+      </Position4>
+      <Position5>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="24" Column="28"/>
+      </Position5>
+      <Position6>
+        <Filename Value="hb_waterquality.pas"/>
+        <Caret Line="62" Column="48" TopLine="44"/>
+      </Position6>
+      <Position7>
+        <Filename Value="hb_waterquality.pas"/>
+        <Caret Line="304" Column="36" TopLine="300"/>
+      </Position7>
+      <Position8>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="17" Column="28"/>
+      </Position8>
+      <Position9>
+        <Filename Value="hb_addweight.pas"/>
+        <Caret Line="41" Column="38" TopLine="32"/>
+      </Position9>
+      <Position10>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="376" Column="25" TopLine="357"/>
+      </Position10>
+      <Position11>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="384" Column="45" TopLine="360"/>
+      </Position11>
+      <Position12>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="637" Column="13" TopLine="622"/>
+      </Position12>
+      <Position13>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1512" Column="13" TopLine="1488"/>
+      </Position13>
+      <Position14>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="231" Column="25" TopLine="217"/>
+      </Position14>
+      <Position15>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="48" TopLine="28"/>
+      </Position15>
+      <Position16>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="262" Column="16" TopLine="248"/>
+      </Position16>
+      <Position17>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="315" Column="24" TopLine="294"/>
+      </Position17>
+      <Position18>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="151" Column="3" TopLine="44"/>
+      </Position18>
+      <Position19>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="288" TopLine="267"/>
+      </Position19>
+      <Position20>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="263" Column="59" TopLine="246"/>
+      </Position20>
+      <Position21>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="307" Column="13" TopLine="263"/>
+      </Position21>
+      <Position22>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="256" Column="5" TopLine="240"/>
+      </Position22>
+      <Position23>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="371" Column="40" TopLine="358"/>
+      </Position23>
+      <Position24>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="396" Column="30" TopLine="372"/>
+      </Position24>
+      <Position25>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3057" Column="37" TopLine="3033"/>
+      </Position25>
+      <Position26>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3201" Column="37" TopLine="3177"/>
+      </Position26>
+      <Position27>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="396" Column="39" TopLine="382"/>
+      </Position27>
+      <Position28>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="20" Column="48" TopLine="16"/>
+      </Position28>
+      <Position29>
+        <Filename Value="hydrobuddy.lpr"/>
+        <Caret Line="133" Column="19" TopLine="107"/>
+      </Position29>
+    </JumpHistory>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="11"/>
+    <PathDelim Value="\"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)"/>
+    </SearchPaths>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
+    <Linking>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+  </CompilerOptions>
+  <Debugging>
+    <Exceptions Count="3">
+      <Item1>
+        <Name Value="EAbort"/>
+      </Item1>
+      <Item2>
+        <Name Value="ECodetoolError"/>
+      </Item2>
+      <Item3>
+        <Name Value="EFOpenError"/>
+      </Item3>
+    </Exceptions>
+  </Debugging>
+</CONFIG>

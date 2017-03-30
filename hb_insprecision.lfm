@@ -1,0 +1,57 @@
+object Form7: TForm7
+  Left = 306
+  Height = 204
+  Top = 240
+  Width = 290
+  HorzScrollBar.Page = 290
+  HorzScrollBar.Range = 232
+  VertScrollBar.Page = 204
+  VertScrollBar.Range = 185
+  BorderStyle = bsToolWindow
+  Caption = 'Instrument Precision'
+  ClientHeight = 204
+  ClientWidth = 290
+  FormStyle = fsStayOnTop
+  LCLVersion = '0.9.31'
+  object Label1: TLabel
+    Left = 40
+    Height = 16
+    Top = 24
+    Width = 192
+    Caption = 'Volume Instrument Precision (+/- L)'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 40
+    Height = 16
+    Top = 88
+    Width = 190
+    Caption = 'Weight Instrument Precision (+/- g)'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 40
+    Height = 25
+    Top = 160
+    Width = 75
+    Caption = 'OK'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Edit1: TEdit
+    Left = 40
+    Height = 23
+    Top = 48
+    Width = 80
+    TabOrder = 1
+    Text = '0.1'
+  end
+  object Edit2: TEdit
+    Left = 40
+    Height = 23
+    Top = 120
+    Width = 80
+    TabOrder = 2
+    Text = '0.01'
+  end
+end
