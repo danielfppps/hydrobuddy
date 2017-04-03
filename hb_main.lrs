@@ -5,7 +5,7 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +'Width'#3'B'#3#18'HorzScrollBar.Page'#3'I'#3#19'HorzScrollBar.Range'#3'8'#3
   +#18'VertScrollBar.Page'#3#179#2#19'VertScrollBar.Range'#3#161#2#11'BorderIco'
   +'ns'#11#12'biSystemMenu'#10'biMinimize'#0#11'BorderStyle'#7#8'bsSingle'#7'Ca'
-  +'ption'#6'jHydroBuddy v1.60 - Programmed and Designed by Dr. Daniel Fernande'
+  +'ption'#6'jHydroBuddy v1.61 - Programmed and Designed by Dr. Daniel Fernande'
   +'z Ph.D at http://scienceinhydroponics.com'#12'ClientHeight'#3#162#2#11'Clie'
   +'ntWidth'#3'B'#3#8'DragKind'#7#6'dkDock'#9'Icon.Data'#10#226'('#0#0#222'('#0
   +#0#0#0#1#0#1#0'22'#0#0#1#0' '#0#200'('#0#0#22#0#0#0'('#0#0#0'2'#0#0#0'd'#0#0
@@ -354,14 +354,14 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +#192#0#255#255#255#255#255#255#192#0#255#255#255#255#255#255#192#0#255#255
   +#255#255#255#255#192#0#255#255#255#255#255#255#192#0#255#255#255#255#255#255
   +#192#0#19'OnWindowStateChange'#7#21'FormWindowStateChange'#14'ParentBiDiMode'
-  +#8#8'Position'#7#15'poDesktopCenter'#10'LCLVersion'#6#7'1.2.6.0'#7'Visible'#9
+  +#8#8'Position'#7#15'poDesktopCenter'#10'LCLVersion'#6#7'1.6.4.0'#7'Visible'#9
   +#0#12'TPageControl'#12'PageControl1'#4'Left'#2#0#6'Height'#3#161#2#3'Top'#2#0
   +#5'Width'#3'B'#3#10'ActivePage'#7#9'TabSheet4'#10'ParentFont'#8#8'TabIndex'#2
   +#0#8'TabOrder'#2#0#0#9'TTabSheet'#9'TabSheet4'#7'Caption'#6#7'Welcome'#12'Cl'
-  +'ientHeight'#3'{'#2#11'ClientWidth'#3':'#3#0#12'TPageControl'#12'PageControl'
+  +'ientHeight'#3'~'#2#11'ClientWidth'#3'<'#3#0#12'TPageControl'#12'PageControl'
   +'2'#4'Left'#2#0#6'Height'#3#136#2#3'Top'#2#0#5'Width'#3'<'#3#10'ActivePage'#7
   +#9'TabSheet5'#8'TabIndex'#2#0#8'TabOrder'#2#0#0#9'TTabSheet'#9'TabSheet5'#7
-  +'Caption'#6#12'Introduction'#12'ClientHeight'#3'b'#2#11'ClientWidth'#3'4'#3#0
+  +'Caption'#6#12'Introduction'#12'ClientHeight'#3'e'#2#11'ClientWidth'#3'6'#3#0
   +#6'TImage'#6'Image1'#4'Left'#2#0#6'Height'#3's'#2#3'Top'#2#247#5'Width'#3'j'
   +#3#8'AutoSize'#9#12'Picture.Data'#10#211#137#0#0#23'TPortableNetworkGraphic'
   +#183#137#0#0#137'PNG'#13#10#26#10#0#0#0#13'IHDR'#0#0#3'j'#0#0#2's'#8#2#0#0#0
@@ -30064,9 +30064,9 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +#25#4'Hint'#6'2Deletes the selected formulation from the database'#3'Top'#2
   +'4'#5'Width'#3#188#0#7'Caption'#6#26'Delete Formulation From DB'#7'OnClick'#7
   +#12'Button6Click'#8'TabOrder'#2#3#0#0#9'TComboBox'#9'ComboBox1'#4'Left'#2#17
-  +#6'Height'#2'!'#3'Top'#3#128#0#5'Width'#3#188#0#10'ItemHeight'#2#25#8'OnSele'
-  +'ct'#7#15'ComboBox1Select'#6'Sorted'#9#8'TabOrder'#2#4#4'Text'#6#26'Select f'
-  +'ormulation from DB'#0#0#7'TButton'#7'Button9'#4'Left'#3#222#0#6'Height'#2#25
+  +#6'Height'#2'!'#3'Top'#3#128#0#5'Width'#3#188#0#10'ItemHeight'#2#0#8'OnSelec'
+  +'t'#7#15'ComboBox1Select'#6'Sorted'#9#8'TabOrder'#2#4#4'Text'#6#26'Select fo'
+  +'rmulation from DB'#0#0#7'TButton'#7'Button9'#4'Left'#3#222#0#6'Height'#2#25
   +#4'Hint'#6'GClick this button to open up the instrument precision settings d'
   +'ialogue'#3'Top'#2'~'#5'Width'#3#246#0#7'Caption'#6#31'Set Instrument Precis'
   +'ion Values'#7'OnClick'#7#12'Button9Click'#8'TabOrder'#2#5#0#0#7'TButton'#7
@@ -30103,8 +30103,8 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +#0#7'TButton'#8'Button24'#4'Left'#3'8'#1#6'Height'#2#25#3'Top'#2#7#5'Width'#2
   +'K'#7'Caption'#6#9'SetValues'#7'OnClick'#7#13'Button24Click'#8'TabOrder'#2#28
   +#7'Visible'#8#0#0#9'TComboBox'#9'ComboBox3'#4'Left'#2','#6'Height'#2'!'#3'To'
-  +'p'#3''''#2#5'Width'#2'5'#10'ItemHeight'#2#25#9'ItemIndex'#2#0#13'Items.Stri'
-  +'ngs'#1#6#2'Si'#6#4'SiO2'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#29#4
+  +'p'#3''''#2#5'Width'#2'5'#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strin'
+  +'gs'#1#6#2'Si'#6#4'SiO2'#0#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#29#4
   +'Text'#6#2'Si'#0#0#7'TBitBtn'#8'Button26'#4'Left'#3#209#2#6'Height'#2'('#3'T'
   +'op'#2#23#5'Width'#2'L'#10'Glyph.Data'#10'B'#30#0#0'>'#30#0#0'BM>'#30#0#0#0#0
   +#0#0'6'#0#0#0'('#0#0#0'>'#0#0#0#31#0#0#0#1#0' '#0#0#0#0#0#8#30#0#0'd'#0#0#0
@@ -34360,8 +34360,8 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +' at http://www.alglib.net.'#11'ParentColor'#8#8'WordWrap'#9#0#0#7'TButton'#8
   +'Button11'#4'Left'#3#160#0#6'Height'#2#25#3'Top'#3'('#1#5'Width'#2'K'#7'Capt'
   +'ion'#6#2'OK'#7'OnClick'#7#13'Button11Click'#8'TabOrder'#2#0#0#0#0#0#0#6'TLa'
-  +'bel'#12'LabelVersion'#4'Left'#3#152#1#6'Height'#2#25#3'Top'#3#128#1#5'Width'
-  +#2#24#7'Caption'#6#3'1.5'#11'ParentColor'#8#7'Visible'#8#0#0#11'TSaveDialog'
+  +'bel'#12'LabelVersion'#4'Left'#3#152#1#6'Height'#2#17#3'Top'#3#128#1#5'Width'
+  +#2#17#7'Caption'#6#3'1.5'#11'ParentColor'#8#7'Visible'#8#0#0#11'TSaveDialog'
   +#11'SaveDialog1'#10'DefaultExt'#6#4'.csv'#6'Filter'#6#5'*.csv'#4'left'#3#152
   +#2#3'top'#4#216#255#0#0#0#0#10'TPopupMenu'#10'PopupMenu1'#4'left'#2'8'#3'top'
   +#2'('#0#9'TMenuItem'#9'MenuItem2'#7'Caption'#6#4'Copy'#7'OnClick'#7#14'MenuI'

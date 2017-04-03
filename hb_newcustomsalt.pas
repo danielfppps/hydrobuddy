@@ -100,7 +100,7 @@ currentValSi := ComboBox3.ItemIndex;
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := 'substances.dbf';
+MyDbf.TableName := substances_db ;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 
@@ -194,7 +194,7 @@ currentValSi := ComboBox3.ItemIndex;
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := 'substances.dbf';
+MyDbf.TableName := substances_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 

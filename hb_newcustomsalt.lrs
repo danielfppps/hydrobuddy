@@ -6,79 +6,79 @@ LazarusResources.Add('TForm3','FORMDATA',[
   +#18'VertScrollBar.Page'#3#172#1#19'VertScrollBar.Range'#3#137#1#11'BorderSty'
   +'le'#7#12'bsToolWindow'#7'Caption'#6'!Custom Substance Addition/Editing'#12
   +'ClientHeight'#3#180#1#11'ClientWidth'#3#205#1#9'FormStyle'#7#11'fsStayOnTop'
-  +#10'LCLVersion'#6#7'1.0.6.0'#0#6'TLabel'#6'Label1'#4'Left'#2#19#6'Height'#2
-  +#16#3'Top'#3#171#0#5'Width'#2'2'#7'Caption'#6#8'N (NO3-)'#11'ParentColor'#8#0
-  +#0#6'TLabel'#6'Label2'#4'Left'#2'5'#6'Height'#2#16#3'Top'#3#237#0#5'Width'#2
-  +#8#7'Caption'#6#1'P'#11'ParentColor'#8#0#0#6'TLabel'#6'Label3'#4'Left'#2'5'#6
-  +'Height'#2#16#3'Top'#3#13#1#5'Width'#2#8#7'Caption'#6#1'K'#11'ParentColor'#8
-  +#0#0#6'TLabel'#6'Label4'#4'Left'#2'5'#6'Height'#2#16#3'Top'#3'/'#1#5'Width'#2
-  +#19#7'Caption'#6#2'Mg'#11'ParentColor'#8#0#0#6'TLabel'#6'Label5'#4'Left'#2'7'
-  +#6'Height'#2#16#3'Top'#3'O'#1#5'Width'#2#15#7'Caption'#6#2'Ca'#11'ParentColo'
-  +'r'#8#0#0#6'TLabel'#6'Label6'#4'Left'#3#187#0#6'Height'#2#16#3'Top'#3#171#0#5
+  +#10'LCLVersion'#6#7'1.6.4.0'#0#6'TLabel'#6'Label1'#4'Left'#2#19#6'Height'#2
+  +#17#3'Top'#3#171#0#5'Width'#2'1'#7'Caption'#6#8'N (NO3-)'#11'ParentColor'#8#0
+  +#0#6'TLabel'#6'Label2'#4'Left'#2'5'#6'Height'#2#17#3'Top'#3#237#0#5'Width'#2
+  +#7#7'Caption'#6#1'P'#11'ParentColor'#8#0#0#6'TLabel'#6'Label3'#4'Left'#2'5'#6
+  +'Height'#2#17#3'Top'#3#13#1#5'Width'#2#7#7'Caption'#6#1'K'#11'ParentColor'#8
+  +#0#0#6'TLabel'#6'Label4'#4'Left'#2'5'#6'Height'#2#17#3'Top'#3'/'#1#5'Width'#2
+  +#18#7'Caption'#6#2'Mg'#11'ParentColor'#8#0#0#6'TLabel'#6'Label5'#4'Left'#2'7'
+  +#6'Height'#2#17#3'Top'#3'O'#1#5'Width'#2#15#7'Caption'#6#2'Ca'#11'ParentColo'
+  +'r'#8#0#0#6'TLabel'#6'Label6'#4'Left'#3#187#0#6'Height'#2#17#3'Top'#3#171#0#5
   +'Width'#2#7#7'Caption'#6#1'S'#11'ParentColor'#8#0#0#6'TLabel'#6'Label7'#4'Le'
-  +'ft'#3#181#0#6'Height'#2#16#3'Top'#3#203#0#5'Width'#2#13#7'Caption'#6#2'Fe'
-  +#11'ParentColor'#8#0#0#6'TLabel'#6'Label8'#4'Left'#3#181#0#6'Height'#2#16#3
-  +'Top'#3#237#0#5'Width'#2#15#7'Caption'#6#2'Zn'#11'ParentColor'#8#0#0#6'TLabe'
-  +'l'#6'Label9'#4'Left'#3#181#0#6'Height'#2#16#3'Top'#3#13#1#5'Width'#2#8#7'Ca'
+  +'ft'#3#181#0#6'Height'#2#17#3'Top'#3#203#0#5'Width'#2#13#7'Caption'#6#2'Fe'
+  +#11'ParentColor'#8#0#0#6'TLabel'#6'Label8'#4'Left'#3#181#0#6'Height'#2#17#3
+  +'Top'#3#237#0#5'Width'#2#14#7'Caption'#6#2'Zn'#11'ParentColor'#8#0#0#6'TLabe'
+  +'l'#6'Label9'#4'Left'#3#181#0#6'Height'#2#17#3'Top'#3#13#1#5'Width'#2#8#7'Ca'
   +'ption'#6#1'B'#11'ParentColor'#8#0#0#6'TLabel'#7'Label10'#4'Left'#3#181#0#6
-  +'Height'#2#16#3'Top'#3'/'#1#5'Width'#2#16#7'Caption'#6#2'Cu'#11'ParentColor'
-  +#8#0#0#6'TLabel'#7'Label11'#4'Left'#3#181#0#6'Height'#2#16#3'Top'#3'O'#1#5'W'
-  +'idth'#2#19#7'Caption'#6#2'Mo'#11'ParentColor'#8#0#0#6'TLabel'#7'Label12'#4
-  +'Left'#3'-'#1#6'Height'#2#16#3'Top'#3#171#0#5'Width'#2#16#7'Caption'#6#2'Na'
-  +#11'ParentColor'#8#0#0#6'TLabel'#7'Label13'#4'Left'#3'-'#1#6'Height'#2#16#3
+  +'Height'#2#17#3'Top'#3'/'#1#5'Width'#2#15#7'Caption'#6#2'Cu'#11'ParentColor'
+  +#8#0#0#6'TLabel'#7'Label11'#4'Left'#3#181#0#6'Height'#2#17#3'Top'#3'O'#1#5'W'
+  +'idth'#2#18#7'Caption'#6#2'Mo'#11'ParentColor'#8#0#0#6'TLabel'#7'Label12'#4
+  +'Left'#3'-'#1#6'Height'#2#17#3'Top'#3#171#0#5'Width'#2#16#7'Caption'#6#2'Na'
+  +#11'ParentColor'#8#0#0#6'TLabel'#7'Label13'#4'Left'#3'-'#1#6'Height'#2#17#3
   +'Top'#3#237#0#5'Width'#2#10#7'Caption'#6#2'Si'#11'ParentColor'#8#0#0#6'TLabe'
-  +'l'#7'Label14'#4'Left'#3'-'#1#6'Height'#2#16#3'Top'#3#13#1#5'Width'#2#12#7'C'
+  +'l'#7'Label14'#4'Left'#3'-'#1#6'Height'#2#17#3'Top'#3#13#1#5'Width'#2#11#7'C'
   +'aption'#6#2'Cl'#11'ParentColor'#8#0#0#6'TLabel'#7'Label15'#4'Left'#2#24#6'H'
-  +'eight'#2#16#3'Top'#2#24#5'Width'#2'!'#7'Caption'#6#4'Name'#11'ParentColor'#8
-  +#0#0#6'TLabel'#7'Label16'#4'Left'#3'-'#1#6'Height'#2#16#3'Top'#3'/'#1#5'Widt'
+  +'eight'#2#17#3'Top'#2#24#5'Width'#2'"'#7'Caption'#6#4'Name'#11'ParentColor'#8
+  +#0#0#6'TLabel'#7'Label16'#4'Left'#3'-'#1#6'Height'#2#17#3'Top'#3'/'#1#5'Widt'
   +'h'#2' '#7'Caption'#6#6'Purity'#11'ParentColor'#8#0#0#6'TLabel'#7'Formula'#4
-  +'Left'#2#24#6'Height'#2#16#3'Top'#2'<'#5'Width'#2'-'#7'Caption'#6#7'Formula'
-  +#11'ParentColor'#8#0#0#6'TLabel'#7'Label17'#4'Left'#3'-'#1#6'Height'#2#16#3
-  +'Top'#3#203#0#5'Width'#2#19#7'Caption'#6#2'Mn'#11'ParentColor'#8#0#0#6'TLabe'
-  +'l'#7'Label18'#4'Left'#2#16#6'Height'#2#16#3'Top'#3#203#0#5'Width'#2'5'#7'Ca'
+  +'Left'#2#24#6'Height'#2#17#3'Top'#2'<'#5'Width'#2'.'#7'Caption'#6#7'Formula'
+  +#11'ParentColor'#8#0#0#6'TLabel'#7'Label17'#4'Left'#3'-'#1#6'Height'#2#17#3
+  +'Top'#3#203#0#5'Width'#2#18#7'Caption'#6#2'Mn'#11'ParentColor'#8#0#0#6'TLabe'
+  +'l'#7'Label18'#4'Left'#2#16#6'Height'#2#17#3'Top'#3#203#0#5'Width'#2'4'#7'Ca'
   +'ption'#6#8'N (NH4+)'#11'ParentColor'#8#0#0#6'TLabel'#7'Label19'#4'Left'#3#24
-  +#1#6'Height'#2#16#3'Top'#2#24#5'Width'#2'f'#7'Caption'#6#17'Concentrated Typ'
-  +'e'#11'ParentColor'#8#0#0#6'TLabel'#7'Label20'#4'Left'#3'-'#1#6'Height'#2#16
+  +#1#6'Height'#2#17#3'Top'#2#24#5'Width'#2'j'#7'Caption'#6#17'Concentrated Typ'
+  +'e'#11'ParentColor'#8#0#0#6'TLabel'#7'Label20'#4'Left'#3'-'#1#6'Height'#2#17
   +#3'Top'#3'O'#1#5'Width'#2#25#7'Caption'#6#4'Cost'#11'ParentColor'#8#0#0#6'TL'
-  +'abel'#7'Label21'#4'Left'#2#20#6'Height'#2#16#3'Top'#3#128#0#5'Width'#3'#'#1
+  +'abel'#7'Label21'#4'Left'#2#20#6'Height'#2#17#3'Top'#3#128#0#5'Width'#3'7'#1
   +#7'Caption'#6'8Please input values as percentages (cost as cost per Kg)'#11
-  +'ParentColor'#8#0#0#5'TEdit'#5'Edit1'#4'Left'#2']'#6'Height'#2#23#3'Top'#3
+  +'ParentColor'#8#0#0#5'TEdit'#5'Edit1'#4'Left'#2']'#6'Height'#2#27#3'Top'#3
   +#168#0#5'Width'#2'@'#8'TabOrder'#2#0#4'Text'#6#1'0'#0#0#5'TEdit'#5'Edit3'#4
-  +'Left'#2']'#6'Height'#2#23#3'Top'#3#234#0#5'Width'#2'@'#8'TabOrder'#2#1#4'Te'
-  +'xt'#6#1'0'#0#0#5'TEdit'#5'Edit2'#4'Left'#2']'#6'Height'#2#23#3'Top'#3#10#1#5
+  +'Left'#2']'#6'Height'#2#27#3'Top'#3#234#0#5'Width'#2'@'#8'TabOrder'#2#1#4'Te'
+  +'xt'#6#1'0'#0#0#5'TEdit'#5'Edit2'#4'Left'#2']'#6'Height'#2#27#3'Top'#3#10#1#5
   +'Width'#2'@'#8'TabOrder'#2#2#4'Text'#6#1'0'#0#0#5'TEdit'#5'Edit4'#4'Left'#2
-  +']'#6'Height'#2#23#3'Top'#3','#1#5'Width'#2'@'#8'TabOrder'#2#3#4'Text'#6#1'0'
-  +#0#0#5'TEdit'#5'Edit5'#4'Left'#2']'#6'Height'#2#23#3'Top'#3'L'#1#5'Width'#2
+  +']'#6'Height'#2#27#3'Top'#3','#1#5'Width'#2'@'#8'TabOrder'#2#3#4'Text'#6#1'0'
+  +#0#0#5'TEdit'#5'Edit5'#4'Left'#2']'#6'Height'#2#27#3'Top'#3'L'#1#5'Width'#2
   +'@'#8'TabOrder'#2#4#4'Text'#6#1'0'#0#0#5'TEdit'#5'Edit6'#4'Left'#3#205#0#6'H'
-  +'eight'#2#23#3'Top'#3#168#0#5'Width'#2'H'#8'TabOrder'#2#5#4'Text'#6#1'0'#0#0
-  +#5'TEdit'#5'Edit7'#4'Left'#3#205#0#6'Height'#2#23#3'Top'#3#200#0#5'Width'#2
+  +'eight'#2#27#3'Top'#3#168#0#5'Width'#2'H'#8'TabOrder'#2#5#4'Text'#6#1'0'#0#0
+  +#5'TEdit'#5'Edit7'#4'Left'#3#205#0#6'Height'#2#27#3'Top'#3#200#0#5'Width'#2
   +'H'#8'TabOrder'#2#6#4'Text'#6#1'0'#0#0#5'TEdit'#5'Edit8'#4'Left'#3#205#0#6'H'
-  +'eight'#2#23#3'Top'#3#234#0#5'Width'#2'H'#8'TabOrder'#2#7#4'Text'#6#1'0'#0#0
-  +#5'TEdit'#5'Edit9'#4'Left'#3#205#0#6'Height'#2#23#3'Top'#3#10#1#5'Width'#2'H'
+  +'eight'#2#27#3'Top'#3#234#0#5'Width'#2'H'#8'TabOrder'#2#7#4'Text'#6#1'0'#0#0
+  +#5'TEdit'#5'Edit9'#4'Left'#3#205#0#6'Height'#2#27#3'Top'#3#10#1#5'Width'#2'H'
   +#8'TabOrder'#2#8#4'Text'#6#1'0'#0#0#5'TEdit'#6'Edit10'#4'Left'#3#205#0#6'Hei'
-  +'ght'#2#23#3'Top'#3','#1#5'Width'#2'H'#8'TabOrder'#2#9#4'Text'#6#1'0'#0#0#5
-  +'TEdit'#6'Edit11'#4'Left'#3#205#0#6'Height'#2#23#3'Top'#3'L'#1#5'Width'#2'H'
+  +'ght'#2#27#3'Top'#3','#1#5'Width'#2'H'#8'TabOrder'#2#9#4'Text'#6#1'0'#0#0#5
+  +'TEdit'#6'Edit11'#4'Left'#3#205#0#6'Height'#2#27#3'Top'#3'L'#1#5'Width'#2'H'
   +#8'TabOrder'#2#10#4'Text'#6#1'0'#0#0#5'TEdit'#6'Edit12'#4'Left'#3'p'#1#6'Hei'
-  +'ght'#2#23#3'Top'#3#168#0#5'Width'#2'H'#8'TabOrder'#2#11#4'Text'#6#1'0'#0#0#5
-  +'TEdit'#6'Edit13'#4'Left'#3'p'#1#6'Height'#2#23#3'Top'#3#234#0#5'Width'#2'H'
+  +'ght'#2#27#3'Top'#3#168#0#5'Width'#2'H'#8'TabOrder'#2#11#4'Text'#6#1'0'#0#0#5
+  +'TEdit'#6'Edit13'#4'Left'#3'p'#1#6'Height'#2#27#3'Top'#3#234#0#5'Width'#2'H'
   +#8'TabOrder'#2#12#4'Text'#6#1'0'#0#0#5'TEdit'#6'Edit14'#4'Left'#3'p'#1#6'Hei'
-  +'ght'#2#23#3'Top'#3#10#1#5'Width'#2'H'#8'TabOrder'#2#13#4'Text'#6#1'0'#0#0#5
-  +'TEdit'#6'Edit15'#4'Left'#2'H'#6'Height'#2#23#3'Top'#2#24#5'Width'#3#176#0#8
+  +'ght'#2#27#3'Top'#3#10#1#5'Width'#2'H'#8'TabOrder'#2#13#4'Text'#6#1'0'#0#0#5
+  +'TEdit'#6'Edit15'#4'Left'#2'H'#6'Height'#2#27#3'Top'#2#24#5'Width'#3#176#0#8
   +'TabOrder'#2#14#4'Text'#6#26'Input Fertilizer Name Here'#0#0#5'TEdit'#6'Edit'
-  ,'16'#4'Left'#3'p'#1#6'Height'#2#23#3'Top'#3','#1#5'Width'#2'H'#8'TabOrder'#2
-  +#15#4'Text'#6#3'100'#0#0#5'TEdit'#6'Edit17'#4'Left'#2'H'#6'Height'#2#23#3'To'
+  ,'16'#4'Left'#3'p'#1#6'Height'#2#27#3'Top'#3','#1#5'Width'#2'H'#8'TabOrder'#2
+  +#15#4'Text'#6#3'100'#0#0#5'TEdit'#6'Edit17'#4'Left'#2'H'#6'Height'#2#27#3'To'
   +'p'#2'8'#5'Width'#3#176#0#8'TabOrder'#2#16#4'Text'#6#18'Input Formula Here'#0
-  +#0#5'TEdit'#6'Edit18'#4'Left'#3'p'#1#6'Height'#2#23#3'Top'#3#200#0#5'Width'#2
+  +#0#5'TEdit'#6'Edit18'#4'Left'#3'p'#1#6'Height'#2#27#3'Top'#3#200#0#5'Width'#2
   +'H'#8'TabOrder'#2#17#4'Text'#6#1'0'#0#0#5'TEdit'#6'Edit19'#4'Left'#2']'#6'He'
-  +'ight'#2#23#3'Top'#3#200#0#5'Width'#2'@'#8'TabOrder'#2#18#4'Text'#6#1'0'#0#0
-  +#5'TEdit'#6'Edit20'#4'Left'#3#24#1#6'Height'#2#23#3'Top'#2'8'#5'Width'#2'f'#8
+  +'ight'#2#27#3'Top'#3#200#0#5'Width'#2'@'#8'TabOrder'#2#18#4'Text'#6#1'0'#0#0
+  +#5'TEdit'#6'Edit20'#4'Left'#3#24#1#6'Height'#2#27#3'Top'#2'8'#5'Width'#2'f'#8
   +'TabOrder'#2#19#4'Text'#6#1'0'#0#0#5'TEdit'#6'Edit21'#4'Left'#3'p'#1#6'Heigh'
-  +'t'#2#23#3'Top'#3'L'#1#5'Width'#2'H'#8'TabOrder'#2#20#4'Text'#6#3'100'#0#0#6
-  +'TLabel'#7'Label22'#4'Left'#2'U'#6'Height'#2#16#3'Top'#2'c'#5'Width'#2'P'#7
+  +'t'#2#27#3'Top'#3'L'#1#5'Width'#2'H'#8'TabOrder'#2#20#4'Text'#6#3'100'#0#0#6
+  +'TLabel'#7'Label22'#4'Left'#2'U'#6'Height'#2#17#3'Top'#2'c'#5'Width'#2'Q'#7
   +'Caption'#6#14'Density (g/mL)'#11'ParentColor'#8#0#0#5'TEdit'#6'Edit22'#4'Le'
-  +'ft'#3#170#0#6'Height'#2#23#3'Top'#2'`'#5'Width'#2'H'#8'TabOrder'#2#21#4'Tex'
-  +'t'#6#3'1.0'#0#0#9'TCheckBox'#9'CheckBox2'#4'Left'#2#16#6'Height'#2#19#3'Top'
-  +#2'b'#5'Width'#2'5'#7'Caption'#6#6'Liquid'#8'OnChange'#7#15'CheckBox2Change'
+  +'ft'#3#170#0#6'Height'#2#27#3'Top'#2'`'#5'Width'#2'H'#8'TabOrder'#2#21#4'Tex'
+  +'t'#6#3'1.0'#0#0#9'TCheckBox'#9'CheckBox2'#4'Left'#2#16#6'Height'#2#22#3'Top'
+  +#2'b'#5'Width'#2'9'#7'Caption'#6#6'Liquid'#8'OnChange'#7#15'CheckBox2Change'
   +#8'TabOrder'#2#22#0#0#7'TBitBtn'#7'Button1'#4'Left'#2#24#6'Height'#2')'#3'To'
   +'p'#3'x'#1#5'Width'#3#208#0#7'Caption'#6#15'Add to Database'#7'Enabled'#8#10
   +'Glyph.Data'#10#254#9#0#0#250#9#0#0'BM'#250#9#0#0#0#0#0#0'6'#0#0#0'('#0#0#0
@@ -251,15 +251,15 @@ LazarusResources.Add('TForm3','FORMDATA',[
   +#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#0#7'OnClick'#7
   +#12'Button2Click'#8'TabOrder'#2#24#0#0#6'TLabel'#7'Label23'#4'Left'#2'I'#6'H'
   +'eight'#2#1#3'Top'#2#9#5'Width'#2#1#11'ParentColor'#8#7'Visible'#8#0#0#9'TCo'
-  +'mboBox'#9'ComboBox3'#4'Left'#3'-'#1#6'Height'#2#23#3'Top'#3#232#0#5'Width'#2
-  +'5'#10'ItemHeight'#2#15#9'ItemIndex'#2#0#13'Items.Strings'#1#6#2'Si'#6#4'SiO'
-  +'2'#0#8'OnChange'#7#15'ComboBox3Change'#5'Style'#7#14'csDropDownList'#8'TabO'
-  +'rder'#2#25#4'Text'#6#2'Si'#0#0#9'TComboBox'#9'ComboBox1'#4'Left'#2#16#6'Hei'
-  +'ght'#2#23#3'Top'#3#234#0#5'Width'#2'5'#10'ItemHeight'#2#15#9'ItemIndex'#2#0
-  +#13'Items.Strings'#1#6#1'P'#6#4'P2O5'#0#8'OnChange'#7#15'ComboBox1Change'#5
-  ,'Style'#7#14'csDropDownList'#8'TabOrder'#2#26#4'Text'#6#1'P'#0#0#9'TComboBox'
-  +#9'ComboBox2'#4'Left'#2#16#6'Height'#2#23#3'Top'#3#13#1#5'Width'#2'5'#10'Ite'
-  +'mHeight'#2#15#9'ItemIndex'#2#0#13'Items.Strings'#1#6#1'K'#6#3'K2O'#0#8'OnCh'
-  +'ange'#7#15'ComboBox2Change'#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#27#4
-  +'Text'#6#1'K'#0#0#0
+  +'mboBox'#9'ComboBox3'#4'Left'#3'-'#1#6'Height'#2#27#3'Top'#3#232#0#5'Width'#2
+  +'5'#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#2'Si'#6#4'SiO2'
+  +#0#8'OnChange'#7#15'ComboBox3Change'#5'Style'#7#14'csDropDownList'#8'TabOrde'
+  +'r'#2#25#4'Text'#6#2'Si'#0#0#9'TComboBox'#9'ComboBox1'#4'Left'#2#16#6'Height'
+  +#2#27#3'Top'#3#234#0#5'Width'#2'5'#10'ItemHeight'#2#0#9'ItemIndex'#2#0#13'It'
+  +'ems.Strings'#1#6#1'P'#6#4'P2O5'#0#8'OnChange'#7#15'ComboBox1Change'#5'Style'
+  ,#7#14'csDropDownList'#8'TabOrder'#2#26#4'Text'#6#1'P'#0#0#9'TComboBox'#9'Com'
+  +'boBox2'#4'Left'#2#16#6'Height'#2#27#3'Top'#3#13#1#5'Width'#2'5'#10'ItemHeig'
+  +'ht'#2#0#9'ItemIndex'#2#0#13'Items.Strings'#1#6#1'K'#6#3'K2O'#0#8'OnChange'#7
+  +#15'ComboBox2Change'#5'Style'#7#14'csDropDownList'#8'TabOrder'#2#27#4'Text'#6
+  +#1'K'#0#0#0
 ]);
