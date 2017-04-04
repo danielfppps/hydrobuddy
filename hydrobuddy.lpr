@@ -21,9 +21,10 @@ MyDbf: TDbf;
 
 begin
 
+DefaultFormatSettings.DecimalSeparator := '.'    ;
   Form13.RadioButton2.Checked := true ;
 
- MyDbf := TDbf.Create(nil) ;
+   MyDbf := TDbf.Create(nil) ;
    MyDbf.FilePathFull := '';
    MyDbf.TableName := water_quality_db;
    MyDbf.Open             ;
