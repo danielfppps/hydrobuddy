@@ -1,7 +1,7 @@
 object Form15: TForm15
-  Left = 209
+  Left = 316
   Height = 443
-  Top = 320
+  Top = 378
   Width = 901
   BorderStyle = bsToolWindow
   Caption = 'Commercial Nutrient Contribution Comparison'
@@ -10,7 +10,7 @@ object Form15: TForm15
   PopupMode = pmExplicit
   PopupParent = Form5.Owner
   Position = poMainFormCenter
-  LCLVersion = '0.9.31'
+  LCLVersion = '2.0.8.0'
   object StringGrid1: TStringGrid
     Left = 8
     Height = 392

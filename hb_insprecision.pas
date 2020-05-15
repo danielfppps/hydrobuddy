@@ -19,6 +19,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     procedure Button1Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { private declarations }
   public
@@ -36,6 +37,11 @@ procedure TForm7.Button1Click(Sender: TObject);
 begin
 
 Form7.Visible := false ;
+
+end;
+
+procedure TForm7.FormCreate(Sender: TObject);
+begin
 
 end;
 
