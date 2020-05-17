@@ -63,14 +63,15 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HB_Main"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="360"/>
-        <CursorPos X="3" Y="362"/>
+        <TopLine Value="770"/>
+        <CursorPos X="9" Y="856"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
-          <Item0 X="34" Y="741"/>
-          <Item1 X="3" Y="1438" ID="1"/>
+          <Item0 X="34" Y="742"/>
+          <Item1 X="3" Y="1439" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -81,10 +82,9 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="592"/>
-        <CursorPos X="22" Y="611"/>
+        <TopLine Value="458"/>
+        <CursorPos X="58" Y="468"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -97,8 +97,8 @@
         <ResourceBaseClass Value="Form"/>
         <EditorIndex Value="2"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="180"/>
-        <CursorPos X="19" Y="193"/>
+        <TopLine Value="195"/>
+        <CursorPos X="13" Y="208"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -302,7 +302,7 @@
         <WindowIndex Value="1"/>
         <TopLine Value="50"/>
         <CursorPos X="26" Y="72"/>
-        <UsageCount Value="169"/>
+        <UsageCount Value="172"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit23>
@@ -316,7 +316,7 @@
         <WindowIndex Value="1"/>
         <TopLine Value="38"/>
         <CursorPos X="46" Y="59"/>
-        <UsageCount Value="167"/>
+        <UsageCount Value="170"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit24>
@@ -351,7 +351,7 @@
         <WindowIndex Value="1"/>
         <TopLine Value="22"/>
         <CursorPos X="28" Y="41"/>
-        <UsageCount Value="108"/>
+        <UsageCount Value="111"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit28>
@@ -380,131 +380,127 @@
         <WindowIndex Value="1"/>
         <TopLine Value="2896"/>
         <CursorPos Y="2911"/>
-        <UsageCount Value="10"/>
+        <UsageCount Value="12"/>
         <Loaded Value="True"/>
       </Unit32>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
-        <Filename Value="hydrobuddy.lpr"/>
-        <Caret Line="24" Column="51" TopLine="14"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="2803" Column="7" TopLine="2778"/>
       </Position1>
       <Position2>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1454" Column="8" TopLine="1448"/>
+        <Caret Line="3028" Column="42" TopLine="3000"/>
       </Position2>
       <Position3>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1958" Column="95" TopLine="1949"/>
+        <Caret Line="3028" Column="42" TopLine="3000"/>
       </Position3>
       <Position4>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="15" Column="47"/>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="225" Column="44" TopLine="215"/>
       </Position4>
       <Position5>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="592" Column="18" TopLine="583"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="193" Column="19" TopLine="180"/>
       </Position5>
       <Position6>
-        <Filename Value="hb_insprecision.pas"/>
-        <Caret Line="26" Column="42" TopLine="4"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="194" Column="19" TopLine="181"/>
       </Position6>
       <Position7>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="14" Column="94" TopLine="3700"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="115" Column="44" TopLine="106"/>
       </Position7>
       <Position8>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="269" Column="59" TopLine="267"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3005" Column="3" TopLine="2990"/>
       </Position8>
       <Position9>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="270" Column="59" TopLine="268"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1443" Column="60" TopLine="1423"/>
       </Position9>
       <Position10>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="271" Column="59" TopLine="269"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1445" Column="38" TopLine="1424"/>
       </Position10>
       <Position11>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="272" Column="59" TopLine="270"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3656" TopLine="3652"/>
       </Position11>
       <Position12>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="273" Column="59" TopLine="271"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3727" Column="51" TopLine="3712"/>
       </Position12>
       <Position13>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="388" Column="3" TopLine="382"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3726" Column="26" TopLine="3710"/>
       </Position13>
       <Position14>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="564" Column="8" TopLine="548"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3728" Column="6" TopLine="3708"/>
       </Position14>
       <Position15>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="576" Column="25" TopLine="554"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1699" Column="58" TopLine="1679"/>
       </Position15>
       <Position16>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="591" Column="22" TopLine="569"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1525" Column="30" TopLine="1506"/>
       </Position16>
       <Position17>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="375" Column="36" TopLine="358"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="2071" Column="38" TopLine="2051"/>
       </Position17>
       <Position18>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="273" TopLine="454"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3732" Column="8" TopLine="3721"/>
       </Position18>
       <Position19>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="623" Column="22" TopLine="611"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="522" Column="3" TopLine="518"/>
       </Position19>
       <Position20>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="741" Column="33" TopLine="722"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="115" Column="44" TopLine="106"/>
       </Position20>
       <Position21>
         <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="587" Column="18" TopLine="574"/>
+        <Caret Line="245" Column="46" TopLine="223"/>
       </Position21>
       <Position22>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="599" Column="20" TopLine="403"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3739" Column="20" TopLine="3722"/>
       </Position22>
       <Position23>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="148" TopLine="146"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="15" Column="72"/>
       </Position23>
       <Position24>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="561" Column="4" TopLine="558"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="231" Column="32" TopLine="206"/>
       </Position24>
       <Position25>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="595" Column="16" TopLine="582"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="233" Column="70" TopLine="206"/>
       </Position25>
       <Position26>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="592" Column="22" TopLine="577"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="526" Column="35" TopLine="1048"/>
       </Position26>
       <Position27>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="639" Column="20" TopLine="616"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1439" Column="3" TopLine="1429"/>
       </Position27>
       <Position28>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="641" Column="27" TopLine="621"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1635" Column="9" TopLine="1754"/>
       </Position28>
       <Position29>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="639" Column="63" TopLine="590"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1901" Column="35" TopLine="1890"/>
       </Position29>
-      <Position30>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="640" Column="14" TopLine="622"/>
-      </Position30>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

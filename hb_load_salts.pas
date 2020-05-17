@@ -157,6 +157,7 @@ values_to_copy : array of double ;
 name1 : string ;
 conctype : string ;
 formula1 : string ;
+source: string;
 begin
 
 if ListBox1.SelCount = 0 then // No ítems selected
@@ -213,6 +214,7 @@ begin
     values_to_copy[17] := MyDbf.FieldByName('Cost').AsFloat ;
     values_to_copy[18] := MyDbf.FieldByName('IsLiquid').AsFloat ;
     values_to_copy[19] := MyDbf.FieldByName('Density').AsFloat ;
+    source := MyDbf.FieldByName('Source').AsString ;
     conctype := MyDbf.FieldByName('ConcType').AsString ;
 
     MyDbf_used.Insert ;
@@ -240,6 +242,7 @@ begin
     MyDbf_used.FieldByName('Cost').AsFloat:= values_to_copy[17] ;
     MyDbf_used.FieldByName('IsLiquid').AsInteger:=Round(values_to_copy[18]);
     MyDbf_used.FieldByName('Density').AsFloat := values_to_copy[19] ;
+    MyDbf_used.FieldByName('Source').AsString := source ;
     MyDbf_used.FieldByName('ConcType').AsString:= conctype ;
 
     MyDbf_used.Post ;
@@ -465,6 +468,7 @@ begin
 
     hb_newcustomsalt.Form3.Edit15.text := MyDbf.FieldByName('Name').AsString;
     hb_newcustomsalt.Form3.Edit17.text := MyDbf.FieldByName('Formula').AsString;
+    hb_newcustomsalt.Form3.Edit23.text := MyDbf.FieldByName('Source').AsString;
     hb_newcustomsalt.Form3.Edit16.text := FloattoStr(MyDbf.FieldByName('Purity').AsFloat*100) ;
     hb_newcustomsalt.Form3.Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
     hb_newcustomsalt.Form3.Edit3.text := MyDbf.FieldByName('P').AsString ;

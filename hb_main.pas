@@ -221,6 +221,7 @@ type
     procedure RadioButton7Change(Sender: TObject);
     procedure RadioButton8Change(Sender: TObject);
     procedure RadioButton9Change(Sender: TObject);
+    procedure StringGrid2EditButtonClick(Sender: TObject);
     procedure StringGrid2EditingDone(Sender: TObject);
     procedure ToggleBox1Change(Sender: TObject);
   private
@@ -1643,7 +1644,7 @@ if RadioButton13.Checked then
 
     SetLength(solutions, arraysize);
 
-    SetLength(name_array, arraysize, 2);
+    SetLength(name_array, arraysize, 3);
 
     SetLength(ConcTypeArray, arraysize);
 
@@ -1871,6 +1872,7 @@ if RadioButton13.Checked then
     begin
       name_array[i][0] := MyDbf.FieldByName('Name').AsString;
       name_array[i][1] := MyDbf.FieldByName('Formula').AsString;
+      name_array[i][2] := MyDbf.FieldByName('Source').AsString;
 
       // if conditional for when A+B solutions are needed
       if Radiobutton6.Checked then
@@ -2067,6 +2069,7 @@ if RadioButton13.Checked then
         begin
 
           StringGrid2.Cells[0,i+1] := (name_array[i][0]);
+          StringGrid2.Cells[4,i+1] := (name_array[i][2]);
 
           if (IsLiquid[0,i] = 0)         or
              (CheckBox6.Checked = false) then
@@ -2098,6 +2101,7 @@ if RadioButton13.Checked then
         begin
 
           StringGrid2.Cells[0,i+1] := (ConcTypeArray[i] + ' - ' + name_array[i][0]);
+          StringGrid2.Cells[4,i+1] := (name_array[i][2]);
 
            if (IsLiquid[0,i] = 0)         or
              (CheckBox6.Checked = false) then
@@ -2150,6 +2154,7 @@ if RadioButton13.Checked then
         begin
 
           StringGrid2.Cells[0,i+1] := (name_array[i][0]);
+          StringGrid2.Cells[4,i+1] := (name_array[i][2]);
           StringGrid2.Cells[2,i+1] := (FloatToStr(round2( preloaded_weight[i], 3)));
           StringGrid2.Cells[3,i+1] :=(FloatToStr(round2(0.001*preloaded_weight[i]* cost[i], 1)));
 
@@ -2165,6 +2170,7 @@ if RadioButton13.Checked then
         begin
 
           StringGrid2.Cells[0,i+1] :=(ConcTypeArray[i] + ' - ' + name_array[i][0]);
+          StringGrid2.Cells[4,i+1] := (name_array[i][2]);
 
           StringGrid2.Cells[2,i+1] :=(FloatToStr(
             round2(preloaded_weight[i]*StrtoFloat(Edit17.Text), 3)));
@@ -2782,6 +2788,7 @@ begin
     begin
       Add('Name', ftString, 80, False);
       Add('Formula', ftString, 80, False);
+      Add('Source', ftString, 80, False);
       Add('Purity', ftFloat, 0, False);
       Add('N (NO3-)', ftFloat, 0, False);
       Add('N (NH4+)', ftFloat, 0, False);
@@ -2799,7 +2806,8 @@ begin
       Add('Na', ftFloat, 0, False);
       Add('Si', ftFloat, 0, False);
       Add('Cl', ftFloat, 0, False);
-      Add('EC', ftFloat, 0, False);
+      Add('isLiquid', ftFloat, 0, False);
+      Add('Density', ftFloat, 0, False);
       Add('Cost', ftFloat, 0, False);
       Add('ConcType', ftString, 80, False);
     end;
@@ -2818,7 +2826,7 @@ begin
 
   MyDbf := TDbf.Create(nil);
   MyDbf.FilePathFull := '';
-  MyDbf.TableName := 'substances_backup.dbf';
+  MyDbf.TableName := 'substances_win_backup.dbf';
   MyDbf.Open;
 
   MyDbf.First;
@@ -2989,17 +2997,20 @@ begin
     { we want to use Visual dBase VII compatible tables }
     MyDbf.TableLevel := 7;
     MyDbf.Exclusive  := True;
-    MyDbf.TableName  := 'datalog.dbf';
+    MyDbf.TableName  := 'substances_used_win.dbf';
     with MyDbf.FieldDefs do
     begin
-      Add('Name', ftString, 80, False);
+   {   Add('Name', ftString, 80, False);
       Add('Time', ftDateTime, 0, False);
       Add('pH1', ftFloat, 0, False);
       Add('pH2', ftFloat, 0, False);
       Add('EC1', ftFloat, 0, False);
       Add('EC2', ftFloat, 0, False);
       Add('Default', ftString, 80, False);
-     { Add('Formula', ftString, 80, False);
+      }
+      Add('Name', ftString, 80, False);
+      Add('Formula', ftString, 80, False);
+      Add('Source', ftString, 80, False);
       Add('Purity', ftFloat, 0, False);
       Add('Cost', ftFloat, 0, False);
       Add('Weight', ftFloat, 0, False);
@@ -3020,14 +3031,15 @@ begin
       Add('Cl', ftFloat, 0, False);
       Add('N (NH4+)', ftFloat, 0, False);
    //  Add('Default', ftInteger, 0, False);
-      Add('EC', ftFloat, 0, False);
-      Add('ConcType', ftString, 80, False); }
+      Add('isLiquid', ftFloat, 0, False);
+      Add('Density', ftFloat, 0, False);
+      Add('ConcType', ftString, 80, False);
     end;
     MyDbf.CreateTable;
     MyDbf.FieldDefs.Clear;
     MyDbf.Open;
-    MyDbf.AddIndex('name', 'Name', [ixCaseInsensitive]);
-    MyDbf.AddIndex('default', 'Default', [ixCaseInsensitive]);
+    //MyDbf.AddIndex('name', 'Name', [ixCaseInsensitive]);
+    //MyDbf.AddIndex('default', 'Default', [ixCaseInsensitive]);
     // MyDbf.AddIndex('formula', 'Formula', [ixCaseInsensitive]);
     MyDbf.Close;
   finally
@@ -3707,6 +3719,21 @@ begin
   StringGrid2.Cells[2,0]  := 'Mass (oz)';
   hb_addweight.Form4.Label1.Caption := 'Mass of Substance Used (oz)';
   cleanresults;
+
+end;
+
+procedure TForm1.StringGrid2EditButtonClick(Sender: TObject);
+var
+  i, j: integer;
+begin
+
+     i := StringGrid2.Row;
+     j := StringGrid2.Col;
+
+     if StringGrid2.Cells[4,i] <> '' then
+     begin
+         OpenURL(StringGrid2.Cells[4,i]);
+     end;
 
 end;
 

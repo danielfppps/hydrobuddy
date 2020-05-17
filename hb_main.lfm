@@ -353,9 +353,9 @@ object Form1: TForm1
     Height = 673
     Top = 0
     Width = 834
-    ActivePage = TabSheet1
+    ActivePage = TabSheet4
     ParentFont = False
-    TabIndex = 1
+    TabIndex = 0
     TabOrder = 0
     object TabSheet4: TTabSheet
       Caption = 'Welcome'
@@ -23180,7 +23180,7 @@ object Form1: TForm1
         Text = '0.5'
       end
       object Button3: TButton
-        Left = 380
+        Left = 376
         Height = 25
         Top = 7
         Width = 91
@@ -23723,8 +23723,8 @@ object Form1: TForm1
     end
     object TabSheet2: TTabSheet
       Caption = 'Results'
-      ClientHeight = 638
-      ClientWidth = 828
+      ClientHeight = 645
+      ClientWidth = 826
       Font.Height = -11
       ParentFont = False
       object Label20: TLabel
@@ -23745,9 +23745,9 @@ object Form1: TForm1
       end
       object Label21: TLabel
         Left = 469
-        Height = 15
+        Height = 13
         Top = 448
-        Width = 101
+        Width = 98
         Caption = 'Predicted EC Value '
         ParentColor = False
       end
@@ -23957,11 +23957,11 @@ object Form1: TForm1
         Height = 248
         Top = 13
         Width = 693
-        ColCount = 4
         Columns = <        
           item
+            ButtonStyle = cbsButtonColumn
             ReadOnly = True
-            Title.Caption = 'Substance Name'
+            Title.Caption = 'Substance Name [click for url]'
           end        
           item
             Alignment = taCenter
@@ -23979,6 +23979,10 @@ object Form1: TForm1
             ReadOnly = True
             Title.Alignment = taCenter
             Title.Caption = 'Preparation Cost'
+          end        
+          item
+            Title.Caption = 'Source'
+            Visible = False
           end>
         DefaultColWidth = 170
         DefaultRowHeight = 20
@@ -23987,13 +23991,14 @@ object Form1: TForm1
         RowCount = 1
         TabOrder = 6
         TitleFont.Height = -11
+        OnEditButtonClick = StringGrid2EditButtonClick
         OnEditingDone = StringGrid2EditingDone
       end
       object Label18: TLabel
         Left = 452
         Height = 18
         Top = 277
-        Width = 82
+        Width = 72
         Caption = 'Total Cost'
         Font.Height = -15
         Font.Name = 'Sans'

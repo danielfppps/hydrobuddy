@@ -34,6 +34,7 @@ type
     Edit20: TEdit;
     Edit21: TEdit;
     Edit22: TEdit;
+    Edit23: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
     Edit5: TEdit;
@@ -108,6 +109,7 @@ MyDbf.Insert ;
 
 MyDbf.FieldByName('Name').AsString:= Edit15.Text ;
 MyDbf.FieldByName('Formula').AsString:= Edit17.Text;
+MyDbf.FieldByName('Source').AsString:= Edit23.Text;
 MyDbf.FieldByName('Purity').AsFloat:=StrtoFloat(Edit16.Text)/100 ;
 
 if currentValP = 0 then
@@ -207,6 +209,7 @@ MyDbf.Filter := 'Name=' + QuotedStr(Label23.Caption) ;
 
                MyDbf.FieldByName('Name').AsString:= Edit15.Text ;
                MyDbf.FieldByName('Formula').AsString:= Edit17.Text;
+               MyDbf.FieldByName('Source').AsString:= Edit23.Text;
                MyDbf.FieldByName('Purity').AsFloat:=StrtoFloat(Edit16.Text)/100 ;
                MyDbf.FieldByName('N (NO3-)').AsFloat:=StrtoFloat(Edit1.Text);
 
