@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 786
+  Left = 915
   Height = 674
-  Top = 181
+  Top = 58
   Width = 834
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
@@ -9,7 +9,7 @@ object Form1: TForm1
   VertScrollBar.Range = 673
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'HydroBuddy v1.7 - Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
+  Caption = 'HydroBuddy v1.8 - Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
   ClientHeight = 674
   ClientWidth = 834
   DragKind = dkDock
@@ -353,9 +353,9 @@ object Form1: TForm1
     Height = 673
     Top = 0
     Width = 834
-    ActivePage = TabSheet4
+    ActivePage = TabSheet1
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
     object TabSheet4: TTabSheet
       Caption = 'Welcome'
@@ -23213,10 +23213,10 @@ object Form1: TForm1
       end
       object Panel4: TPanel
         Left = 640
-        Height = 112
+        Height = 72
         Top = 280
         Width = 153
-        ClientHeight = 112
+        ClientHeight = 72
         ClientWidth = 153
         ParentFont = False
         TabOrder = 22
@@ -23229,10 +23229,10 @@ object Form1: TForm1
           ParentColor = False
         end
         object RadioButton8: TRadioButton
-          Left = 39
+          Left = 8
           Height = 19
           Hint = 'Sets the weight outputs of the program to grams'
-          Top = 40
+          Top = 32
           Width = 54
           Caption = 'Grams'
           Checked = True
@@ -23241,10 +23241,10 @@ object Form1: TForm1
           TabStop = True
         end
         object RadioButton9: TRadioButton
-          Left = 39
+          Left = 71
           Height = 19
           Hint = 'Sets the weight outputs of the program to ounces'
-          Top = 64
+          Top = 32
           Width = 60
           Caption = 'Ounces'
           OnChange = RadioButton9Change
@@ -23719,6 +23719,46 @@ object Form1: TForm1
         Caption = 'Zero all targets'
         OnClick = Button15Click
         TabOrder = 31
+      end
+      object Panel9: TPanel
+        Left = 640
+        Height = 55
+        Top = 336
+        Width = 153
+        ClientHeight = 55
+        ClientWidth = 153
+        ParentFont = False
+        TabOrder = 32
+        object Label25: TLabel
+          Left = 41
+          Height = 15
+          Top = 8
+          Width = 51
+          Caption = 'EC Model'
+          ParentColor = False
+        end
+        object RadioButton14: TRadioButton
+          Left = 8
+          Height = 19
+          Hint = 'Model using limiting molar conductivity values to estimate EC'
+          Top = 32
+          Width = 45
+          Caption = 'LMC'
+          Checked = True
+          OnChange = RadioButton8Change
+          TabOrder = 0
+          TabStop = True
+        end
+        object RadioButton15: TRadioButton
+          Left = 71
+          Height = 19
+          Hint = 'Empirical model created using experimental data. Works best when only these salts are used for macronutrients:'#13#10#13#10'Calcium nitrate (ag grade)'#13#10'Potassium sulfate'#13#10'Potassium monobasic phosphate'#13#10'Magnesium sulfate (heptahydrate)'#13#10'Ammonium sulfate'
+          Top = 32
+          Width = 69
+          Caption = 'Empirical'
+          OnChange = RadioButton9Change
+          TabOrder = 1
+        end
       end
     end
     object TabSheet2: TTabSheet

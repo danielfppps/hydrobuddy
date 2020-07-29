@@ -101,6 +101,7 @@ type
     Label22:    TLabel;
     Label23:    TLabel;
     Label24:    TLabel;
+    Label25: TLabel;
     Label36: TLabel;
     Label45:    TLabel;
     Label51: TLabel;
@@ -114,11 +115,14 @@ type
     Panel6:     TPanel;
     Panel7:     TPanel;
     Panel8: TPanel;
+    Panel9: TPanel;
     PopupMenu1: TPopupMenu;
     RadioButton10: TRadioButton;
     RadioButton11: TRadioButton;
     RadioButton12: TRadioButton;
     RadioButton13: TRadioButton;
+    RadioButton14: TRadioButton;
+    RadioButton15: TRadioButton;
     RadioButton8: TRadioButton;
     RadioButton9: TRadioButton;
     RLabel1:    TLabel;
@@ -581,22 +585,45 @@ begin
 
   SetLength(ec_contribution, 16);
 
-  ec_contribution[0]  := 71.46 / 14;
-  ec_contribution[1]  := 73 / 39;
-  ec_contribution[2]  := 57 / 31;
-  ec_contribution[3]  := 106 / 24.30;
-  ec_contribution[4]  := 119 / 40;
-  ec_contribution[5]  := 160 / 32;
-  ec_contribution[6]  := 108.0 / 56;
-  ec_contribution[7]  := 0;
-  ec_contribution[8]  := 0;
-  ec_contribution[9]  := 0;
-  ec_contribution[10] := 0;
-  ec_contribution[11] := 50.01 / 23;
-  ec_contribution[12] := 100 / 28.09;
-  ec_contribution[13] := 76.35 / 35.5;
-  ec_contribution[14] := 0;
-  ec_contribution[15] := 73.5 / 14;
+  if RadioButton15.Checked = True then
+  begin
+    ec_contribution[0]  := 0.403791;
+    ec_contribution[1]  := -0.110791;
+    ec_contribution[2]  := 0.142525;
+    ec_contribution[3]  := -0.358782;
+    ec_contribution[4]  := -0.283549;
+    ec_contribution[5]  := 0.276118;
+    ec_contribution[6]  := 0;
+    ec_contribution[7]  := 0;
+    ec_contribution[8]  := 0;
+    ec_contribution[9]  := 0;
+    ec_contribution[10] := 0;
+    ec_contribution[11] := 0;
+    ec_contribution[12] := 0;
+    ec_contribution[13] := 0;
+    ec_contribution[14] := 0;
+    ec_contribution[15] := -0.308967;
+  end;
+
+  if RadioButton14.Checked = True then
+  begin
+    ec_contribution[0]  := 71.46 / 14;
+    ec_contribution[1]  := 73 / 39;
+    ec_contribution[2]  := 57 / 31;
+    ec_contribution[3]  := 106 / 24.30;
+    ec_contribution[4]  := 119 / 40;
+    ec_contribution[5]  := 160 / 32;
+    ec_contribution[6]  := 108.0 / 56;
+    ec_contribution[7]  := 0;
+    ec_contribution[8]  := 0;
+    ec_contribution[9]  := 0;
+    ec_contribution[10] := 0;
+    ec_contribution[11] := 50.01 / 23;
+    ec_contribution[12] := 100 / 28.09;
+    ec_contribution[13] := 76.35 / 35.5;
+    ec_contribution[14] := 0;
+    ec_contribution[15] := 73.5 / 14;
+  end;
 
   // define water quality parameters
 
@@ -938,9 +965,8 @@ if RadioButton13.Checked then
 
     end;
 
-
-
-    predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 1);
+    if RadioButton14.Checked = True then predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 3);
+    if RadioButton15.Checked = True then predicted_ec := round2(predicted_ec+0.39661671, 3);
 
     Panel6.Caption := 'EC=' + FloattoStr(predicted_ec) + ' mS/cm';
 
@@ -1456,25 +1482,48 @@ begin
 
   SetLength(ec_contribution, 16);
 
-  ec_contribution[0]  := 71.46 / 14;
-  ec_contribution[1]  := 73 / 39;
-  ec_contribution[2]  := 57 / 31;
-  ec_contribution[3]  := 106 / 24.30;
-  ec_contribution[4]  := 119 / 40;
-  ec_contribution[5]  := 160 / 32;
-  ec_contribution[6]  := 108.0 / 56;
-  ec_contribution[7]  := 0;
-  ec_contribution[8]  := 0;
-  ec_contribution[9]  := 0;
-  ec_contribution[10] := 0;
-  ec_contribution[11] := 50.01 / 23;
-  ec_contribution[12] := 100 / 28.09;
-  ec_contribution[13] := 76.35 / 35.5;
-  ec_contribution[14] := 0;
-  ec_contribution[15] := 73.5 / 14;
+  if RadioButton15.Checked = True then
+  begin
+    ec_contribution[0]  := 0.403791;
+    ec_contribution[1]  := -0.110791;
+    ec_contribution[2]  := 0.142525;
+    ec_contribution[3]  := -0.358782;
+    ec_contribution[4]  := -0.283549;
+    ec_contribution[5]  := 0.276118;
+    ec_contribution[6]  := 0;
+    ec_contribution[7]  := 0;
+    ec_contribution[8]  := 0;
+    ec_contribution[9]  := 0;
+    ec_contribution[10] := 0;
+    ec_contribution[11] := 0;
+    ec_contribution[12] := 0;
+    ec_contribution[13] := 0;
+    ec_contribution[14] := 0;
+    ec_contribution[15] := -0.308967;
+  end;
+
+  if RadioButton14.Checked = True then
+  begin
+    ec_contribution[0]  := 71.46 / 14;
+    ec_contribution[1]  := 73 / 39;
+    ec_contribution[2]  := 57 / 31;
+    ec_contribution[3]  := 106 / 24.30;
+    ec_contribution[4]  := 119 / 40;
+    ec_contribution[5]  := 160 / 32;
+    ec_contribution[6]  := 108.0 / 56;
+    ec_contribution[7]  := 0;
+    ec_contribution[8]  := 0;
+    ec_contribution[9]  := 0;
+    ec_contribution[10] := 0;
+    ec_contribution[11] := 50.01 / 23;
+    ec_contribution[12] := 100 / 28.09;
+    ec_contribution[13] := 76.35 / 35.5;
+    ec_contribution[14] := 0;
+    ec_contribution[15] := 73.5 / 14;
+  end;
+
 
   // define water quality parameters
-
   SetLength(waterquality, 16);
 
   waterquality[0]  := StrtoFloat(hb_waterquality.Form6.Edit1.Text);
@@ -2256,7 +2305,6 @@ if RadioButton13.Checked then
 
     // CALCULATION OF EC
 
-
     predicted_ec := 0;
 
     for i := 1 to 16 do
@@ -2273,7 +2321,8 @@ if RadioButton13.Checked then
 
     end;
 
-    predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 1);
+    if RadioButton14.Checked = True then predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 3);
+    if RadioButton15.Checked = True then predicted_ec := round2(predicted_ec+0.39661671, 3);
 
     Panel6.Caption := 'EC=' + FloattoStr(predicted_ec) + ' mS/cm';
 
@@ -2283,7 +2332,7 @@ if RadioButton13.Checked then
 
     begin
 
-      //first analyze A solution
+      //first analyze A solution      23.0  158.5   30.3  284.6  146.2   58.0  28.3
 
       for i := 0 to 15 do
 
@@ -2689,7 +2738,8 @@ if RadioButton13.Checked then
 
     end;
 
-    predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 1);
+    if RadioButton14.Checked = True then predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 3);
+    if RadioButton15.Checked = True then predicted_ec := round2(predicted_ec+0.39661671, 3);
 
     Panel6.Caption := 'EC=' + FloattoStr(predicted_ec) + ' mS/cm';
 
