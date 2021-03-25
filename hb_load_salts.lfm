@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 335
+  Left = 1925
   Height = 449
-  Top = 436
+  Top = 391
   Width = 689
   HorzScrollBar.Page = 618
   HorzScrollBar.Range = 592
@@ -13,7 +13,8 @@ object Form2: TForm2
   ClientWidth = 689
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
-  LCLVersion = '2.0.8.0'
+  Position = poMainFormCenter
+  LCLVersion = '2.0.13.0'
   object Label1: TLabel
     Left = 66
     Height = 21
@@ -63,7 +64,7 @@ object Form2: TForm2
     Height = 32
     Top = 72
     Width = 128
-    Caption = 'Add '
+    Caption = 'Add to used'
     Enabled = False
     Glyph.Data = {
       460E0000424D460E00000000000036000000280000001E0000001E0000000100
@@ -191,7 +192,7 @@ object Form2: TForm2
     Height = 32
     Top = 112
     Width = 104
-    Caption = 'Delete'
+    Caption = 'Do not use'
     Enabled = False
     Glyph.Data = {
       460E0000424D460E00000000000036000000280000001E0000001E0000000100
@@ -318,7 +319,7 @@ object Form2: TForm2
     Height = 32
     Top = 176
     Width = 128
-    Caption = 'Add Custom'
+    Caption = 'Add New'
     Glyph.Data = {
       FA090000424DFA09000000000000360000002800000019000000190000000100
       200000000000C409000064000000640000000000000000000000000000000000
@@ -501,7 +502,7 @@ object Form2: TForm2
     Height = 32
     Top = 256
     Width = 128
-    Caption = 'Edit Values'
+    Caption = 'Edit selected'
     Enabled = False
     Glyph.Data = {
       FA090000424DFA09000000000000360000002800000019000000190000000100
@@ -593,7 +594,7 @@ object Form2: TForm2
     Height = 32
     Top = 360
     Width = 128
-    Caption = 'Set Weight'
+    Caption = 'Set Amount'
     Glyph.Data = {
       FA090000424DFA09000000000000360000002800000019000000190000000100
       200000000000C409000064000000640000000000000000000000000000000000
@@ -684,7 +685,7 @@ object Form2: TForm2
     Height = 32
     Top = 400
     Width = 128
-    Caption = 'Reset Weights'
+    Caption = 'Reset Amounts'
     Glyph.Data = {
       FA090000424DFA09000000000000360000002800000019000000190000000100
       200000000000C409000064000000640000000000000000000000000000000000
@@ -965,12 +966,12 @@ object Form2: TForm2
     DefaultExt = '.hbl'
     Filter = 'HydroBuddy List|*.hbl'
     FilterIndex = 0
-    left = 240
+    Left = 240
   end
   object SaveDialog1: TSaveDialog
     DefaultExt = '.hbl'
     Filter = 'HydroBuddy List|*.hbl'
     FilterIndex = 0
-    left = 328
+    Left = 328
   end
 end

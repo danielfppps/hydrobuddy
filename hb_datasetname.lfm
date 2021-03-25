@@ -1,19 +1,19 @@
 object Form10: TForm10
-  Left = 301
+  Left = 2499
   Height = 121
-  Top = 320
+  Top = 637
   Width = 258
   BorderStyle = bsToolWindow
   Caption = 'Choose Data Set Name'
   ClientHeight = 121
   ClientWidth = 258
   FormStyle = fsStayOnTop
-  LCLVersion = '0.9.31'
+  LCLVersion = '2.0.13.0'
   object Label1: TLabel
     Left = 32
-    Height = 16
+    Height = 15
     Top = 11
-    Width = 110
+    Width = 109
     Caption = 'Input Data Set Name'
     ParentColor = False
   end

@@ -283,8 +283,9 @@ if Checkbox2.Checked then
 
    begin
 
-   Edit22.Visible := true ;
-   Label22.Visible := true ;
+   //Edit22.Visible := true ;
+   //Label22.Visible := true ;
+   Label21.Caption := 'Please input values as W/V%';
 
    end;
 
@@ -292,8 +293,9 @@ if Checkbox2.Checked then
 
    begin
 
-   Edit22.Visible := false ;
-   Label22.Visible := false ;
+   //Edit22.Visible := false ;
+   //Label22.Visible := false ;
+   Label21.Caption := 'Please input values as W/W%';
 
    end;
 

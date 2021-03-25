@@ -22,6 +22,9 @@
       <Version Value="2"/>
     </PublishOptions>
     <RunParams>
+      <local>
+        <LaunchingApplication PathPlusParams="\usr\X11R6\bin\xterm -T 'Lazarus Run Output' -e $(LazarusDir)\tools\runwait.sh $(TargetCmdLine)"/>
+      </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
@@ -48,10 +51,10 @@
       <Unit0>
         <Filename Value="hydrobuddy.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="8"/>
+        <EditorIndex Value="7"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="11"/>
-        <CursorPos X="46" Y="24"/>
+        <TopLine Value="66"/>
+        <CursorPos Y="72"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -63,15 +66,14 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HB_Main"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="7"/>
+        <EditorIndex Value="6"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1500"/>
-        <CursorPos X="74" Y="1508"/>
+        <TopLine Value="2312"/>
+        <CursorPos X="24" Y="2324"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
-          <Item0 X="34" Y="769"/>
-          <Item1 X="3" Y="1465" ID="1"/>
+          <Item0 X="34" Y="807"/>
+          <Item1 X="3" Y="1581" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -83,8 +85,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="458"/>
-        <CursorPos X="58" Y="468"/>
+        <TopLine Value="392"/>
+        <CursorPos X="24" Y="409"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -95,10 +97,10 @@
         <ComponentName Value="Form3"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="195"/>
-        <CursorPos X="13" Y="208"/>
+        <TopLine Value="278"/>
+        <CursorPos X="46" Y="293"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -128,10 +130,10 @@
         <ComponentName Value="Form4"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <WindowIndex Value="1"/>
         <TopLine Value="11"/>
-        <CursorPos Y="34"/>
+        <CursorPos X="24" Y="25"/>
         <UsageCount Value="230"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -142,13 +144,12 @@
         <ComponentName Value="Form5"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="14"/>
+        <EditorIndex Value="13"/>
         <WindowIndex Value="1"/>
         <TopLine Value="345"/>
         <CursorPos X="26" Y="370"/>
         <UsageCount Value="224"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="hb_waterquality.pas"/>
@@ -156,7 +157,7 @@
         <ComponentName Value="Form6"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="15"/>
+        <EditorIndex Value="14"/>
         <WindowIndex Value="1"/>
         <TopLine Value="228"/>
         <CursorPos X="3" Y="230"/>
@@ -169,13 +170,12 @@
         <ComponentName Value="Form7"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="17"/>
+        <EditorIndex Value="16"/>
         <WindowIndex Value="1"/>
         <TopLine Value="21"/>
         <CursorPos X="3" Y="45"/>
         <UsageCount Value="202"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit10>
       <Unit11>
         <Filename Value="hb_stockanalysis.pas"/>
@@ -183,7 +183,7 @@
         <ComponentName Value="Form8"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="13"/>
+        <EditorIndex Value="12"/>
         <WindowIndex Value="1"/>
         <TopLine Value="18"/>
         <CursorPos X="45" Y="19"/>
@@ -196,7 +196,7 @@
         <ComponentName Value="Form9"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="12"/>
+        <EditorIndex Value="11"/>
         <WindowIndex Value="1"/>
         <TopLine Value="8"/>
         <CursorPos X="32" Y="23"/>
@@ -209,7 +209,7 @@
         <ComponentName Value="Form10"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="3"/>
         <WindowIndex Value="1"/>
         <TopLine Value="18"/>
         <CursorPos X="22" Y="24"/>
@@ -223,13 +223,12 @@
         <ComponentName Value="Form11"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="11"/>
+        <EditorIndex Value="10"/>
         <WindowIndex Value="1"/>
         <TopLine Value="15"/>
         <CursorPos X="71" Y="40"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit14>
       <Unit15>
         <Filename Value="D:\lazarus\components\codetools\definetemplates.pas"/>
@@ -240,7 +239,7 @@
       </Unit15>
       <Unit16>
         <Filename Value="descriptivestatistics.pas"/>
-        <EditorIndex Value="10"/>
+        <EditorIndex Value="9"/>
         <WindowIndex Value="1"/>
         <TopLine Value="132"/>
         <CursorPos X="24" Y="160"/>
@@ -265,13 +264,12 @@
         <ComponentName Value="Form12"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="9"/>
+        <EditorIndex Value="8"/>
         <WindowIndex Value="1"/>
         <TopLine Value="14"/>
         <CursorPos X="15" Y="30"/>
         <UsageCount Value="204"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit19>
       <Unit20>
         <Filename Value="ping.pas"/>
@@ -298,13 +296,12 @@
         <ComponentName Value="Form13"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="16"/>
+        <EditorIndex Value="15"/>
         <WindowIndex Value="1"/>
         <TopLine Value="50"/>
         <CursorPos X="26" Y="72"/>
-        <UsageCount Value="176"/>
+        <UsageCount Value="187"/>
         <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit23>
       <Unit24>
         <Filename Value="hb_ratios.pas"/>
@@ -312,11 +309,11 @@
         <ComponentName Value="Form14"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="4"/>
         <WindowIndex Value="1"/>
         <TopLine Value="38"/>
         <CursorPos X="46" Y="59"/>
-        <UsageCount Value="174"/>
+        <UsageCount Value="185"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit24>
@@ -347,11 +344,12 @@
         <ComponentName Value="Form15"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="6"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="5"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="22"/>
+        <TopLine Value="19"/>
         <CursorPos X="28" Y="41"/>
-        <UsageCount Value="115"/>
+        <UsageCount Value="126"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit28>
@@ -376,134 +374,133 @@
       </Unit31>
       <Unit32>
         <Filename Value="C:\lazarus\lcl\include\control.inc"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <WindowIndex Value="1"/>
         <TopLine Value="2896"/>
         <CursorPos Y="2911"/>
         <UsageCount Value="13"/>
-        <Loaded Value="True"/>
       </Unit32>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2274" Column="22" TopLine="2258"/>
+        <Caret Line="1610" Column="16" TopLine="1590"/>
       </Position1>
       <Position2>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2277" Column="25" TopLine="1603"/>
+        <Caret Line="228" Column="32" TopLine="218"/>
       </Position2>
       <Position3>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="2687" Column="48" TopLine="2672"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="208" Column="13" TopLine="195"/>
       </Position3>
       <Position4>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2693" Column="5" TopLine="2672"/>
+        <Caret Line="1854" Column="5" TopLine="1847"/>
       </Position4>
       <Position5>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1469" Column="51" TopLine="1450"/>
+        <Caret Line="1855" Column="5" TopLine="1848"/>
       </Position5>
       <Position6>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1437" Column="15" TopLine="1956"/>
+        <Caret Line="1856" Column="5" TopLine="1849"/>
       </Position6>
       <Position7>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1443" Column="93" TopLine="1422"/>
+        <Caret Line="1855" Column="5" TopLine="1848"/>
       </Position7>
       <Position8>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1662" Column="57" TopLine="1648"/>
+        <Caret Line="1854" Column="5" TopLine="1847"/>
       </Position8>
       <Position9>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2269" Column="35" TopLine="2255"/>
+        <Caret Line="1855" Column="5" TopLine="1848"/>
       </Position9>
       <Position10>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2271" Column="64" TopLine="2256"/>
+        <Caret Line="1862" Column="5" TopLine="1855"/>
       </Position10>
       <Position11>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1465" Column="34" TopLine="1456"/>
+        <Caret Line="268" Column="15" TopLine="264"/>
       </Position11>
       <Position12>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2269" Column="42" TopLine="1453"/>
+        <Caret Line="1295" TopLine="1292"/>
       </Position12>
       <Position13>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2273" Column="42" TopLine="2243"/>
+        <Caret Line="1319" Column="80" TopLine="1301"/>
       </Position13>
       <Position14>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2272" Column="42" TopLine="2242"/>
+        <Caret Line="1303" Column="81" TopLine="1287"/>
       </Position14>
       <Position15>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2271" Column="42" TopLine="2241"/>
+        <Caret Line="258" Column="9" TopLine="243"/>
       </Position15>
       <Position16>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2270" Column="42" TopLine="2240"/>
+        <Caret Line="1306" TopLine="1290"/>
       </Position16>
       <Position17>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2269" Column="42" TopLine="2239"/>
+        <Caret Line="1315" Column="42" TopLine="1295"/>
       </Position17>
       <Position18>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1710" Column="50" TopLine="1692"/>
+        <Caret Line="1316" Column="42" TopLine="1296"/>
       </Position18>
       <Position19>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2310" Column="89" TopLine="2282"/>
+        <Caret Line="1315" Column="42" TopLine="1295"/>
       </Position19>
       <Position20>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="23" Column="60"/>
+        <Caret Line="1316" Column="42" TopLine="1296"/>
       </Position20>
       <Position21>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="586" Column="37" TopLine="763"/>
+        <Caret Line="1315" Column="42" TopLine="1295"/>
       </Position21>
       <Position22>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="606" Column="37" TopLine="588"/>
+        <Caret Line="1317" Column="42" TopLine="1297"/>
       </Position22>
       <Position23>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="948" Column="10" TopLine="934"/>
+        <Filename Value="hydrobuddy.lpr"/>
+        <Caret Line="117" Column="14" TopLine="94"/>
       </Position23>
       <Position24>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="14" Column="53"/>
+        <Caret Line="1340" TopLine="1331"/>
       </Position24>
       <Position25>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2875" Column="72" TopLine="2856"/>
+        <Caret Line="1338" Column="3" TopLine="1331"/>
       </Position25>
       <Position26>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="417" Column="74" TopLine="397"/>
+        <Caret Line="3252" Column="5" TopLine="3216"/>
       </Position26>
       <Position27>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="2738" Column="26" TopLine="2712"/>
+        <Caret Line="3086" Column="3" TopLine="3082"/>
       </Position27>
       <Position28>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="83" Column="57" TopLine="63"/>
+        <Caret Line="3222" Column="3" TopLine="3216"/>
       </Position28>
       <Position29>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="627" Column="28" TopLine="612"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="296" Column="28" TopLine="278"/>
       </Position29>
       <Position30>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="972" Column="41" TopLine="952"/>
+        <Caret Line="3136" Column="30" TopLine="3108"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -519,6 +516,7 @@
       </SyntaxOptions>
     </Parsing>
     <CodeGeneration>
+      <TargetCPU Value="i386"/>
       <TargetOS Value="win32"/>
     </CodeGeneration>
     <Linking>

@@ -374,6 +374,8 @@ end;
 end;
 
 procedure TForm2.Button3Click(Sender: TObject);
+var
+   i: integer;
 begin
 
   hb_newcustomsalt.Form3.ComboBox1.ItemIndex := 0;
@@ -392,7 +394,32 @@ begin
 
   hb_newcustomsalt.Form3.Button2.Enabled := False ;
 
+  hb_newcustomsalt.Form3.Edit15.Text := 'Input Fertilizer Name Here' ;
+  hb_newcustomsalt.Form3.Edit17.Text := 'Input Formula Here' ;
+  hb_newcustomsalt.Form3.Edit20.Text := '' ;
+  hb_newcustomsalt.Form3.Edit22.Text := '1.0' ;
+  hb_newcustomsalt.Form3.Edit16.Text := '100' ;
+  hb_newcustomsalt.Form3.Edit21.Text := '100' ;
+  hb_newcustomsalt.Form3.Edit1.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit19.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit3.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit2.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit4.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit5.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit6.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit7.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit8.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit9.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit10.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit11.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit12.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit18.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit13.Text := '0' ;
+  hb_newcustomsalt.Form3.Edit14.Text := '0' ;
+
   hb_newcustomsalt.Form3.Visible := true ;
+
+
 end;
 
 procedure TForm2.Button4Click(Sender: TObject);
@@ -563,11 +590,15 @@ begin
     MyDbf.First;                  // moves the the first filtered data
 
     hb_addweight.Form4.Edit1.text := MyDbf.FieldByName('Weight').AsString;
+    hb_addweight.Form4.is_liquid := MyDbf.FieldByName('IsLiquid').AsInteger;
 
     MyDbf.Close ;
 
     MyDbf.Free ;
 
+if (hb_addweight.Form4.is_liquid = 0) and (hb_main.Form1.RadioButton9.checked) then hb_addweight.Form4.Label1.Caption := 'Mass of substance (oz)';
+if (hb_addweight.Form4.is_liquid = 0) and (hb_main.Form1.RadioButton8.checked) then hb_addweight.Form4.Label1.Caption := 'Mass of substance (g)';
+if (hb_addweight.Form4.is_liquid = 1) then hb_addweight.Form4.Label1.Caption := 'Volume of substance (mL)';
 
 hb_addweight.Form4.Label2.Caption := ListBox2.Items[selected_item] ;
 

@@ -18,7 +18,7 @@ procedure AssignValues ;
 
 var
 MyDbf: TDbf;
-
+Units: String;
 begin
 
 DefaultFormatSettings.DecimalSeparator := '.'    ;
@@ -67,6 +67,54 @@ DefaultFormatSettings.DecimalSeparator := '.'    ;
     MyDbf.Close ;
 
     MyDbf.Free ;
+
+    // load default formulation if present
+
+    MyDbf := TDbf.Create(nil);
+  MyDbf.FilePathFull := '';
+  MyDbf.TableName := formulations_db;
+  MyDbf.Open;
+  MyDbf.Active := True;
+
+  MyDbf.Filter := 'Name=' + QuotedStr('DEFAULT');
+
+  MyDbf.Filtered := True;       // This selects the filtered set
+  MyDbf.First;                  // moves the the first filtered data
+
+  Units := MyDbf.FieldByName('Units').AsString ;
+
+  if Units = 'ppm' then
+  Form1.RadioButton10.Checked := true ;
+
+  if Units = 'M' then
+  Form1.RadioButton11.Checked := true ;
+
+  if Units = 'mM' then
+  Form1.RadioButton12.Checked := true ;
+
+  if Units = 'mN' then
+  Form1.RadioButton13.Checked := true ;
+
+  Form1.Edit25.Text := MyDbf.FieldByName('Name').AsString;
+  Form1.Edit1.Text  := MyDbf.FieldByName('N (NO3-)').AsString;
+  Form1.Edit3.Text  := MyDbf.FieldByName('P').AsString;
+  Form1.Edit2.Text  := MyDbf.FieldByName('K').AsString;
+  Form1.Edit4.Text  := MyDbf.FieldByName('Mg').AsString;
+  Form1.Edit5.Text  := MyDbf.FieldByName('Ca').AsString;
+  Form1.Edit6.Text  := MyDbf.FieldByName('S').AsString;
+  Form1.Edit7.Text  := MyDbf.FieldByName('Fe').AsString;
+  Form1.Edit9.Text  := MyDbf.FieldByName('B').AsString;
+  Form1.Edit8.Text  := MyDbf.FieldByName('Zn').AsString;
+  Form1.Edit10.Text := MyDbf.FieldByName('Cu').AsString;
+  Form1.Edit11.Text := MyDbf.FieldByName('Mo').AsString;
+  Form1.Edit12.Text := MyDbf.FieldByName('Na').AsString;
+  Form1.Edit15.Text := MyDbf.FieldByName('Mn').AsString;
+  Form1.Edit13.Text := MyDbf.FieldByName('Si').AsString;
+  Form1.Edit14.Text := MyDbf.FieldByName('Cl').AsString;
+  Form1.Edit16.Text := MyDbf.FieldByName('N (NH4+)').AsString;
+
+  MyDbf.Close;
+  MyDbf.Free;
 
 end ;
 

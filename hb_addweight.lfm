@@ -1,7 +1,7 @@
 object Form4: TForm4
-  Left = 331
+  Left = 2285
   Height = 174
-  Top = 490
+  Top = 702
   Width = 213
   HorzScrollBar.Page = 191
   HorzScrollBar.Range = 170
@@ -12,12 +12,12 @@ object Form4: TForm4
   ClientHeight = 174
   ClientWidth = 213
   FormStyle = fsStayOnTop
-  LCLVersion = '1.6.4.0'
+  LCLVersion = '2.0.13.0'
   object Label1: TLabel
     Left = 40
-    Height = 17
+    Height = 15
     Top = 64
-    Width = 155
+    Width = 145
     Caption = 'Mass of Substance Used (g)'
     ParentColor = False
   end
@@ -33,7 +33,7 @@ object Form4: TForm4
   end
   object Edit1: TEdit
     Left = 48
-    Height = 27
+    Height = 23
     Top = 96
     Width = 120
     TabOrder = 0

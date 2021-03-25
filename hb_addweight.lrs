@@ -1,16 +1,16 @@
 { This is an automatically generated lazarus resource file }
 
 LazarusResources.Add('TForm4','FORMDATA',[
-  'TPF0'#6'TForm4'#5'Form4'#4'Left'#3'K'#1#6'Height'#3#174#0#3'Top'#3#234#1#5'W'
-  +'idth'#3#213#0#18'HorzScrollBar.Page'#3#191#0#19'HorzScrollBar.Range'#3#170#0
-  +#18'VertScrollBar.Page'#3#161#0#19'VertScrollBar.Range'#3#145#0#11'BorderSty'
-  +'le'#7#12'bsToolWindow'#7'Caption'#6#26'Set Mass of Substance Used'#12'Clien'
-  +'tHeight'#3#174#0#11'ClientWidth'#3#213#0#9'FormStyle'#7#11'fsStayOnTop'#10
-  +'LCLVersion'#6#7'1.6.4.0'#0#6'TLabel'#6'Label1'#4'Left'#2'('#6'Height'#2#17#3
-  +'Top'#2'@'#5'Width'#3#155#0#7'Caption'#6#26'Mass of Substance Used (g)'#11'P'
-  +'arentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2'('#6'Height'#2' '#3'Top'#2
+  'TPF0'#6'TForm4'#5'Form4'#4'Left'#3#237#8#6'Height'#3#174#0#3'Top'#3#190#2#5
+  +'Width'#3#213#0#18'HorzScrollBar.Page'#3#191#0#19'HorzScrollBar.Range'#3#170
+  +#0#18'VertScrollBar.Page'#3#161#0#19'VertScrollBar.Range'#3#145#0#11'BorderS'
+  +'tyle'#7#12'bsToolWindow'#7'Caption'#6#26'Set Mass of Substance Used'#12'Cli'
+  +'entHeight'#3#174#0#11'ClientWidth'#3#213#0#9'FormStyle'#7#11'fsStayOnTop'#10
+  +'LCLVersion'#6#8'2.0.13.0'#0#6'TLabel'#6'Label1'#4'Left'#2'('#6'Height'#2#15
+  +#3'Top'#2'@'#5'Width'#3#145#0#7'Caption'#6#26'Mass of Substance Used (g)'#11
+  +'ParentColor'#8#0#0#6'TLabel'#6'Label2'#4'Left'#2'('#6'Height'#2' '#3'Top'#2
   +#24#5'Width'#3#144#0#8'AutoSize'#8#7'Caption'#6#6'------'#11'ParentColor'#8#8
-  +'WordWrap'#9#0#0#5'TEdit'#5'Edit1'#4'Left'#2'0'#6'Height'#2#27#3'Top'#2'`'#5
+  +'WordWrap'#9#0#0#5'TEdit'#5'Edit1'#4'Left'#2'0'#6'Height'#2#23#3'Top'#2'`'#5
   +'Width'#2'x'#8'TabOrder'#2#0#4'Text'#6#1'0'#0#0#7'TButton'#7'Button1'#4'Left'
   +#2'@'#6'Height'#2#25#3'Top'#3#136#0#5'Width'#2'K'#7'Caption'#6#2'Ok'#7'OnCli'
   +'ck'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#0

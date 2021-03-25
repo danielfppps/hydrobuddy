@@ -22,6 +22,7 @@ type
     { private declarations }
   public
     { public declarations }
+    is_liquid: integer;
   end; 
 
 var
