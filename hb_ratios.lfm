@@ -8,6 +8,7 @@ object Form14: TForm14
   ClientHeight = 338
   ClientWidth = 320
   FormStyle = fsStayOnTop
+  Position = poMainFormCenter
   LCLVersion = '2.0.13.0'
   object Button1: TButton
     Left = 40

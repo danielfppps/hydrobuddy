@@ -116,6 +116,18 @@ DefaultFormatSettings.DecimalSeparator := '.'    ;
   MyDbf.Close;
   MyDbf.Free;
 
+  Form2.Position := poMainFormCenter;
+  Form3.Position := poMainFormCenter;
+  Form4.Position := poMainFormCenter;
+  Form5.Position := poMainFormCenter;
+  Form6.Position := poMainFormCenter;
+  Form7.Position := poMainFormCenter;
+  Form8.Position := poMainFormCenter;
+  Form9.Position := poMainFormCenter;
+  Form10.Position := poMainFormCenter;
+  Form11.Position := poMainFormCenter;
+  Form12.Position := poMainFormCenter;
+
 end ;
 
 procedure UpdateComboBoxes ;
