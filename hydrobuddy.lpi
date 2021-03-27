@@ -51,11 +51,10 @@
       <Unit0>
         <Filename Value="hydrobuddy.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="7"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="113"/>
-        <CursorPos X="21" Y="130"/>
+        <TopLine Value="98"/>
+        <CursorPos X="10" Y="120"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -85,9 +84,10 @@
         <ComponentName Value="Form2"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="392"/>
-        <CursorPos X="73" Y="406"/>
+        <TopLine Value="463"/>
+        <CursorPos X="92" Y="546"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -391,123 +391,123 @@
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1854" Column="5" TopLine="1847"/>
+        <Caret Line="1855" Column="5" TopLine="1848"/>
       </Position1>
       <Position2>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1855" Column="5" TopLine="1848"/>
+        <Caret Line="1856" Column="5" TopLine="1849"/>
       </Position2>
       <Position3>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1856" Column="5" TopLine="1849"/>
+        <Caret Line="1855" Column="5" TopLine="1848"/>
       </Position3>
       <Position4>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1855" Column="5" TopLine="1848"/>
+        <Caret Line="1854" Column="5" TopLine="1847"/>
       </Position4>
       <Position5>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1854" Column="5" TopLine="1847"/>
+        <Caret Line="1855" Column="5" TopLine="1848"/>
       </Position5>
       <Position6>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1855" Column="5" TopLine="1848"/>
+        <Caret Line="1862" Column="5" TopLine="1855"/>
       </Position6>
       <Position7>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1862" Column="5" TopLine="1855"/>
+        <Caret Line="268" Column="15" TopLine="264"/>
       </Position7>
       <Position8>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="268" Column="15" TopLine="264"/>
+        <Caret Line="1295" TopLine="1292"/>
       </Position8>
       <Position9>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1295" TopLine="1292"/>
+        <Caret Line="1319" Column="80" TopLine="1301"/>
       </Position9>
       <Position10>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1319" Column="80" TopLine="1301"/>
+        <Caret Line="1303" Column="81" TopLine="1287"/>
       </Position10>
       <Position11>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1303" Column="81" TopLine="1287"/>
+        <Caret Line="258" Column="9" TopLine="243"/>
       </Position11>
       <Position12>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="258" Column="9" TopLine="243"/>
+        <Caret Line="1306" TopLine="1290"/>
       </Position12>
       <Position13>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1306" TopLine="1290"/>
+        <Caret Line="1315" Column="42" TopLine="1295"/>
       </Position13>
       <Position14>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1315" Column="42" TopLine="1295"/>
+        <Caret Line="1316" Column="42" TopLine="1296"/>
       </Position14>
       <Position15>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1316" Column="42" TopLine="1296"/>
+        <Caret Line="1315" Column="42" TopLine="1295"/>
       </Position15>
       <Position16>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1315" Column="42" TopLine="1295"/>
+        <Caret Line="1316" Column="42" TopLine="1296"/>
       </Position16>
       <Position17>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1316" Column="42" TopLine="1296"/>
+        <Caret Line="1315" Column="42" TopLine="1295"/>
       </Position17>
       <Position18>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1315" Column="42" TopLine="1295"/>
+        <Caret Line="1317" Column="42" TopLine="1297"/>
       </Position18>
       <Position19>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="1317" Column="42" TopLine="1297"/>
-      </Position19>
-      <Position20>
         <Filename Value="hydrobuddy.lpr"/>
         <Caret Line="117" Column="14" TopLine="94"/>
+      </Position19>
+      <Position20>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1340" TopLine="1331"/>
       </Position20>
       <Position21>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1340" TopLine="1331"/>
+        <Caret Line="1338" Column="3" TopLine="1331"/>
       </Position21>
       <Position22>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1338" Column="3" TopLine="1331"/>
+        <Caret Line="3252" Column="5" TopLine="3216"/>
       </Position22>
       <Position23>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3252" Column="5" TopLine="3216"/>
+        <Caret Line="3086" Column="3" TopLine="3082"/>
       </Position23>
       <Position24>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3086" Column="3" TopLine="3082"/>
+        <Caret Line="3222" Column="3" TopLine="3216"/>
       </Position24>
       <Position25>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="3222" Column="3" TopLine="3216"/>
-      </Position25>
-      <Position26>
         <Filename Value="hb_newcustomsalt.pas"/>
         <Caret Line="296" Column="28" TopLine="278"/>
-      </Position26>
-      <Position27>
+      </Position25>
+      <Position26>
         <Filename Value="hb_main.pas"/>
         <Caret Line="3136" Column="30" TopLine="3108"/>
+      </Position26>
+      <Position27>
+        <Filename Value="hydrobuddy.lpr"/>
+        <Caret Line="129" Column="24" TopLine="108"/>
       </Position27>
       <Position28>
         <Filename Value="hydrobuddy.lpr"/>
-        <Caret Line="129" Column="24" TopLine="108"/>
+        <Caret Line="131" Column="5" TopLine="113"/>
       </Position28>
       <Position29>
         <Filename Value="hydrobuddy.lpr"/>
-        <Caret Line="131" Column="5" TopLine="113"/>
+        <Caret Line="132" Column="3" TopLine="113"/>
       </Position29>
       <Position30>
-        <Filename Value="hydrobuddy.lpr"/>
-        <Caret Line="132" Column="3" TopLine="113"/>
+        <Filename Value="hb_load_salts.pas"/>
+        <Caret Line="406" Column="73" TopLine="392"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -522,10 +522,6 @@
         <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
-    <CodeGeneration>
-      <TargetCPU Value="i386"/>
-      <TargetOS Value="win32"/>
-    </CodeGeneration>
     <Linking>
       <Options>
         <Win32>

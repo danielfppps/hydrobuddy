@@ -527,14 +527,6 @@ begin
 
     MyDbf.Free ;
 
-   if hb_newcustomsalt.Form3.Checkbox2.Checked then
-
-   begin
-
-   hb_newcustomsalt.Form3.Edit22.Visible := true ;
-   hb_newcustomsalt.Form3.Label22.Visible := true ;
-   end;
-
     if hb_newcustomsalt.Form3.Checkbox2.Checked = false then
 
    begin

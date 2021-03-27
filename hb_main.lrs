@@ -5,7 +5,7 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +'h'#3'B'#3#18'HorzScrollBar.Page'#3'I'#3#19'HorzScrollBar.Range'#3'8'#3#18'V'
   +'ertScrollBar.Page'#3#179#2#19'VertScrollBar.Range'#3#161#2#11'BorderIcons'
   +#11#12'biSystemMenu'#10'biMinimize'#0#11'BorderStyle'#7#8'bsSingle'#7'Captio'
-  +'n'#6'jHydroBuddy v1.91 - Programmed and Designed by Dr. Daniel Fernandez Ph'
+  +'n'#6'jHydroBuddy v1.92 - Programmed and Designed by Dr. Daniel Fernandez Ph'
   +'.D at http://scienceinhydroponics.com'#12'ClientHeight'#3#162#2#11'ClientWi'
   +'dth'#3'B'#3#8'DragKind'#7#6'dkDock'#9'Icon.Data'#10#226'('#0#0#222'('#0#0#0
   +#0#1#0#1#0'22'#0#0#1#0' '#0#200'('#0#0#22#0#0#0'('#0#0#0'2'#0#0#0'd'#0#0#0#1
