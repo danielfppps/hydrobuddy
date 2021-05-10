@@ -12,148 +12,148 @@ object Form6: TForm6
   ClientHeight = 416
   ClientWidth = 448
   FormStyle = fsStayOnTop
-  LCLVersion = '0.9.31'
+  LCLVersion = '2.0.13.0'
   object Label1: TLabel
     Left = 19
-    Height = 16
+    Height = 15
     Top = 107
-    Width = 50
+    Width = 49
     Caption = 'N (NO3-)'
     ParentColor = False
   end
   object Label2: TLabel
     Left = 53
-    Height = 16
+    Height = 15
     Top = 170
-    Width = 8
+    Width = 7
     Caption = 'P'
     ParentColor = False
   end
   object Label3: TLabel
     Left = 53
-    Height = 16
+    Height = 15
     Top = 202
-    Width = 8
+    Width = 7
     Caption = 'K'
     ParentColor = False
   end
   object Label4: TLabel
     Left = 53
-    Height = 16
+    Height = 15
     Top = 231
-    Width = 19
+    Width = 18
     Caption = 'Mg'
     ParentColor = False
   end
   object Label5: TLabel
     Left = 55
-    Height = 16
+    Height = 15
     Top = 262
-    Width = 15
+    Width = 14
     Caption = 'Ca'
     ParentColor = False
   end
   object Label6: TLabel
     Left = 187
-    Height = 16
+    Height = 15
     Top = 107
-    Width = 7
+    Width = 6
     Caption = 'S'
     ParentColor = False
   end
   object Label7: TLabel
     Left = 181
-    Height = 16
+    Height = 15
     Top = 137
-    Width = 13
+    Width = 12
     Caption = 'Fe'
     ParentColor = False
   end
   object Label8: TLabel
     Left = 181
-    Height = 16
+    Height = 15
     Top = 170
-    Width = 15
+    Width = 14
     Caption = 'Zn'
     ParentColor = False
   end
   object Label9: TLabel
     Left = 181
-    Height = 16
+    Height = 15
     Top = 202
-    Width = 8
+    Width = 7
     Caption = 'B'
     ParentColor = False
   end
   object Label10: TLabel
     Left = 181
-    Height = 16
+    Height = 15
     Top = 231
-    Width = 16
+    Width = 15
     Caption = 'Cu'
     ParentColor = False
   end
   object Label11: TLabel
     Left = 181
-    Height = 16
+    Height = 15
     Top = 262
-    Width = 19
+    Width = 18
     Caption = 'Mo'
     ParentColor = False
   end
   object Label12: TLabel
     Left = 301
-    Height = 16
+    Height = 15
     Top = 107
-    Width = 16
+    Width = 15
     Caption = 'Na'
     ParentColor = False
   end
   object Label13: TLabel
     Left = 301
-    Height = 16
+    Height = 15
     Top = 170
-    Width = 10
+    Width = 9
     Caption = 'Si'
     ParentColor = False
   end
   object Label14: TLabel
     Left = 301
-    Height = 16
+    Height = 15
     Top = 202
-    Width = 12
+    Width = 11
     Caption = 'Cl'
     ParentColor = False
   end
   object Label15: TLabel
     Left = 301
-    Height = 16
+    Height = 15
     Top = 137
-    Width = 19
+    Width = 18
     Caption = 'Mn'
     ParentColor = False
   end
   object Label16: TLabel
     Left = 16
-    Height = 16
+    Height = 15
     Top = 137
-    Width = 53
+    Width = 52
     Caption = 'N (NH4+)'
     ParentColor = False
   end
   object Label26: TLabel
     Left = 16
-    Height = 16
+    Height = 15
     Top = 31
-    Width = 33
+    Width = 32
     Caption = 'Name'
     ParentColor = False
   end
   object Label25: TLabel
     Left = 16
-    Height = 16
+    Height = 15
     Top = 64
-    Width = 128
+    Width = 127
     Caption = 'Input Quantities as ppm'
     ParentColor = False
   end
@@ -162,6 +162,7 @@ object Form6: TForm6
     Height = 23
     Top = 104
     Width = 64
+    NumbersOnly = True
     TabOrder = 0
     Text = '0'
   end
@@ -170,6 +171,7 @@ object Form6: TForm6
     Height = 23
     Top = 167
     Width = 64
+    NumbersOnly = True
     TabOrder = 1
     Text = '0'
   end
@@ -178,6 +180,7 @@ object Form6: TForm6
     Height = 23
     Top = 199
     Width = 64
+    NumbersOnly = True
     TabOrder = 2
     Text = '0'
   end
@@ -186,6 +189,7 @@ object Form6: TForm6
     Height = 23
     Top = 228
     Width = 64
+    NumbersOnly = True
     TabOrder = 3
     Text = '0'
   end
@@ -194,6 +198,7 @@ object Form6: TForm6
     Height = 23
     Top = 259
     Width = 64
+    NumbersOnly = True
     TabOrder = 4
     Text = '0'
   end
@@ -202,6 +207,7 @@ object Form6: TForm6
     Height = 23
     Top = 104
     Width = 72
+    NumbersOnly = True
     TabOrder = 5
     Text = '0'
   end
@@ -210,6 +216,7 @@ object Form6: TForm6
     Height = 23
     Top = 134
     Width = 72
+    NumbersOnly = True
     TabOrder = 6
     Text = '0'
   end
@@ -218,6 +225,7 @@ object Form6: TForm6
     Height = 23
     Top = 167
     Width = 72
+    NumbersOnly = True
     TabOrder = 7
     Text = '0'
   end
@@ -226,6 +234,7 @@ object Form6: TForm6
     Height = 23
     Top = 199
     Width = 72
+    NumbersOnly = True
     TabOrder = 8
     Text = '0'
   end
@@ -234,6 +243,7 @@ object Form6: TForm6
     Height = 23
     Top = 228
     Width = 72
+    NumbersOnly = True
     TabOrder = 9
     Text = '0'
   end
@@ -242,6 +252,7 @@ object Form6: TForm6
     Height = 23
     Top = 259
     Width = 72
+    NumbersOnly = True
     TabOrder = 10
     Text = '0'
   end
@@ -250,6 +261,7 @@ object Form6: TForm6
     Height = 23
     Top = 104
     Width = 72
+    NumbersOnly = True
     TabOrder = 11
     Text = '0'
   end
@@ -258,6 +270,7 @@ object Form6: TForm6
     Height = 23
     Top = 167
     Width = 72
+    NumbersOnly = True
     TabOrder = 12
     Text = '0'
   end
@@ -266,6 +279,7 @@ object Form6: TForm6
     Height = 23
     Top = 199
     Width = 72
+    NumbersOnly = True
     TabOrder = 13
     Text = '0'
   end
@@ -274,6 +288,7 @@ object Form6: TForm6
     Height = 23
     Top = 134
     Width = 72
+    NumbersOnly = True
     TabOrder = 14
     Text = '0'
   end
@@ -282,6 +297,7 @@ object Form6: TForm6
     Height = 23
     Top = 134
     Width = 64
+    NumbersOnly = True
     TabOrder = 15
     Text = '0'
   end
@@ -591,7 +607,7 @@ object Form6: TForm6
     Height = 25
     Top = 232
     Width = 102
-    Caption = 'Set pH/GH/KH'
+    Caption = 'Adjust alkalinity'
     OnClick = Button5Click
     TabOrder = 22
   end

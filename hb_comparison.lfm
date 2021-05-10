@@ -1,27 +1,28 @@
 object Form15: TForm15
-  Left = 1970
-  Height = 443
-  Top = 498
-  Width = 901
+  Left = 190
+  Height = 470
+  Top = 265
+  Width = 899
   BorderStyle = bsToolWindow
   Caption = 'Commercial Nutrient Contribution Comparison'
-  ClientHeight = 443
-  ClientWidth = 901
+  ClientHeight = 470
+  ClientWidth = 899
   PopupMode = pmExplicit
   PopupParent = Form5.Owner
   Position = poMainFormCenter
   LCLVersion = '2.0.13.0'
   object StringGrid1: TStringGrid
     Left = 8
-    Height = 392
+    Height = 416
     Top = 8
     Width = 880
     ColCount = 1
     FixedRows = 0
-    RowCount = 17
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goColSizing, goSmoothScroll]
+    RowCount = 18
     TabOrder = 0
     Cells = (
-      16
+      17
       0
       1
       'N (NO3-)'
@@ -51,31 +52,34 @@ object Form15: TForm15
       'B'
       0
       10
-      'Mn'
-      0
-      11
       'Cu'
       0
-      12
+      11
       'Mo'
       0
-      13
+      12
       'Na'
       0
-      14
+      13
       'Si'
       0
-      15
+      14
       'Cl'
+      0
+      15
+      'Mn'
       0
       16
       'N (NH4+)'
+      0
+      17
+      'Addition'
     )
   end
   object Button1: TButton
     Left = 813
     Height = 25
-    Top = 408
+    Top = 432
     Width = 75
     Caption = 'Close'
     OnClick = Button1Click
@@ -84,7 +88,7 @@ object Form15: TForm15
   object Button2: TButton
     Left = 608
     Height = 25
-    Top = 410
+    Top = 432
     Width = 179
     Caption = 'Clear Comparison Chart'
     OnClick = Button2Click

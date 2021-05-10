@@ -41,7 +41,7 @@ begin
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := substances_used_db;
+MyDbf.TableName := Form1.substances_used_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 

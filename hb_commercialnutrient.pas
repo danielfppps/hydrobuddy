@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  ComCtrls, StdCtrls, Menus, ExtCtrls, Buttons, hb_comparison;
+  ComCtrls, StdCtrls, Menus, ExtCtrls, Buttons, Dbf, hb_comparison;
 
 type
 
@@ -16,20 +16,16 @@ type
     Button1: TBitBtn;
     Button2: TButton;
     Button3: TButton;
-    ComboBox1: TComboBox;
-    ComboBox2: TComboBox;
-    ComboBox3: TComboBox;
+    ComboBox4: TComboBox;
     Edit1: TEdit;
     Edit10: TEdit;
     Edit11: TEdit;
     Edit12: TEdit;
     Edit13: TEdit;
     Edit14: TEdit;
-    Edit18: TEdit;
+    Edit17: TEdit;
     Edit15: TEdit;
     Edit16: TEdit;
-    Edit17: TEdit;
-    Edit19: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
     Edit4: TEdit;
@@ -44,10 +40,10 @@ type
     Label12: TLabel;
     Label13: TLabel;
     Label14: TLabel;
+    Label17: TLabel;
     Label29: TLabel;
     Label15: TLabel;
     Label16: TLabel;
-    Label19: TLabel;
     Label2: TLabel;
     Label20: TLabel;
     Label3: TLabel;
@@ -59,25 +55,17 @@ type
     Label9: TLabel;
     Panel1: TPanel ;
     CheckBox1: TCheckBox;
-    Panel2: TPanel;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
     RadioButton3: TRadioButton;
     RadioButton4: TRadioButton;
-    RadioButton5: TRadioButton;
-    RadioButton6: TRadioButton;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
-    procedure RadioButton1Change(Sender: TObject);
-    procedure RadioButton2Change(Sender: TObject);
-    procedure RadioButton3Change(Sender: TObject);
-    procedure RadioButton5Change(Sender: TObject);
-    procedure RadioButton6Change(Sender: TObject);
+    procedure ComboBox4Change(Sender: TObject);
   private
     { private declarations }
   public
     { public declarations }
+    is_liquid: boolean;
   end; 
 
 var
@@ -103,10 +91,6 @@ currentValK: Integer;
 currentValSi: Integer;
 begin
 
-currentValP := ComboBox1.ItemIndex;
-currentValK := ComboBox2.ItemIndex;
-currentValSi := ComboBox3.ItemIndex;
-
 SetLength (varnames, 16) ;
 SetLength (result, 16) ;
 
@@ -130,19 +114,8 @@ for i := 1 to 16 do
 
     begin
 
-    test := StrtoFloat(((FindComponent('Edit' + IntToStr(i)) as TEdit).Text)) ;
-
-    if RadioButton2.Checked and HB_Main.Form1.RadioButton8.Checked then
-    result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit18.Text) * 1000 )/Volume, 2) ;
-
-     if RadioButton2.Checked and HB_Main.Form1.RadioButton9.Checked then
-    result[i - 1] := Form1.round2(((1/0.0352739619)*0.01 * test * StrtoFloat(Edit18.Text) * 1000 )/Volume, 2) ;
-
-    if (RadioButton1.Checked) and (RadioButton5.Checked) then
-    result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit18.Text) * StrtoFloat(Edit17.Text) * 1000 )/Volume, 2) ;
-
-    if (RadioButton1.Checked) and (RadioButton6.Checked)then
-    result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit18.Text) * 1000 )/Volume, 2) ;
+      test := StrtoFloat(((FindComponent('Edit' + IntToStr(i)) as TEdit).Text)) ;
+      result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit17.Text) * 1000 )/Volume, 2) ;
 
     end;
 
@@ -257,18 +230,19 @@ varnames : array of string ;
 result : array of double ;
 test : double ;
 Volume : double ;
-currentValP: integer;
-currentValK: Integer;
-currentValSi: Integer;
 colCount: integer;
+addition_units: string;
+s:TTextStyle;
 begin
 
-currentValP := ComboBox1.ItemIndex;
-currentValK := ComboBox2.ItemIndex;
-currentValSi := ComboBox3.ItemIndex;
 
 SetLength (varnames, 16) ;
 SetLength (result, 16) ;
+
+if (is_liquid = True) and (RadioButton4.Checked) then addition_units := 'mL/gal' ;
+if (is_liquid = False) and (RadioButton4.Checked) then addition_units := 'g/gal' ;
+if (is_liquid = True) and (RadioButton3.Checked) then addition_units := 'mL/L'   ;
+if (is_liquid = False) and (RadioButton3.Checked) then addition_units := 'g/L'   ;
 
 if  RadioButton3.Checked then
 Volume := 1      ;
@@ -291,15 +265,7 @@ for i := 1 to 16 do
     begin
 
     test := StrtoFloat(((FindComponent('Edit' + IntToStr(i)) as TEdit).Text)) ;
-
-    if RadioButton2.Checked and HB_Main.Form1.RadioButton8.Checked then
-    result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit18.Text) * 1000 )/Volume, 2) ;
-
-     if RadioButton2.Checked and HB_Main.Form1.RadioButton9.Checked then
-    result[i - 1] := Form1.round2(((1/0.0352739619)*0.01 * test * StrtoFloat(Edit18.Text) * 1000 )/Volume, 2) ;
-
-    if RadioButton1.Checked then
-    result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit18.Text) * StrtoFloat(Edit17.Text) * 1000 )/Volume, 2) ;
+    result[i - 1] := Form1.round2((0.01 * test * StrtoFloat(Edit17.Text) * 1000 )/Volume, 2) ;
 
     end;
 
@@ -310,45 +276,31 @@ for i := 1 to 16 do
 
     colCount := hb_comparison.Form15.StringGrid1.ColCount ;
 
-    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 0] := Edit19.Text  ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 0] := ComboBox4.Items[ComboBox4.ItemIndex] ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 1] := FloattoStr(result[0]) ;
 
-          if currentValP = 0 then
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 2] := FloattoStr(result[2]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 2] := FloattoStr(result[2]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 3] := FloattoStr(result[1]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 14] := FloattoStr(result[13]);
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 4] := FloattoStr(result[3]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 5] := FloattoStr(result[4]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 6] := FloattoStr(result[5]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 7] := FloattoStr(result[6]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 8] := FloattoStr(result[7]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 9] := FloattoStr(result[8]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 10] := FloattoStr(result[9]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 11] := FloattoStr(result[10]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 12] := FloattoStr(result[11]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 13] := FloattoStr(result[12]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 15] := FloattoStr(result[14]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 16] := FloattoStr(result[15]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 17] := Edit17.Text + addition_units ;
 
-          if currentValP = 1 then
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 2] := FloattoStr(Form1.round2(result[2]*0.4364, 2))  ;
-
-
-          if currentValK = 0 then
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 3] := FloattoStr(result[1]) ;
-
-          if currentValK = 1 then
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 3] := FloattoStr(Form1.round2(result[1]*0.8301, 2)) ;
-
-
-          if currentValSi = 0 then
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 14] := FloattoStr(result[13]) ;
-
-          if currentValSi = 1 then
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 14] := FloattoStr(Form1.round2(result[13]*0.4684, 2)) ;
-
-
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 4] := FloattoStr(result[3]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 5] := FloattoStr(result[4]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 6] := FloattoStr(result[5]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 7] := FloattoStr(result[6]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 8] := FloattoStr(result[7]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 9] := FloattoStr(result[8]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 10] := FloattoStr(result[9]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 11] := FloattoStr(result[10]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 12] := FloattoStr(result[11]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 13] := FloattoStr(result[12]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 15] := FloattoStr(result[14]) ;
-          hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 16] := FloattoStr(result[15]) ;;
-
-          ShowMessage('Product final ppm values added to comparison chart') ;
-
+    ShowMessage('Product final ppm values added to comparison chart') ;
+    hb_comparison.Form15.StringGrid1.AutoSizeColumn(colCount-1);
+    s := hb_comparison.Form15.StringGrid1.DefaultTextStyle;
+    s.Alignment:=taCenter;
+    hb_comparison.Form15.StringGrid1.DefaultTextStyle := s;
 end;
 
 procedure TForm5.Button3Click(Sender: TObject);
@@ -356,57 +308,63 @@ begin
   hb_comparison.Form15.Visible := true ;
 end;
 
-
-procedure TForm5.RadioButton1Change(Sender: TObject);
+procedure TForm5.ComboBox4Change(Sender: TObject);
+  var
+i : integer ;
+selected_item : integer ;
+MyDbf: TDbf;
 begin
 
-Label20.Caption :=  'Volume of addition (mL) ' ;
-Edit17.Enabled := true ;
+   selected_item := ComboBox4.ItemIndex;
 
-if RadioButton1.Checked then
-  Panel2.Enabled := true ;
+   MyDbf := TDbf.Create(nil) ;
+   MyDbf.FilePathFull := '';
+   MyDbf.TableName := Form1.substances_db;
+   MyDbf.Open             ;
+   MyDbf.Active := true ;
 
-if RadioButton6.Checked then
-  Edit17.Enabled := false ;
+
+         MyDbf.Filter := 'Name=' + QuotedStr(ComboBox4.Items[selected_item]) ;
+
+    MyDbf.Filtered := true;       // This selects the filtered set
+    MyDbf.First;                  // moves the the first filtered data
+
+    Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
+    Edit3.text := MyDbf.FieldByName('P').AsString ;
+    Edit2.text := MyDbf.FieldByName('K').AsString ;
+    Edit4.text := MyDbf.FieldByName('Mg').AsString ;
+    Edit5.text := MyDbf.FieldByName('Ca').AsString ;
+    Edit6.text := MyDbf.FieldByName('S').AsString ;
+    Edit7.text := MyDbf.FieldByName('Fe').AsString ;
+    Edit9.text := MyDbf.FieldByName('B').AsString ;
+    Edit8.text := MyDbf.FieldByName('Zn').AsString ;
+    Edit10.text := MyDbf.FieldByName('Cu').AsString ;
+    Edit11.text := MyDbf.FieldByName('Mo').AsString ;
+    Edit12.text := MyDbf.FieldByName('Na').AsString ;
+    Edit15.text := MyDbf.FieldByName('Mn').AsString ;
+    Edit13.text := MyDbf.FieldByName('Si').AsString ;
+    Edit14.text := MyDbf.FieldByName('Cl').AsString ;
+    Edit16.text := MyDbf.FieldByName('N (NH4+)').AsString ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 0 then
+    begin
+         is_liquid := False ;
+         Label20.Caption := 'Mass of addition (g)'
+    end;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 1 then
+    begin
+         is_liquid := True ;
+         Label20.Caption := 'Volume of addition (mL)'
+    end;
+
+    MyDbf.Close ;
+
+    MyDbf.Free ;
+
 
 end;
 
-procedure TForm5.RadioButton2Change(Sender: TObject);
-begin
-
-if HB_Main.Form1.RadioButton8.Checked then
-Label20.Caption :=  'Mass of addition (g)' ;
-
-if HB_Main.Form1.RadioButton9.Checked then
-Label20.Caption :=  'Mass of addition (oz)' ;
-
-if RadioButton2.Checked then
-Panel2.Enabled := false ;
-
-Edit17.Enabled := false ;
-
-end;
-
-procedure TForm5.RadioButton3Change(Sender: TObject);
-begin
-
-end;
-
-procedure TForm5.RadioButton5Change(Sender: TObject);
-begin
-
-  if RadioButton5.Checked then
-  Edit17.Enabled := true ;
-
-end;
-
-procedure TForm5.RadioButton6Change(Sender: TObject);
-begin
-
-if RadioButton6.Checked then
-Edit17.Enabled := false ;
-
-end;
 
 initialization
   {$I hb_commercialnutrient.lrs}

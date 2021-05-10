@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 2173
+  Left = 619
   Height = 674
-  Top = 107
+  Top = 197
   Width = 834
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
@@ -9,7 +9,7 @@ object Form1: TForm1
   VertScrollBar.Range = 673
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'HydroBuddy v1.92 - Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
+  Caption = 'HydroBuddy v1.95 - Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
   ClientHeight = 674
   ClientWidth = 834
   DragKind = dkDock
@@ -343,6 +343,8 @@ object Form1: TForm1
     C000FFFFFFFFFFFFC000FFFFFFFFFFFFC000FFFFFFFFFFFFC000FFFFFFFFFFFF
     C000
   }
+  OnClose = FormClose
+  OnCreate = FormCreate
   OnWindowStateChange = FormWindowStateChange
   ParentBiDiMode = False
   Position = poDesktopCenter
@@ -353,10 +355,11 @@ object Form1: TForm1
     Height = 673
     Top = 0
     Width = 834
-    ActivePage = TabSheet4
+    ActivePage = TabSheet1
     ParentFont = False
-    TabIndex = 0
+    TabIndex = 1
     TabOrder = 0
+    OnExit = PageControl1Exit
     object TabSheet4: TTabSheet
       Caption = 'Welcome'
       ClientHeight = 645
@@ -22382,6 +22385,7 @@ object Form1: TForm1
       Caption = 'Main Page'
       ClientHeight = 645
       ClientWidth = 826
+      OnContextPopup = TabSheet1ContextPopup
       ParentShowHint = False
       ShowHint = True
       object Label1: TLabel
@@ -22405,7 +22409,7 @@ object Form1: TForm1
       object Label3: TLabel
         Left = 86
         Height = 15
-        Top = 163
+        Top = 164
         Width = 7
         Caption = 'P'
         ParentColor = False
@@ -22414,7 +22418,7 @@ object Form1: TForm1
       object Label4: TLabel
         Left = 75
         Height = 15
-        Top = 231
+        Top = 228
         Width = 18
         Caption = 'Mg'
         ParentColor = False
@@ -22423,7 +22427,7 @@ object Form1: TForm1
       object Label5: TLabel
         Left = 79
         Height = 15
-        Top = 259
+        Top = 260
         Width = 14
         Caption = 'Ca'
         ParentColor = False
@@ -22432,7 +22436,7 @@ object Form1: TForm1
       object Label6: TLabel
         Left = 87
         Height = 15
-        Top = 295
+        Top = 292
         Width = 6
         Caption = 'S'
         ParentColor = False
@@ -22441,7 +22445,7 @@ object Form1: TForm1
       object Label7: TLabel
         Left = 81
         Height = 15
-        Top = 327
+        Top = 324
         Width = 12
         Caption = 'Fe'
         ParentColor = False
@@ -22450,7 +22454,7 @@ object Form1: TForm1
       object Label8: TLabel
         Left = 79
         Height = 15
-        Top = 355
+        Top = 356
         Width = 14
         Caption = 'Zn'
         ParentColor = False
@@ -22459,7 +22463,7 @@ object Form1: TForm1
       object Label9: TLabel
         Left = 86
         Height = 15
-        Top = 391
+        Top = 388
         Width = 7
         Caption = 'B'
         ParentColor = False
@@ -22468,7 +22472,7 @@ object Form1: TForm1
       object Label10: TLabel
         Left = 78
         Height = 15
-        Top = 462
+        Top = 452
         Width = 15
         Caption = 'Cu'
         ParentColor = False
@@ -22477,7 +22481,7 @@ object Form1: TForm1
       object Label11: TLabel
         Left = 75
         Height = 15
-        Top = 490
+        Top = 484
         Width = 18
         Caption = 'Mo'
         ParentColor = False
@@ -22486,7 +22490,7 @@ object Form1: TForm1
       object Label12: TLabel
         Left = 78
         Height = 15
-        Top = 523
+        Top = 516
         Width = 15
         Caption = 'Na'
         ParentColor = False
@@ -22495,7 +22499,7 @@ object Form1: TForm1
       object Label13: TLabel
         Left = 84
         Height = 15
-        Top = 558
+        Top = 548
         Width = 9
         Caption = 'Si'
         ParentColor = False
@@ -22505,13 +22509,13 @@ object Form1: TForm1
       object Label14: TLabel
         Left = 82
         Height = 15
-        Top = 586
+        Top = 580
         Width = 11
         Caption = 'Cl'
         ParentColor = False
         ParentFont = False
       end
-      object Label45: TLabel
+      object Label33: TLabel
         Left = 54
         Height = 15
         Top = 40
@@ -22520,7 +22524,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label55: TLabel
+      object Label26: TLabel
         Left = 140
         Height = 15
         Top = 40
@@ -22655,7 +22659,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label33: TLabel
+      object Label27: TLabel
         Left = 244
         Height = 15
         Top = 40
@@ -22664,7 +22668,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label35: TLabel
+      object Label29: TLabel
         Left = 140
         Height = 15
         Top = 60
@@ -22673,7 +22677,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label38: TLabel
+      object Label32: TLabel
         Left = 243
         Height = 15
         Top = 60
@@ -22685,7 +22689,7 @@ object Form1: TForm1
       object Label15: TLabel
         Left = 75
         Height = 15
-        Top = 422
+        Top = 420
         Width = 18
         Caption = 'Mn'
         ParentColor = False
@@ -22703,7 +22707,7 @@ object Form1: TForm1
       object Label16: TLabel
         Left = 44
         Height = 15
-        Top = 128
+        Top = 132
         Width = 52
         Caption = 'N (NH4+)'
         ParentColor = False
@@ -22723,6 +22727,7 @@ object Form1: TForm1
         Height = 23
         Top = 96
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 0
         Text = '260'
@@ -22730,8 +22735,9 @@ object Form1: TForm1
       object Edit3: TEdit
         Left = 132
         Height = 23
-        Top = 159
+        Top = 160
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 1
         Text = '31'
@@ -22739,8 +22745,9 @@ object Form1: TForm1
       object Edit2: TEdit
         Left = 132
         Height = 23
-        Top = 195
+        Top = 192
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 2
         Text = '235'
@@ -22748,8 +22755,9 @@ object Form1: TForm1
       object Edit4: TEdit
         Left = 132
         Height = 23
-        Top = 227
+        Top = 224
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 3
         Text = '48'
@@ -22757,8 +22765,9 @@ object Form1: TForm1
       object Edit5: TEdit
         Left = 132
         Height = 23
-        Top = 255
+        Top = 256
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 4
         Text = '200'
@@ -22766,8 +22775,9 @@ object Form1: TForm1
       object Edit6: TEdit
         Left = 132
         Height = 23
-        Top = 291
+        Top = 288
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 5
         Text = '64'
@@ -22775,8 +22785,9 @@ object Form1: TForm1
       object Edit7: TEdit
         Left = 132
         Height = 23
-        Top = 323
+        Top = 320
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 6
         Text = '2.5'
@@ -22784,8 +22795,9 @@ object Form1: TForm1
       object Edit8: TEdit
         Left = 132
         Height = 23
-        Top = 351
+        Top = 352
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 7
         Text = '0.05'
@@ -22793,8 +22805,9 @@ object Form1: TForm1
       object Edit9: TEdit
         Left = 132
         Height = 23
-        Top = 387
+        Top = 384
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 8
         Text = '0.5'
@@ -22802,8 +22815,9 @@ object Form1: TForm1
       object Edit10: TEdit
         Left = 132
         Height = 23
-        Top = 458
+        Top = 448
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 9
         Text = '0.02'
@@ -22811,8 +22825,9 @@ object Form1: TForm1
       object Edit11: TEdit
         Left = 132
         Height = 23
-        Top = 486
+        Top = 480
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 10
         Text = '0.01'
@@ -22820,8 +22835,9 @@ object Form1: TForm1
       object Edit12: TEdit
         Left = 132
         Height = 23
-        Top = 522
+        Top = 512
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 11
         Text = '0'
@@ -22829,8 +22845,9 @@ object Form1: TForm1
       object Edit13: TEdit
         Left = 132
         Height = 23
-        Top = 554
+        Top = 544
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 12
         Text = '0'
@@ -22838,8 +22855,9 @@ object Form1: TForm1
       object Edit14: TEdit
         Left = 132
         Height = 23
-        Top = 582
+        Top = 576
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 13
         Text = '0'
@@ -22853,7 +22871,7 @@ object Form1: TForm1
         ClientWidth = 481
         ParentFont = False
         TabOrder = 14
-        object Label37: TLabel
+        object Label31: TLabel
           Left = 23
           Height = 15
           Top = 8
@@ -23031,7 +23049,7 @@ object Form1: TForm1
         ClientWidth = 481
         ParentFont = False
         TabOrder = 15
-        object Label34: TLabel
+        object Label28: TLabel
           Left = 23
           Height = 15
           Top = 8
@@ -23062,12 +23080,13 @@ object Form1: TForm1
           TabStop = True
         end
         object Edit17: TEdit
-          Left = 166
+          Left = 152
           Height = 23
           Hint = 'This value determines how concentrated stock solutions are when compared to the final reservoir concentrations'
-          Top = 68
-          Width = 104
+          Top = 64
+          Width = 170
           Enabled = False
+          NumbersOnly = True
           TabOrder = 1
           Text = '100'
         end
@@ -23081,8 +23100,8 @@ object Form1: TForm1
           OnClick = Button22Click
           TabOrder = 3
         end
-        object Label36: TLabel
-          Left = 30
+        object Label30: TLabel
+          Left = 23
           Height = 15
           Hint = 'Measures the concentration ratio between the stock and final solutions'
           Top = 68
@@ -23108,12 +23127,13 @@ object Form1: TForm1
           Caption = 'Volume'
           ParentColor = False
         end
-        object Edit19: TEdit
+        object Edit18: TEdit
           Left = 33
           Height = 23
           Hint = 'Volume used within the calculation (this can be reservoir or stock solution volume depending on the calculation type)'
           Top = 28
           Width = 131
+          NumbersOnly = True
           TabOrder = 0
           Text = '100'
         end
@@ -23165,8 +23185,9 @@ object Form1: TForm1
       object Edit15: TEdit
         Left = 132
         Height = 23
-        Top = 421
+        Top = 416
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 18
         Text = '0.5'
@@ -23197,8 +23218,9 @@ object Form1: TForm1
       object Edit16: TEdit
         Left = 132
         Height = 23
-        Top = 127
+        Top = 128
         Width = 88
+        NumbersOnly = True
         ParentFont = False
         TabOrder = 21
         Text = '0'
@@ -23255,9 +23277,9 @@ object Form1: TForm1
         object Button7: TButton
           Left = 222
           Height = 25
-          Top = 57
+          Top = 56
           Width = 246
-          Caption = 'Copy Commercial Nutrient Formulation'
+          Caption = 'Substance Analysis'
           OnClick = Button7Click
           TabOrder = 0
         end
@@ -23328,13 +23350,12 @@ object Form1: TForm1
           ShowHint = True
           TabOrder = 6
         end
-        object Edit25: TEdit
+        object Edit19: TEdit
           Left = 15
           Height = 23
           Hint = 'Write the name you want the formulation to have here'
           Top = 16
           Width = 190
-          OnChange = Edit25Change
           TabOrder = 7
           Text = 'Input Formulation Name Here'
         end
@@ -23377,7 +23398,7 @@ object Form1: TForm1
         ClientHeight = 112
         ClientWidth = 120
         TabOrder = 26
-        object Label51: TLabel
+        object Label34: TLabel
           Left = 0
           Height = 15
           Top = 8
@@ -23445,9 +23466,9 @@ object Form1: TForm1
         Visible = False
       end
       object ComboBox3: TComboBox
-        Left = 44
+        Left = 48
         Height = 23
-        Top = 551
+        Top = 544
         Width = 53
         ItemHeight = 15
         ItemIndex = 0
@@ -23806,6 +23827,7 @@ object Form1: TForm1
         Font.Quality = fqDraft
         ParentFont = False
         TabOrder = 0
+        OnClick = Panel6Click
       end
       object Button13: TBitBtn
         Left = 56
@@ -23999,8 +24021,8 @@ object Form1: TForm1
       end
       object StringGrid2: TStringGrid
         Left = 54
-        Height = 248
-        Top = 13
+        Height = 253
+        Top = 8
         Width = 722
         ColCount = 6
         Columns = <        
@@ -24091,8 +24113,8 @@ object Form1: TForm1
     end
     object TabSheet3: TTabSheet
       Caption = 'About'
-      ClientHeight = 638
-      ClientWidth = 828
+      ClientHeight = 645
+      ClientWidth = 826
       object Panel7: TPanel
         Left = 235
         Height = 336

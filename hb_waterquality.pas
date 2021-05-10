@@ -81,7 +81,7 @@ begin
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := water_quality_db;
+MyDbf.TableName := Form1.water_quality_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 
@@ -104,27 +104,6 @@ MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit12.Text);
 MyDbf.FieldByName('Si').AsFloat:=StrtoFloat(Edit13.Text);
 MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit14.Text);
 MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit15.Text);
-
-MyDbf.FieldByName('pH').AsFloat:=StrtoFloat(hb_ph.Form13.Edit17.Text);
-
-if hb_ph.Form13.RadioButton1.Checked then
-
-begin
-
-MyDbf.FieldByName('KH').AsFloat:=StrtoFloat(hb_ph.Form13.Edit19.Text)*17.86;
-MyDbf.FieldByName('GH').AsFloat:=StrtoFloat(hb_ph.Form13.Edit18.Text)*17.86;
-
-end ;
-
-if hb_ph.Form13.RadioButton2.Checked then
-
-begin
-
-MyDbf.FieldByName('KH').AsFloat:=StrtoFloat(hb_ph.Form13.Edit19.Text);
-MyDbf.FieldByName('GH').AsFloat:=StrtoFloat(hb_ph.Form13.Edit18.Text);
-
-end ;
-
 
 
 MyDbf.FieldByName('Default').AsInteger := 0;
@@ -154,7 +133,7 @@ begin
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := water_quality_db;
+MyDbf.TableName := Form1.water_quality_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 
@@ -188,7 +167,7 @@ begin
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := water_quality_db;
+MyDbf.TableName := Form1.water_quality_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 
@@ -245,11 +224,9 @@ selected_item : integer ;
 MyDbf: TDbf;
 begin
 
-   hb_ph.Form13.RadioButton2.Checked := True ;
-
    MyDbf := TDbf.Create(nil) ;
    MyDbf.FilePathFull := '';
-   MyDbf.TableName := water_quality_db;
+   MyDbf.TableName := Form1.water_quality_db;
    MyDbf.Open             ;
    MyDbf.Active := true ;
 
@@ -275,9 +252,6 @@ begin
     Edit13.text := MyDbf.FieldByName('Si').AsString ;
     Edit14.text := MyDbf.FieldByName('Cl').AsString ;
     Edit16.text := MyDbf.FieldByName('N (NH4+)').AsString ;
-    hb_ph.Form13.Edit17.text := MyDbf.FieldByName('pH').AsString ;
-    hb_ph.Form13.Edit18.text := MyDbf.FieldByName('GH').AsString ;
-    hb_ph.Form13.Edit19.text := MyDbf.FieldByName('KH').AsString ;
 
 
     MyDbf.Close ;
@@ -303,7 +277,7 @@ ComboBox1.Items.Clear ;
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := water_quality_db;
+MyDbf.TableName := Form1.water_quality_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 

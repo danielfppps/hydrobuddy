@@ -1,7 +1,7 @@
 object Form3: TForm3
-  Left = 2041
+  Left = 643
   Height = 436
-  Top = 161
+  Top = 213
   Width = 461
   HorzScrollBar.Page = 471
   HorzScrollBar.Range = 437
@@ -178,8 +178,8 @@ object Form3: TForm3
     Left = 301
     Height = 15
     Top = 335
-    Width = 24
-    Caption = 'Cost'
+    Width = 42
+    Caption = 'Cost/kg'
     ParentColor = False
   end
   object Label21: TLabel
@@ -195,6 +195,7 @@ object Form3: TForm3
     Height = 23
     Top = 168
     Width = 64
+    NumbersOnly = True
     TabOrder = 3
     Text = '0'
   end
@@ -203,6 +204,7 @@ object Form3: TForm3
     Height = 23
     Top = 234
     Width = 64
+    NumbersOnly = True
     TabOrder = 5
     Text = '0'
   end
@@ -211,6 +213,7 @@ object Form3: TForm3
     Height = 23
     Top = 266
     Width = 64
+    NumbersOnly = True
     TabOrder = 6
     Text = '0'
   end
@@ -219,6 +222,7 @@ object Form3: TForm3
     Height = 23
     Top = 300
     Width = 64
+    NumbersOnly = True
     TabOrder = 7
     Text = '0'
   end
@@ -227,6 +231,7 @@ object Form3: TForm3
     Height = 23
     Top = 332
     Width = 64
+    NumbersOnly = True
     TabOrder = 8
     Text = '0'
   end
@@ -235,6 +240,7 @@ object Form3: TForm3
     Height = 23
     Top = 168
     Width = 72
+    NumbersOnly = True
     TabOrder = 9
     Text = '0'
   end
@@ -243,6 +249,7 @@ object Form3: TForm3
     Height = 23
     Top = 200
     Width = 72
+    NumbersOnly = True
     TabOrder = 10
     Text = '0'
   end
@@ -251,6 +258,7 @@ object Form3: TForm3
     Height = 23
     Top = 234
     Width = 72
+    NumbersOnly = True
     TabOrder = 11
     Text = '0'
   end
@@ -259,6 +267,7 @@ object Form3: TForm3
     Height = 23
     Top = 266
     Width = 72
+    NumbersOnly = True
     TabOrder = 12
     Text = '0'
   end
@@ -267,6 +276,7 @@ object Form3: TForm3
     Height = 23
     Top = 300
     Width = 72
+    NumbersOnly = True
     TabOrder = 13
     Text = '0'
   end
@@ -275,6 +285,7 @@ object Form3: TForm3
     Height = 23
     Top = 332
     Width = 72
+    NumbersOnly = True
     TabOrder = 14
     Text = '0'
   end
@@ -283,6 +294,7 @@ object Form3: TForm3
     Height = 23
     Top = 168
     Width = 72
+    NumbersOnly = True
     TabOrder = 15
     Text = '0'
   end
@@ -291,6 +303,7 @@ object Form3: TForm3
     Height = 23
     Top = 234
     Width = 72
+    NumbersOnly = True
     TabOrder = 17
     Text = '0'
   end
@@ -299,6 +312,7 @@ object Form3: TForm3
     Height = 23
     Top = 266
     Width = 72
+    NumbersOnly = True
     TabOrder = 18
     Text = '0'
   end
@@ -315,6 +329,7 @@ object Form3: TForm3
     Height = 23
     Top = 300
     Width = 72
+    NumbersOnly = True
     TabOrder = 19
     Text = '100'
   end
@@ -331,6 +346,7 @@ object Form3: TForm3
     Height = 23
     Top = 200
     Width = 72
+    NumbersOnly = True
     TabOrder = 16
     Text = '0'
   end
@@ -339,6 +355,7 @@ object Form3: TForm3
     Height = 23
     Top = 200
     Width = 64
+    NumbersOnly = True
     TabOrder = 4
     Text = '0'
   end
@@ -355,6 +372,7 @@ object Form3: TForm3
     Height = 23
     Top = 332
     Width = 72
+    NumbersOnly = True
     TabOrder = 20
     Text = '100'
   end

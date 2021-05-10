@@ -1,5 +1,5 @@
 object Form8: TForm8
-  Left = 350
+  Left = 120
   Height = 431
   Top = 258
   Width = 414
@@ -12,12 +12,12 @@ object Form8: TForm8
   ClientHeight = 431
   ClientWidth = 414
   FormStyle = fsStayOnTop
-  LCLVersion = '0.9.31'
+  LCLVersion = '2.0.13.0'
   object Label3: TLabel
     Left = 56
-    Height = 16
+    Height = 15
     Top = 23
-    Width = 250
+    Width = 249
     Caption = 'Composition values below are given as (W/V)%'
     ParentColor = False
   end

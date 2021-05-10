@@ -167,13 +167,13 @@ SetLength(values_to_copy, 20) ;
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := substances_db;
+MyDbf.TableName := Form1.substances_db;
 MyDbf.ReadOnly := False ;
 MyDbf.Open;
 
 MyDbf_used := TDbf.Create(nil) ;
 MyDbf_used.FilePathFull := '';
-MyDbf_used.TableName := substances_used_db;
+MyDbf_used.TableName := Form1.substances_used_db;
 MyDbf_used.Open             ;
 MyDbf_used.Active := true ;
 
@@ -279,7 +279,7 @@ begin
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := substances_used_db;
+MyDbf.TableName := Form1.substances_used_db;
 MyDbf.Open;
 MyDbf.ReadOnly := False;
 MyDbf.Active := true ;
@@ -330,7 +330,7 @@ if ListBox2.SelCount = 0 then // No ítems selected
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := substances_used_db;
+MyDbf.TableName := Form1.substances_used_db;
 MyDbf.Open;
 MyDbf.ReadOnly := False;
 MyDbf.Active := true ;
@@ -431,7 +431,7 @@ begin
 
 MyDbf := TDbf.Create(nil) ;
 MyDbf.FilePathFull := '';
-MyDbf.TableName := substances_db;
+MyDbf.TableName := Form1.substances_db;
 MyDbf.Open             ;
 MyDbf.Active := true ;
 
@@ -483,7 +483,7 @@ begin
 
    MyDbf := TDbf.Create(nil) ;
    MyDbf.FilePathFull := '';
-   MyDbf.TableName := substances_db;
+   MyDbf.TableName := Form1.substances_db;
    MyDbf.Open             ;
    MyDbf.Active := true ;
 
@@ -572,7 +572,7 @@ begin
 
    MyDbf := TDbf.Create(nil) ;
    MyDbf.FilePathFull := '';
-   MyDbf.TableName := substances_used_db;
+   MyDbf.TableName := Form1.substances_used_db;
    MyDbf.Open             ;
    MyDbf.Active := true ;
 
@@ -608,7 +608,7 @@ begin
 
    MyDbf := TDbf.Create(nil) ;
    MyDbf.FilePathFull := '';
-   MyDbf.TableName := substances_used_db;
+   MyDbf.TableName := Form1.substances_used_db;
    MyDbf.Open             ;
    MyDbf.Active := true ;
 
@@ -675,7 +675,7 @@ begin
 
     MyDbf := TDbf.Create(nil) ;
     MyDbf.FilePathFull := '';
-    MyDbf.TableName := substances_used_db;
+    MyDbf.TableName := Form1.substances_used_db;
     MyDbf.Open;
     MyDbf.ReadOnly := False;
     MyDbf.Active := true ;
@@ -735,13 +735,13 @@ end;
 
   MyDbf := TDbf.Create(nil) ;
   MyDbf.FilePathFull := '';
-  MyDbf.TableName := substances_db;
+  MyDbf.TableName := Form1.substances_db;
   MyDbf.ReadOnly := False ;
   MyDbf.Open;
 
   MyDbf_used := TDbf.Create(nil) ;
   MyDbf_used.FilePathFull := '';
-  MyDbf_used.TableName := substances_used_db;
+  MyDbf_used.TableName := Form1.substances_used_db;
   MyDbf_used.Open             ;
   MyDbf_used.Active := true ;
 

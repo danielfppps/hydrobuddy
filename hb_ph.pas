@@ -14,18 +14,11 @@ type
 
   TForm13 = class(TForm)
     Button1: TButton;
-    Edit17: TEdit;
+    ComboBox1: TComboBox;
     Edit18: TEdit;
-    Edit19: TEdit;
-    Label17: TLabel;
+    Label1: TLabel;
     Label18: TLabel;
-    Label19: TLabel;
-    Label20: TLabel;
-    RadioButton1: TRadioButton;
-    RadioButton2: TRadioButton;
     procedure Button1Click(Sender: TObject);
-    procedure RadioButton1Change(Sender: TObject);
-    procedure RadioButton2Change(Sender: TObject);
   private
     { private declarations }
   public
@@ -37,50 +30,40 @@ var
 
 implementation
 
+uses hb_waterquality;
+
 { TForm13 }
 
 procedure TForm13.Button1Click(Sender: TObject);
-begin
-  Form13.Visible := false ;
-end;
-
-procedure TForm13.RadioButton1Change(Sender: TObject);
-  var
-GH : double ;
-KH : double ;
-begin
-
-GH := StrToFloat(Edit18.Text) ;
-KH := StrToFloat(Edit19.Text) ;
-
-if RadioButton1.Checked then
-
-   begin
-
-   Edit18.Text := FloatToStr(GH/17.86) ;
-   Edit19.Text := FloatToStr(KH/17.86) ;
-
-   end ;
-end;
-
-procedure TForm13.RadioButton2Change(Sender: TObject);
 var
-GH : double ;
-KH : double ;
+  total_alkalinity: double;
+  ppm_contribution: double;
 begin
 
-GH := StrToFloat(Edit18.Text) ;
-KH := StrToFloat(Edit19.Text) ;
+  //see here https://ag.umass.edu/greenhouse-floriculture/fact-sheets/adjusting-alkalinity-with-acids
 
-if RadioButton2.Checked then
+  total_alkalinity := StrToFloat(Edit18.Text);
 
-   begin
+  if ComboBox1.ItemIndex = 0 then
+  begin
+        ppm_contribution := total_alkalinity*0.7*(0.033814/1)*(25.6);
+        Form6.Edit3.Text := FloatToStr(StrToFloat(Form6.Edit3.Text)+ppm_contribution);
+  end;
 
-   Edit18.Text := FloatToStr(GH*17.86) ;
-   Edit19.Text := FloatToStr(KH*17.86) ;
+  if ComboBox1.ItemIndex = 1 then
+  begin
+       ppm_contribution := total_alkalinity*0.23*(0.033814/1)*(43.6);
+       Form6.Edit6.Text := FloatToStr(StrToFloat(Form6.Edit6.Text)+ppm_contribution);
+  end;
 
-   end ;
+  if ComboBox1.ItemIndex = 2 then
+  begin
+       ppm_contribution := total_alkalinity*0.56*(0.033814/1)*(14.6);
+       Form6.Edit1.Text := FloatToStr(StrToFloat(Form6.Edit1.Text)+ppm_contribution);
+  end;
 
+
+  Form13.Visible := false ;
 end;
 
 initialization

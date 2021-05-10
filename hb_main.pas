@@ -7,25 +7,13 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ComCtrls, StdCtrls, Menus, ExtCtrls, Buttons, Grids, TAGraph, TASeries,
-  hb_load_salts, Dbf, DB, Math, densesolver, hb_commercialnutrient,
+  hb_load_salts, Dbf, DB, Math, densesolver, hb_commercialnutrient, hb_comparison,
   hb_waterquality, hb_addweight, hb_insprecision, hb_stockanalysis,
   hb_persubstance, hb_datasetname, hb_analysis,
-  hb_freedom, dbf_fields, hb_ratios,LCLIntf, Types;
+  hb_freedom, dbf_fields, hb_ratios,LCLIntf, Types,IniFiles;
 
 const
-  {$IFDEF UNIX}
-  water_quality_db = 'waterquality_unix.dbf';
-  formulations_db = 'formulations_unix.dbf' ;
-  substances_db = 'substances_unix.dbf';
-  substances_used_db = 'substances_used_unix.dbf';
-  {$ENDIF}
-
-  {$IFDEF WINDOWS}
-  water_quality_db = 'waterquality_win.dbf' ;
-  formulations_db = 'formulations_win.dbf' ;
-  substances_db = 'substances_win.dbf'    ;
-  substances_used_db = 'substances_used_win.dbf' ;
-  {$ENDIF}
+  IniFile = 'settings.ini';
 
 type
 
@@ -67,8 +55,8 @@ type
     Edit13:     TEdit;
     Edit14:     TEdit;
     Edit16:     TEdit;
-    Edit25:     TEdit;
     Edit19:     TEdit;
+    Edit18:     TEdit;
     Edit15:     TEdit;
     Edit17:     TEdit;
     Edit2:      TEdit;
@@ -90,26 +78,40 @@ type
     Image8:     TImage;
     Image9:     TImage;
     Label1:     TLabel;
+    Label2:     TLabel;
+    Label3:     TLabel;
+    Label4:     TLabel;
+    Label5:     TLabel;
+    Label6:     TLabel;
+    Label7:     TLabel;
+    Label8:     TLabel;
+    Label9:     TLabel;
     Label10:    TLabel;
     Label11:    TLabel;
     Label12:    TLabel;
     Label13:    TLabel;
     Label14:    TLabel;
+    Label15:    TLabel;
     Label16:    TLabel;
-    Label18: TLabel;
+    Label17:    TLabel;
+    Label18:    TLabel;
     Label19:    TLabel;
     Label20:    TLabel;
     Label21:    TLabel;
     Label22:    TLabel;
     Label23:    TLabel;
     Label24:    TLabel;
-    Label25: TLabel;
-    Label36: TLabel;
-    Label45:    TLabel;
-    Label51: TLabel;
+    Label25:    TLabel;
+    Label27:    TLabel;
+    Label28:    TLabel;
+    Label29:    TLabel;
+    Label30:    TLabel;
+    Label31:    TLabel;
+    Label32:    TLabel;
+    Label33:    TLabel;
+    Label34:    TLabel;
+    Label26:    TLabel;
     LabelVersion: TLabel;
-    Label55:    TLabel;
-    Label17:    TLabel;
     MenuItem2: TMenuItem;
     PageControl2: TPageControl;
     Panel4:     TPanel;
@@ -128,7 +130,6 @@ type
     RadioButton8: TRadioButton;
     RadioButton9: TRadioButton;
     RLabel1:    TLabel;
-    Label2:     TLabel;
     RLabel16:   TLabel;
     RLabel3:    TLabel;
     RLabel2:    TLabel;
@@ -140,23 +141,10 @@ type
     RLabel9:    TLabel;
     RLabel10:   TLabel;
     RLabel11:   TLabel;
-    Label3:     TLabel;
     RLabel12:   TLabel;
     RLabel13:   TLabel;
     RLabel14:   TLabel;
-    Label33:    TLabel;
-    Label34:    TLabel;
-    Label35:    TLabel;
-    Label37:    TLabel;
-    Label38:    TLabel;
-    Label15:    TLabel;
-    Label4:     TLabel;
     RLabel15:   TLabel;
-    Label5:     TLabel;
-    Label6:     TLabel;
-    Label7:     TLabel;
-    Label8:     TLabel;
-    Label9:     TLabel;
     PageControl1: TPageControl;
     Panel1:     TPanel;
     Panel2:     TPanel;
@@ -214,9 +202,12 @@ type
     procedure CheckBox4Change(Sender: TObject);
     procedure CheckBox5Change(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
-    procedure Edit25Change(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormCreate(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
     procedure MenuItem2Click(Sender: TObject);
+    procedure PageControl1Exit(Sender: TObject);
+    procedure Panel6Click(Sender: TObject);
     procedure RadioButton10Change(Sender: TObject);
     procedure RadioButton11Change(Sender: TObject);
     procedure RadioButton12Change(Sender: TObject);
@@ -234,6 +225,8 @@ type
       aRect: TRect; aState: TGridDrawState);
     procedure StringGrid2EditButtonClick(Sender: TObject);
     procedure StringGrid2EditingDone(Sender: TObject);
+    procedure TabSheet1ContextPopup(Sender: TObject; MousePos: TPoint;
+      var Handled: Boolean);
     procedure ToggleBox1Change(Sender: TObject);
   private
     { private declarations }
@@ -266,18 +259,20 @@ type
       1,
       1,
       1) ;
-      var
+    var
+        water_quality_db,formulations_db,substances_db,substances_used_db: string;
         IsLiquid: array of array of double ;
-    procedure weightFineTunning;
-    procedure UpdateList;
-    procedure UpdateComboBox;
-    procedure setinivalues ;
-    procedure cleanresults;
-    function getratio(first: string; second: string; third: string; items: integer): string ;
-    procedure getmolarmasses(var molar_mass: array of double) ;
-    procedure getequivalents(var equivalents: array of integer);
-    function round2(const Number: extended; const Places: longint): extended;
-
+        procedure weightFineTunning;
+        procedure UpdateList;
+        procedure UpdateComboBox;
+        procedure setinivalues ;
+        procedure cleanresults;
+        function getratio(first: string; second: string; third: string; items: integer): string ;
+        procedure getmolarmasses(var molar_mass: array of double) ;
+        procedure getequivalents(var equivalents: array of integer);
+        procedure replaceNullWithZeroes();
+        procedure LoadValues();
+        function round2(const Number: extended; const Places: longint): extended;
   end;
 
 var
@@ -289,6 +284,16 @@ var
 implementation
 
 { TForm1 }
+
+procedure TForm1.replaceNullWithZeroes();
+var
+  j: integer;
+begin
+    for j := 1 to 16 do
+    begin
+        if (FindComponent('Edit' + IntToStr(j)) as TEdit).Text = '' then (FindComponent('Edit' + IntToStr(j)) as TEdit).Text := '0';
+    end;
+end;
 
 procedure TForm1.UpdateComboBox;
 var
@@ -610,6 +615,7 @@ var
   nameToCompare: string;
   ionic_strength : double;
 begin
+  replaceNullWithZeroes;
 
    // clear listbox to get rid of old solutions
 
@@ -709,7 +715,7 @@ begin
   // which is the unit used within all calculations ppm = g/m3
 
   // cubic meter
-  Volume := StrtoFloat(Edit19.Text);
+  Volume := StrtoFloat(Edit18.Text);
 
   // liter conversion
   if Radiobutton1.Checked then
@@ -1035,7 +1041,7 @@ if RadioButton13.Checked then
           volumeunit := 'liters';
 
           Label20.Caption := 'Values calculated for the preparation of ' +
-            Edit19.Text + ' ' + volumeunit;
+            Edit18.Text + ' ' + volumeunit;
 
   // total cost calculation
 
@@ -1059,7 +1065,7 @@ if RadioButton13.Checked then
   for i := 0 to 15 do
   begin
 
-        elementInSolutionA[i] := elementInSolutionA[i] * StrtoFloat(Edit17.Text) * 100 / ((Volume/StrtoFloat(Edit17.Text)) * 1000000);
+        elementInSolutionA[i] := 100 * elementInSolutionA[i] * StrtoFloat(Edit17.Text) / (1000*1000);
 
         if (varnames[i] <> 'P') and (varnames[i] <> 'K') then
 
@@ -1091,7 +1097,7 @@ if RadioButton13.Checked then
   for i := 0 to 15 do
   begin
 
-        elementInSolutionB[i] := elementInSolutionB[i] * StrtoFloat(Edit17.Text) * 100 / ((Volume/StrtoFloat(Edit17.Text)) * 1000000);
+        elementInSolutionB[i] := 100 * elementInSolutionB[i] * StrtoFloat(Edit17.Text) / (1000*1000);
 
         if (varnames[i] <> 'P') and (varnames[i] <> 'K') then
 
@@ -1119,9 +1125,6 @@ if RadioButton13.Checked then
 
   end;
 
-
-
-
    // post ratios based on results posted on listboxes above
 
     hb_ratios.Form14.StringGrid1.Cells[0, hb_ratios.Form14.StringGrid1.RowCount - 1] :=('N: P: K') ;
@@ -1134,6 +1137,7 @@ if RadioButton13.Checked then
     hb_ratios.Form14.StringGrid1.Cells[1, hb_ratios.Form14.StringGrid1.RowCount - 2] :=(getratio('N (NO3-)', 'N (NH4+)', 'K', 2) ) ;
     hb_ratios.Form14.StringGrid1.Cells[0, hb_ratios.Form14.StringGrid1.RowCount - 1] :=('Ca: Mg') ;
     hb_ratios.Form14.StringGrid1.Cells[1, hb_ratios.Form14.StringGrid1.RowCount - 2] :=(getratio('Ca', 'Mg', 'K', 2) ) ;
+
   end;
 
 procedure TForm1.Button10Click(Sender: TObject);
@@ -1274,7 +1278,6 @@ end;
 
 procedure TForm1.Button15Click(Sender: TObject);
 begin
-  Edit25.Text := '0';
   Edit1.Text  := '0';
   Edit3.Text  := '0';
   Edit2.Text  := '0';
@@ -1336,7 +1339,7 @@ var
   selected_item: integer;
 begin
 
-  Edit25.Text := 'DEFAULT' ;
+  Edit19.Text := 'DEFAULT' ;
 
   if ComboBox1.Items.Count = 0 then
     Exit;
@@ -1579,6 +1582,9 @@ var
   ionic_strength: double;
 begin
 
+  //deal with null
+  replaceNullWithZeroes();
+
   // clear listbox to get rid of old solutions
 
   StringGrid1.Clean;
@@ -1690,7 +1696,7 @@ begin
   // which is the unit used within all calculations ppm = g/m3
 
   // cubic meter
-  Volume := StrtoFloat(Edit19.Text);
+  Volume := StrtoFloat(Edit18.Text);
 
   // liter conversion
   if Radiobutton1.Checked then
@@ -2247,7 +2253,7 @@ if RadioButton13.Checked then
           StringGrid2.Cells[COST_IDX,i+1] := (FloatToStr(round2(0.001 * solutions[i] * cost[i]+ 0.001*preloaded_weight[i]* cost[i], 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
-            Edit19.Text + ' ' + volumeunit;
+            Edit18.Text + ' ' + volumeunit;
 
         end;
 
@@ -2268,7 +2274,7 @@ if RadioButton13.Checked then
           StringGrid2.Cells[COST_IDX,i+1] :=(FloatToStr(round2(0.001 * solutions[i] * cost[i] * StrtoFloat(Edit17.Text)+0.001*preloaded_weight[i] * cost[i]*StrtoFloat(Edit17.Text), 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
-            Edit19.Text + ' ' + volumeunit + ' of A and ' + Edit19.Text + ' ' +
+            Edit18.Text + ' ' + volumeunit + ' of A and ' + Edit18.Text + ' ' +
             volumeunit + ' of B solution. Please use ' +
             FloatToStr(round2(1000 / StrtoFloat(Edit17.Text), 3)) +
             'mL of A and B within every Liter of final solution';
@@ -2305,7 +2311,7 @@ if RadioButton13.Checked then
           StringGrid2.Cells[COST_IDX,i+1] :=(FloatToStr(round2(0.001*preloaded_weight[i]* cost[i], 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
-            Edit19.Text + ' ' + volumeunit;
+            Edit18.Text + ' ' + volumeunit;
 
         end;
 
@@ -2325,7 +2331,7 @@ if RadioButton13.Checked then
             round2(0.001*preloaded_weight[i] * cost[i]*StrtoFloat(Edit17.Text), 1)));
 
           Label20.Caption := 'Values calculated for the preparation of ' +
-            Edit19.Text + ' ' + volumeunit + ' of A and ' + Edit19.Text + ' ' +
+            Edit18.Text + ' ' + volumeunit + ' of A and ' + Edit18.Text + ' ' +
             volumeunit + ' of B solution. Please use ' +
             FloatToStr(round2(1000 / StrtoFloat(Edit17.Text), 3)) +
             'mL of A and B within every Liter of final solution';
@@ -2547,10 +2553,6 @@ if RadioButton13.Checked then
         end;
 
       end;
-
-      //activate analysis access button
-
-      Button12.Enabled := True;
 
     end;
 
@@ -2870,7 +2872,7 @@ if RadioButton13.Checked then
           volumeunit := 'liters';
 
     Label20.Caption := 'Values calculated for the preparation of ' +
-            Edit19.Text + ' ' + volumeunit;
+            Edit18.Text + ' ' + volumeunit;
 
 
     // END OF SECOND IMPORTANT IF STATEMENT
@@ -2922,9 +2924,12 @@ if RadioButton13.Checked then
     hb_ratios.Form14.StringGrid1.Cells[0, hb_ratios.Form14.StringGrid1.RowCount - 1] :=('K: Ca') ;
     hb_ratios.Form14.StringGrid1.Cells[1, hb_ratios.Form14.StringGrid1.RowCount - 2] :=(getratio('K', 'Ca', 'Ca', 2) ) ;
 
+   // enable or disable stock solution analysis button
+  if RadioButton6.Checked then Button12.Enabled := True else  Button12.Enabled := False;
+
+
   if CheckBox3.Checked = false then
   ShowMessage('Calculation carried out successfully :o)');
-
 
 end;
 
@@ -3082,7 +3087,7 @@ var
   MyDbf: TDbf;
 begin
 
-  if Edit25.Text = 'Input Formulation Name Here' then
+  if Edit19.Text = 'Input Formulation Name Here' then
   begin
     ShowMessage('Please input a name within the name input field') ;
     Exit;
@@ -3096,7 +3101,7 @@ begin
 
   MyDbf.Insert;
 
-  MyDbf.FieldByName('Name').AsString := Edit25.Text;
+  MyDbf.FieldByName('Name').AsString := Edit19.Text;
   MyDbf.FieldByName('P').AsFloat     := StrtoFloat(Edit3.Text);
   MyDbf.FieldByName('K').AsFloat     := StrtoFloat(Edit2.Text);
   MyDbf.FieldByName('N (NO3-)').AsFloat := StrtoFloat(Edit1.Text);
@@ -3132,8 +3137,8 @@ begin
 
   MyDbf.Free;
 
-  if Edit25.Text <> 'DEFAULT' then
-  ShowMessage('Formulation named ' + Edit25.Text + ' has been saved to the Database');
+  if Edit19.Text <> 'DEFAULT' then
+  ShowMessage('Formulation named ' + Edit19.Text + ' has been saved to the Database');
 
   Form1.UpdateComboBox;
 
@@ -3258,7 +3263,31 @@ begin
 end;
 
 procedure TForm1.Button7Click(Sender: TObject);
+var
+  MyDbf: TDbf;
+  i:     integer;
+  j:     integer;
 begin
+
+  Form5.ComboBox4.Items.Clear;
+
+  MyDbf := TDbf.Create(nil);
+  MyDbf.FilePathFull := '';
+  MyDbf.TableName := substances_db;
+  MyDbf.Open;
+  MyDbf.Active := True;
+
+  MyDbf.First;                  // moves to the first data
+
+  while not MyDbf.EOF do
+  begin
+    Form5.ComboBox4.Items.Add(MyDbf.FieldByName('Name').AsString);
+    MyDbf.Next;                                     // use .next here NOT .findnext!
+  end;
+
+  MyDbf.Close;
+
+  Form5.ComboBox4.Sorted := true ;
   hb_commercialnutrient.Form5.Visible := True;
 end;
 
@@ -3397,7 +3426,7 @@ begin
   if Units = 'mN' then
   RadioButton13.Checked := true ;
 
-  Edit25.Text := MyDbf.FieldByName('Name').AsString;
+  Edit19.Text := MyDbf.FieldByName('Name').AsString;
   Edit1.Text  := MyDbf.FieldByName('N (NO3-)').AsString;
   Edit3.Text  := MyDbf.FieldByName('P').AsString;
   Edit2.Text  := MyDbf.FieldByName('K').AsString;
@@ -3424,7 +3453,68 @@ begin
 
 end;
 
-procedure TForm1.Edit25Change(Sender: TObject);
+procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+var
+    Sett : TIniFile;
+    j: integer;
+begin
+    //save program variable states on exit
+    Sett := TIniFile.Create(IniFile);
+    for j := 1 to 19 do Sett.WriteString('Main', 'Form1.Edit' + IntToStr(j), (FindComponent('Edit' + IntToStr(j)) as TEdit).Text);
+    for j := 1 to 16 do Sett.WriteString('Main', 'Form1.RLabel' + IntToStr(j), (FindComponent('RLabel' + IntToStr(j)) as TLabel).Caption);
+    for j := 1 to 34 do Sett.WriteString('Main', 'Form1.Label' + IntToStr(j), (FindComponent('Label' + IntToStr(j)) as TLabel).Caption);
+    for j := 1 to 15 do Sett.WriteBool('Main', 'Form1.RadioButton' + IntToStr(j), (FindComponent('RadioButton' + IntToStr(j)) as TRadioButton).Checked);
+
+    Sett.WriteString('Main', 'prev_conc', prev_conc);
+    Sett.WriteString('Main', 'Form1.Label20', Label20.Caption);
+    Sett.WriteString('Main', 'Form1.Label18', Label18.Caption);
+    Sett.WriteString('Main', 'Form1.Panel6', Panel6.Caption);
+    Sett.WriteBool('Main', 'Form1.Checkbox3', Checkbox3.Checked);
+    Sett.WriteBool('Main', 'Form1.Checkbox5', Checkbox5.Checked);
+    Sett.WriteInteger('Main', 'Form1.ComboBox3', ComboBox3.ItemIndex);
+
+    hb_comparison.Form15.StringGrid1.SavetoCSVFile('hb_comparison.csv');
+    hb_stockanalysis.Form8.StringGrid1.SavetoCSVFile('hb_stockanalysis.csv');
+    hb_persubstance.Form9.StringGrid1.SavetoCSVFile('hb_persubstance.csv');
+    hb_ratios.Form14.StringGrid1.SavetoCSVFile('hb_ratios.csv');
+    StringGrid1.SavetoCSVFile('hb_ppm_results.csv');
+    StringGrid2.SavetoCSVFile('hb_results.csv');
+
+    if hb_comparison.Form15.StringGrid1.ColCount = 1 then  DeleteFile('hb_comparison.csv');
+    Sett.Free;
+end;
+
+procedure TForm1.LoadValues;
+var
+    Sett : TIniFile;
+    j: integer;
+begin
+    //load program variables
+    Sett := TIniFile.Create(IniFile);
+    for j := 1 to 19 do (FindComponent('Edit' + IntToStr(j)) as TEdit).Text := Sett.ReadString('Main', 'Form1.Edit' + IntToStr(j), (FindComponent('Edit' + IntToStr(j)) as TEdit).Text);
+    for j := 1 to 16 do (FindComponent('RLabel' + IntToStr(j)) as TLabel).Caption := Sett.ReadString('Main', 'Form1.RLabel' + IntToStr(j), '0');
+    for j := 1 to 34 do (FindComponent('Label' + IntToStr(j)) as TLabel).Caption := Sett.ReadString('Main', 'Form1.Label' + IntToStr(j), (FindComponent('Label' + IntToStr(j)) as TLabel).Caption);
+
+    prev_conc := Sett.ReadString('Main', 'prev_conc', prev_conc);
+    for j := 1 to 15 do (FindComponent('RadioButton' + IntToStr(j)) as TRadioButton).Checked := Sett.ReadBool('Main', 'Form1.RadioButton' + IntToStr(j), (FindComponent('RadioButton' + IntToStr(j)) as TRadioButton).Checked);
+
+    Label20.Caption := Sett.ReadString('Main', 'Form1.Label20', Label20.Caption);
+    Label18.Caption := Sett.ReadString('Main', 'Form1.Label18', Label18.Caption);
+    Panel6.Caption := Sett.ReadString('Main', 'Form1.Panel6', Panel6.Caption);
+    Checkbox3.Checked := Sett.ReadBool('Main', 'Form1.Checkbox3', Checkbox3.Checked);
+    Checkbox5.Checked := Sett.ReadBool('Main', 'Form1.Checkbox5', Checkbox3.Checked);
+    ComboBox3.ItemIndex := Sett.ReadInteger('Main', 'Form1.ComboBox3', ComboBox3.ItemIndex);
+
+    if FileExists('hb_comparison.csv') then hb_comparison.Form15.StringGrid1.LoadFromCSVFile('hb_comparison.csv');
+    if FileExists('hb_stockanalysis.csv') then hb_stockanalysis.Form8.StringGrid1.LoadFromCSVFile('hb_stockanalysis.csv');
+    if FileExists('hb_persubstance.csv') then hb_persubstance.Form9.StringGrid1.LoadFromCSVFile('hb_persubstance.csv');
+    if FileExists('hb_ratios.csv') then hb_ratios.Form14.StringGrid1.LoadFromCSVFile('hb_ratios.csv');
+    if FileExists('hb_ppm_results.csv') then StringGrid1.LoadFromCSVFile('hb_ppm_results.csv');
+    if FileExists('hb_results.csv') then StringGrid2.LoadFromCSVFile('hb_results.csv');
+    Sett.Free;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
 begin
 
 end;
@@ -3449,8 +3539,15 @@ begin
 
 end;
 
+procedure TForm1.PageControl1Exit(Sender: TObject);
+begin
 
+end;
 
+procedure TForm1.Panel6Click(Sender: TObject);
+begin
+
+end;
 
 procedure TForm1.cleanresults;
 var
@@ -3478,8 +3575,8 @@ var
   prev_value : double ;
 begin
 
-  Label35.Caption := 'Conc. (ppm)' ;
-  Label38.Caption := '(ppm)' ;
+  Label29.Caption := 'Conc. (ppm)' ;
+  Label32.Caption := '(ppm)' ;
   StringGrid1.Cells[1,0] := 'Result (ppm)' ;
   hb_persubstance.Form9.StringGrid1.Cells[2, 0] := 'Contribution (ppm)' ;
   hb_ratios.Form14.StringGrid1.Cells[1, 0] := 'Ratio (ppm: ppm)' ;
@@ -3499,7 +3596,7 @@ begin
 
   prev_value := StrtoFloat((FindComponent('Edit' + IntToStr(i)) as TEdit).Text)  ;
 
-  (FindComponent('Edit' + IntToStr(i)) as TEdit).Text  := FloatToStrF(prev_value*molar_masses[i-1]*1000, ffExponent, 4, 2)
+  (FindComponent('Edit' + IntToStr(i)) as TEdit).Text  := FloatToStrF(prev_value*molar_masses[i-1]*1000, ffGeneral, 4, 2)
 
   end ;
 
@@ -3517,7 +3614,7 @@ begin
 
   prev_value := StrtoFloat((FindComponent('Edit' + IntToStr(i)) as TEdit).Text)  ;
 
-  (FindComponent('Edit' + IntToStr(i)) as TEdit).Text  := FloatToStrF(prev_value*molar_masses[i-1], ffExponent, 4, 2)
+  (FindComponent('Edit' + IntToStr(i)) as TEdit).Text  := FloatToStrF(prev_value*molar_masses[i-1], ffGeneral, 4, 2)
 
   end ;
 
@@ -3535,7 +3632,7 @@ begin
 
   prev_value := StrtoFloat((FindComponent('Edit' + IntToStr(i)) as TEdit).Text)  ;
 
-  (FindComponent('Edit' + IntToStr(i)) as TEdit).Text  := FloatToStrF(prev_value*molar_masses[i-1]/equivalents[i-1], ffExponent, 4, 2)
+  (FindComponent('Edit' + IntToStr(i)) as TEdit).Text  := FloatToStrF(prev_value*molar_masses[i-1]/equivalents[i-1], ffGeneral, 4, 2)
 
   end ;
 
@@ -3555,8 +3652,8 @@ var
   prev_value : double ;
 begin
 
-  Label35.Caption := 'Conc. (mol/L)' ;
-  Label38.Caption := '(mol/L)' ;
+  Label29.Caption := 'Conc. (mol/L)' ;
+  Label32.Caption := '(mol/L)' ;
   StringGrid1.Cells[1,0] := 'Result (mol/L)' ;
   hb_persubstance.Form9.StringGrid1.Cells[2, 0] := 'Contribution (mol/L)' ;
   hb_ratios.Form14.StringGrid1.Cells[1, 0] := 'Ratio (mol/L: mol/L)' ;
@@ -3632,8 +3729,8 @@ var
   prev_value : double ;
 begin
 
-  Label35.Caption := 'Conc. (mmol/L)' ;
-  Label38.Caption := '(mmol/L)' ;
+  Label29.Caption := 'Conc. (mmol/L)' ;
+  Label32.Caption := '(mmol/L)' ;
   StringGrid1.Cells[1,0] := 'Result (mmol/L)' ;
   hb_persubstance.Form9.StringGrid1.Cells[2, 0] := 'Contribution (mmol/L)' ;
   hb_ratios.Form14.StringGrid1.Cells[1, 0]  := 'Ratio (mmol/L: mmol/L)' ;
@@ -3709,8 +3806,8 @@ var
   prev_value : double ;
 begin
 
-  Label35.Caption := 'Conc. (meq/L)' ;
-  Label38.Caption := '(meq/L)' ;
+  Label29.Caption := 'Conc. (meq/L)' ;
+  Label32.Caption := '(meq/L)' ;
   StringGrid1.Cells[1,0] := 'Result (meq/L)' ;
   hb_persubstance.Form9.StringGrid1.Cells[2, 0] := 'Contribution (meq/L)' ;
   hb_ratios.Form14.StringGrid1.Cells[1, 0] := 'Ratio (meq/L: meq/L)' ;
@@ -3910,6 +4007,12 @@ end;
 procedure TForm1.StringGrid2EditingDone(Sender: TObject);
 begin
   weightFineTunning;
+end;
+
+procedure TForm1.TabSheet1ContextPopup(Sender: TObject; MousePos: TPoint;
+  var Handled: Boolean);
+begin
+
 end;
 
 procedure TForm1.ToggleBox1Change(Sender: TObject);
