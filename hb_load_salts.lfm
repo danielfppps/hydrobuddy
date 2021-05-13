@@ -43,6 +43,7 @@ object Form2: TForm2
     ItemHeight = 0
     MultiSelect = True
     OnSelectionChange = ListBox1SelectionChange
+    ParentShowHint = False
     ScrollWidth = 238
     Sorted = True
     TabOrder = 0
@@ -962,6 +963,17 @@ object Form2: TForm2
     OnClick = Button10Click
     TabOrder = 11
   end
+  object CheckBox1: TCheckBox
+    Left = 280
+    Height = 19
+    Top = 152
+    Width = 114
+    Caption = 'Summary Popups'
+    Checked = True
+    OnChange = CheckBox1Change
+    State = cbChecked
+    TabOrder = 12
+  end
   object OpenDialog1: TOpenDialog
     DefaultExt = '.hbl'
     Filter = 'HydroBuddy List|*.hbl'
@@ -973,5 +985,16 @@ object Form2: TForm2
     Filter = 'HydroBuddy List|*.hbl'
     FilterIndex = 0
     Left = 328
+  end
+  object PopupNotifier1: TPopupNotifier
+    Color = clInfoBk
+    Icon.Data = {
+      07544269746D617000000000
+    }
+    Text = 'Text'
+    Title = 'Caption'
+    Visible = False
+    Left = 392
+    Top = 8
   end
 end

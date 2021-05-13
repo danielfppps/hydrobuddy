@@ -30,7 +30,9 @@ type
     Button16: TButton;
     Button17: TButton;
     Button18: TButton;
+    Button19: TBitBtn;
     Button2: TBitBtn;
+    Button20: TButton;
     Button22: TButton;
     Button23: TButton;
     Button24: TButton;
@@ -182,7 +184,9 @@ type
     procedure Button16Click(Sender: TObject);
     procedure Button17Click(Sender: TObject);
     procedure Button18Click(Sender: TObject);
+    procedure Button19Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button20Click(Sender: TObject);
     procedure Button22Click(Sender: TObject);
     procedure Button23Click(Sender: TObject);
     procedure Button24Click(Sender: TObject);
@@ -412,6 +416,13 @@ begin
   Form2.Visible := True;
 end;
 
+procedure TForm1.Button20Click(Sender: TObject);
+var
+  i: integer;
+begin
+    for i := 1 to 16 do (FindComponent('Edit' + IntToStr(i)) as TEdit).Text := StringGrid1.cells[1,i];
+end;
+
 procedure TForm1.Button22Click(Sender: TObject);
 begin
   hb_freedom.Form12.Visible := true ;;
@@ -614,6 +625,9 @@ var
   predicted_ec: double;
   nameToCompare: string;
   ionic_strength : double;
+  all_solids: boolean;
+  mixContribution: array[0..15] of double;
+  totalWeight: double;
 begin
   replaceNullWithZeroes;
 
@@ -624,6 +638,10 @@ begin
   hb_persubstance.Form9.StringGrid1.Clean;
   hb_persubstance.Form9.StringGrid1.RowCount := 1 ;
   hb_stockanalysis.Form8.StringGrid1.Clean ;
+
+  //initializing variables for mix label calculation
+  all_solids := True;
+  totalWeight := 0;
 
   // EC parameters
 
@@ -689,6 +707,9 @@ begin
   waterquality[13] := StrtoFloat(hb_waterquality.Form6.Edit14.Text);
   waterquality[14] := StrtoFloat(hb_waterquality.Form6.Edit15.Text);
   waterquality[15] := StrtoFloat(hb_waterquality.Form6.Edit16.Text);
+
+  // disable input mix analysis button, we will enable it later if all substances are solids
+  Button19.Enabled := False ;
 
   // set instrument precision values
 
@@ -832,7 +853,7 @@ if RadioButton13.Checked then
       instrumentalError[j-1] := 0;
       elementInSolutionA[j-1] := 0;
       elementInSolutionB[j-1] := 0;
-
+      mixContribution[j-1] := 0;
     end;
 
     // load the database in order to get the weights and find the resulting ppm values
@@ -855,6 +876,8 @@ if RadioButton13.Checked then
       weight := StrToFloat(StringGrid2.Cells[AMOUNT_IDX, i]);
       nameToCompare := StringGrid2.Cells[NAME_IDX, i] ;
 
+      if  MyDbf.FieldByName('isLiquid').AsBoolean = True then all_solids := False;
+
       If RadioButton6.Checked then
       nameToCompare := Copy(nameToCompare, 5, Length(nameToCompare));
 
@@ -865,23 +888,11 @@ if RadioButton13.Checked then
 
       begin
 
-        // ppm values are very easily calculated using all the information
-        // within the DB
-        Result[j] := (1 / weight_factor) * weight *
-          0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
-          'Purity').AsFloat / Volume + Result[j];
-
         if ((1 / weight_factor) * weight *
           0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
           'Purity').AsFloat / Volume > 0) then
 
         begin
-
-        if (StringGrid2.Cells[NAME_IDX, i][1] = 'A') and (RadioButton6.Checked) then
-        elementInSolutionA[j] := Result[j] + elementInSolutionA[j] ;
-
-        if (StringGrid2.Cells[NAME_IDX, i][1] = 'B') and (RadioButton6.Checked) then
-        elementInSolutionB[j] := Result[j] + elementInSolutionB[j] ;
 
           upper := ((StrToFloat(StringGrid2.Cells[AMOUNT_IDX, i])+weight_error)) /
             (Volume - volume_error) ;
@@ -914,7 +925,16 @@ if RadioButton13.Checked then
             0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName(
             'Purity').AsFloat / Volume, ffExponent, 4, 2));
 
+          Result[j] := Result[j] + StrToFloat(hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1]);
 
+          if (StringGrid2.Cells[NAME_IDX, i][1] = 'A') and (RadioButton6.Checked) then
+          elementInSolutionA[j] := StrToFloat(hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1])+ elementInSolutionA[j] ;
+
+          if (StringGrid2.Cells[NAME_IDX, i][1] = 'B') and (RadioButton6.Checked) then
+          elementInSolutionB[j] := StrToFloat(hb_persubstance.Form9.StringGrid1.Cells[2, hb_persubstance.Form9.StringGrid1.RowCount-1]) + elementInSolutionB[j] ;
+
+          //ShowMessage( nameSubstance + ' ' + varnames[j] + ' ' + FloatToStr(weight * 0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName('Purity').AsFloat));
+          mixContribution[j] := mixContribution[j] + weight * 0.01 * MyDbf.FieldByName(varnames[j]).AsFloat * MyDbf.FieldByName('Purity').AsFloat ;
 
         end;
 
@@ -934,20 +954,27 @@ if RadioButton13.Checked then
     MyDbf.Close;
     MyDbf.Free;
 
+    for i := 1 to StringGrid2.RowCount - 1 do totalWeight := totalWeight+StrToFloat(StringGrid2.Cells[AMOUNT_IDX, i]);
 
     // save results in main page as well
     for j := 1 to 16 do
     begin
 
-    if all_element_targets[j-1] <> 0 then
-    grossError[j-1] :=  (Result[j-1] * 100 / all_element_targets[j-1]) - 100 ;
+        if all_element_targets[j-1] <> 0 then
+        grossError[j-1] :=  (Result[j-1] * 100 / all_element_targets[j-1]) - 100 ;
 
-    (FindComponent('RLabel' + IntToStr(j)) as TLabel).Caption := StringGrid1.Cells[1, i];
-    StringGrid1.Cells[3, j] := '+/- ' + FloatToStr(Round(instrumentalError[j-1]*10)/10) + '%' ;
-    StringGrid1.Cells[2, j] := FloatToStr(Round(grossError[j-1]*10)/10) + '%' ;
+        (FindComponent('RLabel' + IntToStr(j)) as TLabel).Caption := StringGrid1.Cells[1, i];
+        StringGrid1.Cells[3, j] := '+/- ' + FloatToStr(Round(instrumentalError[j-1]*10)/10) + '%' ;
+        StringGrid1.Cells[2, j] := FloatToStr(Round(grossError[j-1]*10)/10) + '%' ;
+
+        // save the mix composition here
+        hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(100*mixContribution[j-1]/totalWeight,3));
+        if hb_analysis.Form11.StringGrid1.Cells[0,j] = 'K2O' then hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(1.2047*100*mixContribution[j-1]/totalWeight,3));
+        if hb_analysis.Form11.StringGrid1.Cells[0,j] = 'P2O5' then hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(2.290*100*mixContribution[j-1]/totalWeight,3));
 
     end;
 
+    if all_solids then Button19.Enabled := True;
 
     for i := 1 to 16 do
     begin
@@ -1065,6 +1092,7 @@ if RadioButton13.Checked then
   for i := 0 to 15 do
   begin
 
+        //ShowMessage(FloatToStr(elementInSolutionA[i]));
         elementInSolutionA[i] := 100 * elementInSolutionA[i] * StrtoFloat(Edit17.Text) / (1000*1000);
 
         if (varnames[i] <> 'P') and (varnames[i] <> 'K') then
@@ -1361,6 +1389,11 @@ begin
   Button4Click(Sender);
 end;
 
+procedure TForm1.Button19Click(Sender: TObject);
+begin
+      hb_analysis.Form11.visible := True ;
+end;
+
 procedure TForm1.getmolarmasses(var molar_mass: array of double) ;
 begin
 
@@ -1580,6 +1613,9 @@ var
   predicted_ec: double;
   mass_unit: string;
   ionic_strength: double;
+  all_solids: boolean;
+  mixContribution: array[0..15] of double;
+  totalWeight: double;
 begin
 
   //deal with null
@@ -1599,6 +1635,12 @@ begin
   hb_persubstance.Form9.StringGrid1.Clean;
   hb_persubstance.Form9.StringGrid1.RowCount := 1 ;
   hb_stockanalysis.Form8.StringGrid1.Clean ;
+
+  //initializing variables for mix label calculation
+  all_solids := True;
+  totalWeight := 0;
+  Button19.Enabled := False;
+  for j:=0 to 15 do mixContribution[j] := 0;
 
   // EC parameters
 
@@ -1893,6 +1935,7 @@ if RadioButton13.Checked then
       begin
         if IsLiquid[0][i] = 0 then preloaded_weight[i] :=  (1 / weight_factor) * MyDbf.FieldByName('Weight').AsFloat ;
         if IsLiquid[0][i] = 1 then preloaded_weight[i] :=   MyDbf.FieldByName('Weight').AsFloat ;
+        if IsLiquid[0][i] = 1 then all_solids := False;
 
         all_element_contributions[j][i] :=
         0.01 * MyDbf.FieldByName(all_element_names[j]).AsFloat * MyDbf.FieldByName('Purity').AsFloat / Volume;
@@ -2572,7 +2615,7 @@ if RadioButton13.Checked then
 
           hb_persubstance.Form9.StringGrid1.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
 
-          hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][1]);
+          hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][0]);
           hb_persubstance.Form9.StringGrid1.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(all_element_names[j]);
 
           temp3 := solutions[i] * all_element_contributions[j][i]+preloaded_weight[i]*all_element_contributions[j][j] ;
@@ -2593,7 +2636,7 @@ if RadioButton13.Checked then
 
           hb_persubstance.Form9.StringGrid1.RowCount := hb_persubstance.Form9.StringGrid1.RowCount + 1 ;
 
-          hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][1]);
+          hb_persubstance.Form9.StringGrid1.Cells[0, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(name_array[i][0]);
           hb_persubstance.Form9.StringGrid1.Cells[1, hb_persubstance.Form9.StringGrid1.RowCount - 1] :=(all_element_names[j]);
 
           temp3 := preloaded_weight[i]*all_element_contributions[j][i] ;
@@ -2879,6 +2922,9 @@ if RadioButton13.Checked then
   end;
   // END OF SECOND IMPORTANT IF STATEMENT
 
+
+
+
   //check and assign any empty elements in StringGrid
 
   for i := 0 to StringGrid2.RowCount - 2 do
@@ -2895,19 +2941,28 @@ if RadioButton13.Checked then
 
   end;
 
-  // total cost calculation
+  // total cost and mix calculation
 
-  test := 0;
+   test := 0;
 
-  for i := 0 to StringGrid2.RowCount - 2 do
+   for i := 1 to StringGrid2.RowCount - 1 do
+   begin
+      test := StrtoFloat(StringGrid2.Cells[COST_IDX,i]) + test;
+      totalWeight := totalWeight + StrtoFloat(StringGrid2.Cells[AMOUNT_IDX,i]);
+      for j:= 0 to 15 do mixContribution[j] := mixContribution[j] + StrtoFloat(StringGrid2.Cells[AMOUNT_IDX,i])*all_element_contributions[j][i-1]*Volume;
+   end;
 
-  begin
+   for j := 1 to 16 do
+    begin
+        hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(100*mixContribution[j-1]/totalWeight,3));
+        if hb_analysis.Form11.StringGrid1.Cells[0,j] = 'K2O' then hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(1.2047*100*mixContribution[j-1]/totalWeight,3));
+        if hb_analysis.Form11.StringGrid1.Cells[0,j] = 'P2O5' then hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(2.290*100*mixContribution[j-1]/totalWeight,3));
+    end;
 
-    test := StrtoFloat(StringGrid2.Cells[COST_IDX,i+1]) + test;
-
-  end;
+   if all_solids then Button19.Enabled := True;
 
   Label18.Caption := ('Total Cost is ' + FloattoStr(round2(test, 1)));
+
 
    // post ratios based on results posted on listboxes above
 
@@ -3472,6 +3527,7 @@ begin
     Sett.WriteBool('Main', 'Form1.Checkbox3', Checkbox3.Checked);
     Sett.WriteBool('Main', 'Form1.Checkbox5', Checkbox5.Checked);
     Sett.WriteInteger('Main', 'Form1.ComboBox3', ComboBox3.ItemIndex);
+    Sett.WriteBool('Main', 'Form2.CheckBox1', hb_load_salts.Form2.Checkbox1.checked);
 
     hb_comparison.Form15.StringGrid1.SavetoCSVFile('hb_comparison.csv');
     hb_stockanalysis.Form8.StringGrid1.SavetoCSVFile('hb_stockanalysis.csv');
@@ -3504,6 +3560,7 @@ begin
     Checkbox3.Checked := Sett.ReadBool('Main', 'Form1.Checkbox3', Checkbox3.Checked);
     Checkbox5.Checked := Sett.ReadBool('Main', 'Form1.Checkbox5', Checkbox3.Checked);
     ComboBox3.ItemIndex := Sett.ReadInteger('Main', 'Form1.ComboBox3', ComboBox3.ItemIndex);
+    hb_load_salts.Form2.Checkbox1.checked := Sett.ReadBool('Main', 'Form2.CheckBox1', hb_load_salts.Form2.Checkbox1.checked);
 
     if FileExists('hb_comparison.csv') then hb_comparison.Form15.StringGrid1.LoadFromCSVFile('hb_comparison.csv');
     if FileExists('hb_stockanalysis.csv') then hb_stockanalysis.Form8.StringGrid1.LoadFromCSVFile('hb_stockanalysis.csv');

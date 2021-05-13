@@ -1,18 +1,19 @@
 object Form11: TForm11
-  Left = 437
-  Height = 400
-  Top = 266
-  Width = 398
+  Left = 721
+  Height = 440
+  Top = 327
+  Width = 266
   BorderStyle = bsToolWindow
   Caption = 'Data Analysis'
-  ClientHeight = 400
-  ClientWidth = 398
+  ClientHeight = 440
+  ClientWidth = 266
   FormStyle = fsStayOnTop
-  LCLVersion = '0.9.31'
+  Position = poMainFormCenter
+  LCLVersion = '2.0.13.0'
   object Button1: TButton
-    Left = 301
+    Left = 181
     Height = 25
-    Top = 352
+    Top = 408
     Width = 75
     Caption = 'Close '
     OnClick = Button1Click
@@ -20,24 +21,77 @@ object Form11: TForm11
   end
   object StringGrid1: TStringGrid
     Left = 16
-    Height = 320
+    Height = 384
     Top = 16
-    Width = 376
+    Width = 240
     ColCount = 2
     Columns = <    
       item
-        Title.Caption = 'Logged Data Analysis'
-        Width = 250
-      end    
-      item
         Alignment = taCenter
         Title.Alignment = taCenter
-        Title.Caption = 'Values'
-        Width = 100
+        Title.Caption = 'Composition % (W/W)'
+        Width = 150
       end>
     DefaultColWidth = 180
-    FixedCols = 0
-    RowCount = 25
+    RowCount = 17
     TabOrder = 1
+    ColWidths = (
+      75
+      150
+    )
+    Cells = (
+      17
+      0
+      0
+      'Element'
+      0
+      1
+      'N (NO3-)'
+      0
+      2
+      'K2O'
+      0
+      3
+      'P2O5'
+      0
+      4
+      'Mg'
+      0
+      5
+      'Ca'
+      0
+      6
+      'S'
+      0
+      7
+      'Fe'
+      0
+      8
+      'Zn'
+      0
+      9
+      'B'
+      0
+      10
+      'Cu'
+      0
+      11
+      'Mo'
+      0
+      12
+      'Na'
+      0
+      13
+      'Si'
+      0
+      14
+      'Cl'
+      0
+      15
+      'Mn'
+      0
+      16
+      'N (NH4+)'
+    )
   end
 end

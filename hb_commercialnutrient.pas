@@ -86,9 +86,6 @@ varnames : array of string ;
 result : array of double ;
 test : double ;
 Volume : double ;
-currentValP: integer;
-currentValK: Integer;
-currentValSi: Integer;
 begin
 
 SetLength (varnames, 16) ;
@@ -132,28 +129,9 @@ for i := 1 to 16 do
            begin
 
           HB_Main.Form1.Edit1.Text := FloattoStr(result[0]) ;
-
-          if currentValP = 0 then
           HB_Main.Form1.Edit3.Text := FloattoStr(result[2]) ;
-
-          if currentValP = 1 then
-          HB_Main.Form1.Edit3.Text := FloattoStr(Form1.round2(result[2]*0.4364, 2))  ;
-
-
-          if currentValK = 0 then
           HB_Main.Form1.Edit2.Text := FloattoStr(result[1]) ;
-
-          if currentValK = 1 then
-          HB_Main.Form1.Edit2.Text := FloattoStr(Form1.round2(result[1]*0.8301, 2)) ;
-
-
-          if currentValSi = 0 then
           HB_Main.Form1.Edit13.Text := FloattoStr(result[13]) ;
-
-          if currentValSi = 1 then
-          HB_Main.Form1.Edit13.Text := FloattoStr(Form1.round2(result[13]*0.4684, 2)) ;
-
-
           HB_Main.Form1.Edit4.Text := FloattoStr(result[3]) ;
           HB_Main.Form1.Edit5.Text := FloattoStr(result[4]) ;
           HB_Main.Form1.Edit6.Text := FloattoStr(result[5]) ;
@@ -178,25 +156,12 @@ for i := 1 to 16 do
 
           HB_Main.Form1.Edit1.Text := FloattoStr(result[0]+ StrtoFloat(HB_Main.Form1.Edit1.Text)) ;
 
-          if currentValP = 0 then
           HB_Main.Form1.Edit3.Text := FloattoStr(result[2]+ StrtoFloat(HB_Main.Form1.Edit3.Text)) ;
 
-          if currentValP = 1 then
-          HB_Main.Form1.Edit3.Text := FloattoStr(Form1.round2(result[2]*0.4364, 2))  ;
-
-
-          if currentValK = 0 then
           HB_Main.Form1.Edit2.Text := FloattoStr(result[1]+ StrtoFloat(HB_Main.Form1.Edit2.Text)) ;  ;
 
-          if currentValK = 1 then
-          HB_Main.Form1.Edit2.Text := FloattoStr(Form1.round2(result[1]*0.8301+ StrtoFloat(HB_Main.Form1.Edit2.Text), 2)) ;
-
-
-          if currentValSi = 0 then
           HB_Main.Form1.Edit13.Text := FloattoStr(result[13]+ StrtoFloat(HB_Main.Form1.Edit13.Text)) ;
 
-          if currentValSi = 1 then
-          HB_Main.Form1.Edit13.Text := FloattoStr(Form1.round2(result[13]*0.4684+ StrtoFloat(HB_Main.Form1.Edit13.Text), 2)) ;
 
 
 

@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
-  StdCtrls, Buttons, Dbf, db, Dbf_Common, hb_newcustomsalt;
+  StdCtrls, Buttons, PopupNotifier, Dbf, db, Dbf_Common, hb_newcustomsalt;
 
 type
 
@@ -23,11 +23,13 @@ type
     Button7: TBitBtn;
     Button8: TBitBtn;
     Button9: TBitBtn;
+    CheckBox1: TCheckBox;
     Label1: TLabel;
     Label2: TLabel;
     ListBox1: TListBox;
     ListBox2: TListBox;
     OpenDialog1: TOpenDialog;
+    PopupNotifier1: TPopupNotifier;
     SaveDialog1: TSaveDialog;
     procedure Button10Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
@@ -39,6 +41,7 @@ type
     procedure Button7Click(Sender: TObject);
     procedure Button8Click(Sender: TObject);
     procedure Button9Click(Sender: TObject);
+    procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure ListBox1SelectionChange(Sender: TObject; User: boolean);
     procedure ListBox2SelectionChange(Sender: TObject; User: boolean);
@@ -53,7 +56,7 @@ var
 
 implementation
 
-uses HB_Main, hb_addweight ;
+uses HB_Main, hb_addweight, hb_analysis ;
 
 { TForm2 }
 
@@ -64,8 +67,9 @@ end;
 
 procedure TForm2.ListBox1SelectionChange(Sender: TObject; User: boolean);
 var
-  i : integer ;
+  i,selected_idx : integer ;
   item_selected : boolean ;
+  MyDbf: TDbf;
 begin
 
 item_selected := false ;
@@ -75,7 +79,10 @@ for i := 0 to ListBox1.Items.Count - 1 do
     begin
 
     if (ListBox1.Selected [i]) then
-    item_selected := true ;
+    begin
+         selected_idx := i;
+         item_selected := true ;
+    end;
 
     end ;
 
@@ -83,32 +90,73 @@ if item_selected then
 
 begin
 
-for i := 0 to ListBox2.Items.Count - 1 do
+    for i := 0 to ListBox2.Items.Count - 1 do
 
-    begin
+        begin
 
-    if (ListBox2.Selected [i]) then
-    ListBox2.Selected [i] := false ;
+        if (ListBox2.Selected [i]) then
+        ListBox2.Selected [i] := false ;
 
-    end ;
+        end ;
 
-Button1.Enabled := True ;
-Button4.Enabled := True ;
-Button5.Enabled := True ;
-Button6.Enabled := False ;
-Button2.Enabled := False ;
-Button10.Enabled := False;
+    MyDbf := TDbf.Create(nil) ;
+    MyDbf.FilePathFull := '';
+    MyDbf.TableName := Form1.substances_db;
+    MyDbf.Open             ;
+    MyDbf.Active := true ;
+    MyDbf.Filter := 'Name=' + QuotedStr(ListBox1.Items[selected_idx]) ;
+    MyDbf.Filtered := true;       // This selects the filtered set
+    MyDbf.First;                  // moves the the first filtered data
+
+
+    PopupNotifier1.Title := ListBox1.Items[selected_idx] + ' - '+ 'ConcType ' + MyDbf.FieldByName('ConcType').AsString ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 0 then
+    PopupNotifier1.Text := 'Solid, composition is in %W/W' ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 1 then
+    PopupNotifier1.Text := 'Liquid, composition is in %W/V';
+
+    PopupNotifier1.Text := PopupNotifier1.Text + LineEnding + ' Purity ' + FloattoStr(MyDbf.FieldByName('Purity').AsFloat*100) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| N (NO3-)' + ' - ' + FloattoStr(MyDbf.FieldByName('N (NO3-)').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| N (NH4+)' + ' - ' + FloattoStr(MyDbf.FieldByName('N (NH4+)').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| K' + ' - ' + FloattoStr(MyDbf.FieldByName('K').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| P' + ' - ' + FloattoStr(MyDbf.FieldByName('P').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Mg' + ' - ' + FloattoStr(MyDbf.FieldByName('Mg').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Ca' + ' - ' + FloattoStr(MyDbf.FieldByName('Ca').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| S' + ' - ' + FloattoStr(MyDbf.FieldByName('S').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Fe' + ' - ' + FloattoStr(MyDbf.FieldByName('Fe').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| B' + ' - ' + FloattoStr(MyDbf.FieldByName('B').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Zn' + ' - ' + FloattoStr(MyDbf.FieldByName('Zn').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Mn' + ' - ' + FloattoStr(MyDbf.FieldByName('Mn').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Cu' + ' - ' + FloattoStr(MyDbf.FieldByName('Cu').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Mo' + ' - ' + FloattoStr(MyDbf.FieldByName('Mo').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Si' + ' - ' + FloattoStr(MyDbf.FieldByName('Si').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Cl' + ' - ' + FloattoStr(MyDbf.FieldByName('Cl').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Na' + ' - ' + FloattoStr(MyDbf.FieldByName('Na').AsFloat) ;
+
+    MyDbf.Close ;
+    MyDbf.Free ;
+
+    if checkbox1.Checked then PopupNotifier1.Show;
+
+    Button1.Enabled := True ;
+    Button4.Enabled := True ;
+    Button5.Enabled := True ;
+    Button6.Enabled := False ;
+    Button2.Enabled := False ;
+    Button10.Enabled := False;
 
 end ;
-
 
 end;
 
 
 procedure TForm2.ListBox2SelectionChange(Sender: TObject; User: boolean);
 var
-  i : integer ;
+  i,selected_idx : integer ;
   item_selected : boolean ;
+  MyDbf: TDbf;
 begin
 
 
@@ -119,7 +167,10 @@ for i := 0 to ListBox2.Items.Count - 1 do
     begin
 
     if (ListBox2.Selected [i]) then
-    item_selected := true ;
+    begin
+        item_selected := true ;
+        selected_idx := i;
+    end;
 
     end ;
 
@@ -135,6 +186,48 @@ for i := 0 to ListBox1.Items.Count - 1 do
     ListBox1.Selected [i] := false ;
 
     end ;
+
+
+    MyDbf := TDbf.Create(nil) ;
+    MyDbf.FilePathFull := '';
+    MyDbf.TableName := Form1.substances_used_db;
+    MyDbf.Open             ;
+    MyDbf.Active := true ;
+    MyDbf.Filter := 'Name=' + QuotedStr(ListBox2.Items[selected_idx]) ;
+    MyDbf.Filtered := true;       // This selects the filtered set
+    MyDbf.First;                  // moves the the first filtered data
+
+
+    PopupNotifier1.Title := ListBox2.Items[selected_idx] + ' - '+ 'ConcType ' + MyDbf.FieldByName('ConcType').AsString ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 0 then
+    PopupNotifier1.Text := 'Solid, composition is in %W/W' ;
+
+    if MyDbf.FieldByName('IsLiquid').AsInteger = 1 then
+    PopupNotifier1.Text := 'Liquid, composition is in %W/V';
+
+    PopupNotifier1.Text := PopupNotifier1.Text + LineEnding + ' Purity ' + FloattoStr(MyDbf.FieldByName('Purity').AsFloat*100) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| N (NO3-)' + ' - ' + FloattoStr(MyDbf.FieldByName('N (NO3-)').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| N (NH4+)' + ' - ' + FloattoStr(MyDbf.FieldByName('N (NH4+)').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| K' + ' - ' + FloattoStr(MyDbf.FieldByName('K').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| P' + ' - ' + FloattoStr(MyDbf.FieldByName('P').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Mg' + ' - ' + FloattoStr(MyDbf.FieldByName('Mg').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Ca' + ' - ' + FloattoStr(MyDbf.FieldByName('Ca').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| S' + ' - ' + FloattoStr(MyDbf.FieldByName('S').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Fe' + ' - ' + FloattoStr(MyDbf.FieldByName('Fe').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| B' + ' - ' + FloattoStr(MyDbf.FieldByName('B').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Zn' + ' - ' + FloattoStr(MyDbf.FieldByName('Zn').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Mn' + ' - ' + FloattoStr(MyDbf.FieldByName('Mn').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Cu' + ' - ' + FloattoStr(MyDbf.FieldByName('Cu').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Mo' + ' - ' + FloattoStr(MyDbf.FieldByName('Mo').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Si' + ' - ' + FloattoStr(MyDbf.FieldByName('Si').AsFloat)  ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Cl' + ' - ' + FloattoStr(MyDbf.FieldByName('Cl').AsFloat) ;
+    PopupNotifier1.Text := PopupNotifier1.Text + ' ' + '| Na' + ' - ' + FloattoStr(MyDbf.FieldByName('Na').AsFloat) ;
+
+    MyDbf.Close ;
+    MyDbf.Free ;
+
+    if checkbox1.Checked then PopupNotifier1.Show;
 
 Button1.Enabled := False ;
 Button4.Enabled := False ;
@@ -826,6 +919,11 @@ end;
 
    saltList.Free();
 
+end;
+
+procedure TForm2.CheckBox1Change(Sender: TObject);
+begin
+  PopupNotifier1.Hide;
 end;
 
 

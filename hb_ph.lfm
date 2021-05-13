@@ -32,7 +32,7 @@ object Form13: TForm13
     Hint = 'This will add the nutrient contribution of the acid selected, in the amount needed to neutralize the total alkalinity of the source water'
     Top = 96
     Width = 311
-    Caption = 'Add acid nutrient contribution to water analysis'
+    Caption = 'Add acid nutrient contribution to targets'
     OnClick = Button1Click
     ParentShowHint = False
     ShowHint = True

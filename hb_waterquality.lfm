@@ -162,7 +162,6 @@ object Form6: TForm6
     Height = 23
     Top = 104
     Width = 64
-    NumbersOnly = True
     TabOrder = 0
     Text = '0'
   end
@@ -171,7 +170,6 @@ object Form6: TForm6
     Height = 23
     Top = 167
     Width = 64
-    NumbersOnly = True
     TabOrder = 1
     Text = '0'
   end
@@ -180,7 +178,6 @@ object Form6: TForm6
     Height = 23
     Top = 199
     Width = 64
-    NumbersOnly = True
     TabOrder = 2
     Text = '0'
   end
@@ -189,7 +186,6 @@ object Form6: TForm6
     Height = 23
     Top = 228
     Width = 64
-    NumbersOnly = True
     TabOrder = 3
     Text = '0'
   end
@@ -198,7 +194,6 @@ object Form6: TForm6
     Height = 23
     Top = 259
     Width = 64
-    NumbersOnly = True
     TabOrder = 4
     Text = '0'
   end
@@ -207,7 +202,6 @@ object Form6: TForm6
     Height = 23
     Top = 104
     Width = 72
-    NumbersOnly = True
     TabOrder = 5
     Text = '0'
   end
@@ -225,7 +219,6 @@ object Form6: TForm6
     Height = 23
     Top = 167
     Width = 72
-    NumbersOnly = True
     TabOrder = 7
     Text = '0'
   end
@@ -234,7 +227,6 @@ object Form6: TForm6
     Height = 23
     Top = 199
     Width = 72
-    NumbersOnly = True
     TabOrder = 8
     Text = '0'
   end
@@ -243,7 +235,6 @@ object Form6: TForm6
     Height = 23
     Top = 228
     Width = 72
-    NumbersOnly = True
     TabOrder = 9
     Text = '0'
   end
@@ -252,7 +243,6 @@ object Form6: TForm6
     Height = 23
     Top = 259
     Width = 72
-    NumbersOnly = True
     TabOrder = 10
     Text = '0'
   end
@@ -261,7 +251,6 @@ object Form6: TForm6
     Height = 23
     Top = 104
     Width = 72
-    NumbersOnly = True
     TabOrder = 11
     Text = '0'
   end
@@ -270,7 +259,6 @@ object Form6: TForm6
     Height = 23
     Top = 167
     Width = 72
-    NumbersOnly = True
     TabOrder = 12
     Text = '0'
   end
@@ -279,7 +267,6 @@ object Form6: TForm6
     Height = 23
     Top = 199
     Width = 72
-    NumbersOnly = True
     TabOrder = 13
     Text = '0'
   end
@@ -288,7 +275,6 @@ object Form6: TForm6
     Height = 23
     Top = 134
     Width = 72
-    NumbersOnly = True
     TabOrder = 14
     Text = '0'
   end
@@ -297,7 +283,6 @@ object Form6: TForm6
     Height = 23
     Top = 134
     Width = 64
-    NumbersOnly = True
     TabOrder = 15
     Text = '0'
   end
