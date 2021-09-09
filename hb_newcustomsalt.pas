@@ -341,7 +341,7 @@ currentVal := ComboBox2.ItemIndex;
 
       begin
 
-      Edit2.Text := FloattoStr(Form1.round2(StrtoFloat(Edit2.Text)*1.2047, 3))   ;
+      Edit4.Text := FloattoStr(Form1.round2(StrtoFloat(Edit4.Text)*1.2047, 3))   ;
 
       end ;
 
@@ -349,7 +349,7 @@ currentVal := ComboBox2.ItemIndex;
 
       begin
 
-      Edit2.Text := FloattoStr(Form1.round2(StrtoFloat(Edit2.Text)*(1/1.2047), 3))   ;
+      Edit4.Text := FloattoStr(Form1.round2(StrtoFloat(Edit4.Text)*(1/1.2047), 3))   ;
 
       end ;
 

@@ -207,6 +207,7 @@ type
     procedure CheckBox5Change(Sender: TObject);
     procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
+    procedure ComboBox3Change(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormWindowStateChange(Sender: TObject);
@@ -3552,6 +3553,11 @@ begin
   MyDbf.Free;
 
   Button6.Enabled := True;
+
+end;
+
+procedure TForm1.ComboBox3Change(Sender: TObject);
+begin
 
 end;
 
