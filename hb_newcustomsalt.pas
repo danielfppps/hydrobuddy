@@ -116,7 +116,7 @@ if currentValP = 0 then
 MyDbf.FieldByName('P').AsFloat:=StrtoFloat(Edit3.Text);
 
 if currentValK = 0 then
-MyDbf.FieldByName('K').AsFloat:=StrtoFloat(Edit2.Text);
+MyDbf.FieldByName('K').AsFloat:=StrtoFloat(Edit4.Text);
 
 if currentValSi = 0 then
 MyDbf.FieldByName('Si').AsFloat:=StrtoFloat(Edit13.Text);
@@ -125,7 +125,7 @@ if currentValP = 1 then
 MyDbf.FieldByName('P').AsFloat:=(StrtoFloat(Edit3.Text)*0.4364);
 
 if currentValK = 1 then
-MyDbf.FieldByName('K').AsFloat:=(StrtoFloat(Edit2.Text)*0.8301);
+MyDbf.FieldByName('K').AsFloat:=(StrtoFloat(Edit4.Text)*0.8301);
 
 if currentValSi = 1 then
 MyDbf.FieldByName('Si').AsFloat:=(StrtoFloat(Edit13.Text)*0.4684);
@@ -139,18 +139,19 @@ if CheckBox2.Checked  then
    MyDbf.FieldByName('IsLiquid').AsInteger:=1;
 
 MyDbf.FieldByName('N (NO3-)').AsFloat:=StrtoFloat(Edit1.Text);
-MyDbf.FieldByName('N (NH4+)').AsFloat:=StrtoFloat(Edit19.Text);
-MyDbf.FieldByName('Mg').AsFloat:=StrtoFloat(Edit4.Text);
-MyDbf.FieldByName('Ca').AsFloat:=StrtoFloat(Edit5.Text);
-MyDbf.FieldByName('S').AsFloat:=StrtoFloat(Edit6.Text);
-MyDbf.FieldByName('B').AsFloat:=StrtoFloat(Edit9.Text);
-MyDbf.FieldByName('Fe').AsFloat:=StrtoFloat(Edit7.Text);
-MyDbf.FieldByName('Zn').AsFloat:=StrtoFloat(Edit8.Text);
-MyDbf.FieldByName('Cu').AsFloat:=StrtoFloat(Edit10.Text);
-MyDbf.FieldByName('Mo').AsFloat:=StrtoFloat(Edit11.Text);
-MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit12.Text);
-MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit14.Text);
-MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit18.Text);
+MyDbf.FieldByName('N (NH4+)').AsFloat:=StrtoFloat(Edit2.Text);
+MyDbf.FieldByName('Mg').AsFloat:=StrtoFloat(Edit5.Text);
+MyDbf.FieldByName('Ca').AsFloat:=StrtoFloat(Edit6.Text);
+MyDbf.FieldByName('S').AsFloat:=StrtoFloat(Edit7.Text);
+MyDbf.FieldByName('Fe').AsFloat:=StrtoFloat(Edit8.Text);
+MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit9.Text);
+MyDbf.FieldByName('Zn').AsFloat:=StrtoFloat(Edit10.Text);
+MyDbf.FieldByName('B').AsFloat:=StrtoFloat(Edit11.Text);
+MyDbf.FieldByName('Cu').AsFloat:=StrtoFloat(Edit12.Text);
+MyDbf.FieldByName('Mo').AsFloat:=StrtoFloat(Edit14.Text);
+MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit18.Text);
+MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit19.Text);
+
 MyDbf.FieldByName('Cost').AsFloat:=StrtoFloat(Edit21.Text);
 MyDbf.FieldByName('ConcType').AsString:=Edit20.Text;
 MyDbf.FieldByName('Density').AsString:=Edit22.Text;
@@ -207,18 +208,18 @@ MyDbf.Filter := 'Name=' + QuotedStr(Label23.Caption) ;
 
     MyDbf.Edit;
 
-               MyDbf.FieldByName('Name').AsString:= Edit15.Text ;
-               MyDbf.FieldByName('Formula').AsString:= Edit17.Text;
-               MyDbf.FieldByName('Source').AsString:= Edit23.Text;
-               MyDbf.FieldByName('Purity').AsFloat:=StrtoFloat(Edit16.Text)/100 ;
-               MyDbf.FieldByName('N (NO3-)').AsFloat:=StrtoFloat(Edit1.Text);
-
+    MyDbf.FieldByName('Name').AsString:= Edit15.Text ;
+    MyDbf.FieldByName('Formula').AsString:= Edit17.Text;
+    MyDbf.FieldByName('Source').AsString:= Edit23.Text;
+    MyDbf.FieldByName('Purity').AsFloat:=StrtoFloat(Edit16.Text)/100 ;
+    MyDbf.FieldByName('N (NO3-)').AsFloat:=StrtoFloat(Edit1.Text);
+    MyDbf.FieldByName('N (NH4+)').AsFloat:=StrtoFloat(Edit2.Text);
 
     if currentValP = 0 then
     MyDbf.FieldByName('P').AsFloat:=StrtoFloat(Edit3.Text);
 
     if currentValK = 0 then
-    MyDbf.FieldByName('K').AsFloat:=StrtoFloat(Edit2.Text);
+    MyDbf.FieldByName('K').AsFloat:=StrtoFloat(Edit4.Text);
 
     if currentValSi = 0 then
     MyDbf.FieldByName('Si').AsFloat:=StrtoFloat(Edit13.Text);
@@ -227,7 +228,7 @@ MyDbf.Filter := 'Name=' + QuotedStr(Label23.Caption) ;
     MyDbf.FieldByName('P').AsFloat:=(StrtoFloat(Edit3.Text)*0.4364);
 
     if currentValK = 1 then
-    MyDbf.FieldByName('K').AsFloat:=(StrtoFloat(Edit2.Text)*0.8301);
+    MyDbf.FieldByName('K').AsFloat:=(StrtoFloat(Edit4.Text)*0.8301);
 
     if currentValSi = 1 then
     MyDbf.FieldByName('Si').AsFloat:=(StrtoFloat(Edit13.Text)*0.4684);
@@ -239,21 +240,23 @@ MyDbf.Filter := 'Name=' + QuotedStr(Label23.Caption) ;
    if CheckBox2.Checked  then
    MyDbf.FieldByName('IsLiquid').AsInteger:=1;
 
-               MyDbf.FieldByName('Mg').AsFloat:=StrtoFloat(Edit4.Text);
-               MyDbf.FieldByName('Ca').AsFloat:=StrtoFloat(Edit5.Text);
-               MyDbf.FieldByName('S').AsFloat:=StrtoFloat(Edit6.Text);
-               MyDbf.FieldByName('B').AsFloat:=StrtoFloat(Edit9.Text);
-               MyDbf.FieldByName('Fe').AsFloat:=StrtoFloat(Edit7.Text);
-               MyDbf.FieldByName('Zn').AsFloat:=StrtoFloat(Edit8.Text);
-               MyDbf.FieldByName('Cu').AsFloat:=StrtoFloat(Edit10.Text);
-               MyDbf.FieldByName('Mo').AsFloat:=StrtoFloat(Edit11.Text);
-               MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit12.Text);
-               MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit14.Text);
-               MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit18.Text);
-               MyDbf.FieldByName('Cost').AsFloat:=StrtoFloat(Edit21.Text);
-               MyDbf.FieldByName('N (NH4+)').AsFloat:=StrtoFloat(Edit19.Text);
-               MyDbf.FieldByName('ConcType').AsString:=Edit20.Text;
-               MyDbf.FieldByName('Density').AsString:=Edit22.Text;
+   MyDbf.FieldByName('Mg').AsFloat:=StrtoFloat(Edit5.Text);
+   MyDbf.FieldByName('Ca').AsFloat:=StrtoFloat(Edit6.Text);
+   MyDbf.FieldByName('S').AsFloat:=StrtoFloat(Edit7.Text);
+
+   MyDbf.FieldByName('Fe').AsFloat:=StrtoFloat(Edit8.Text);
+   MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit9.Text);
+   MyDbf.FieldByName('Zn').AsFloat:=StrtoFloat(Edit10.Text);
+   MyDbf.FieldByName('B').AsFloat:=StrtoFloat(Edit11.Text);
+   MyDbf.FieldByName('Cu').AsFloat:=StrtoFloat(Edit12.Text);
+   MyDbf.FieldByName('Mo').AsFloat:=StrtoFloat(Edit14.Text);
+   MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit18.Text);
+   MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit19.Text);
+
+   MyDbf.FieldByName('Cost').AsFloat:=StrtoFloat(Edit21.Text);
+
+   MyDbf.FieldByName('ConcType').AsString:=Edit20.Text;
+   MyDbf.FieldByName('Density').AsString:=Edit22.Text;
 
     MyDbf.Post ;
 

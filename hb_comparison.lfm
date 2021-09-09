@@ -28,49 +28,49 @@ object Form15: TForm15
       'N (NO3-)'
       0
       2
-      'P'
+      'N (NH4+)'
       0
       3
-      'K'
+      'P'
       0
       4
-      'Mg'
+      'K'
       0
       5
-      'Ca'
+      'Mg'
       0
       6
-      'S'
+      'Ca'
       0
       7
-      'Fe'
+      'S'
       0
       8
-      'Zn'
+      'Fe'
       0
       9
-      'B'
+      'Mn'
       0
       10
-      'Cu'
+      'Zn'
       0
       11
-      'Mo'
+      'B'
       0
       12
-      'Na'
+      'Cu'
       0
       13
       'Si'
       0
       14
-      'Cl'
+      'Mo'
       0
       15
-      'Mn'
+      'Na'
       0
       16
-      'N (NH4+)'
+      'Cl'
       0
       17
       'Addition'

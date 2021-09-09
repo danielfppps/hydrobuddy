@@ -51,24 +51,24 @@ type
     ComboBox1:  TComboBox;
     ComboBox3: TComboBox;
     Edit1:      TEdit;
-    Edit10:     TEdit;
-    Edit11:     TEdit;
     Edit12:     TEdit;
     Edit13:     TEdit;
     Edit14:     TEdit;
+    Edit15:     TEdit;
     Edit16:     TEdit;
+    Edit2:     TEdit;
     Edit19:     TEdit;
     Edit18:     TEdit;
-    Edit15:     TEdit;
+    Edit11:     TEdit;
     Edit17:     TEdit;
-    Edit2:      TEdit;
-    Edit3:      TEdit;
     Edit4:      TEdit;
+    Edit3:      TEdit;
     Edit5:      TEdit;
     Edit6:      TEdit;
     Edit7:      TEdit;
     Edit8:      TEdit;
     Edit9:      TEdit;
+    Edit10:      TEdit;
     Image1:     TImage;
     Image10:    TImage;
     Image2:     TImage;
@@ -80,21 +80,21 @@ type
     Image8:     TImage;
     Image9:     TImage;
     Label1:     TLabel;
-    Label2:     TLabel;
-    Label3:     TLabel;
     Label4:     TLabel;
+    Label3:     TLabel;
     Label5:     TLabel;
     Label6:     TLabel;
     Label7:     TLabel;
     Label8:     TLabel;
-    Label9:     TLabel;
-    Label10:    TLabel;
-    Label11:    TLabel;
+    Label10:     TLabel;
+    Label11:     TLabel;
     Label12:    TLabel;
-    Label13:    TLabel;
     Label14:    TLabel;
     Label15:    TLabel;
+    Label13:    TLabel;
     Label16:    TLabel;
+    Label9:    TLabel;
+    Label2:    TLabel;
     Label17:    TLabel;
     Label18:    TLabel;
     Label19:    TLabel;
@@ -132,21 +132,21 @@ type
     RadioButton8: TRadioButton;
     RadioButton9: TRadioButton;
     RLabel1:    TLabel;
-    RLabel16:   TLabel;
+    RLabel2:   TLabel;
     RLabel3:    TLabel;
-    RLabel2:    TLabel;
     RLabel4:    TLabel;
     RLabel5:    TLabel;
     RLabel6:    TLabel;
     RLabel7:    TLabel;
     RLabel8:    TLabel;
     RLabel9:    TLabel;
-    RLabel10:   TLabel;
-    RLabel11:   TLabel;
+    RLabel10:    TLabel;
     RLabel12:   TLabel;
     RLabel13:   TLabel;
     RLabel14:   TLabel;
     RLabel15:   TLabel;
+    RLabel16:   TLabel;
+    RLabel11:   TLabel;
     PageControl1: TPageControl;
     Panel1:     TPanel;
     Panel2:     TPanel;
@@ -205,6 +205,7 @@ type
     procedure CheckBox3Change(Sender: TObject);
     procedure CheckBox4Change(Sender: TObject);
     procedure CheckBox5Change(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -1263,6 +1264,7 @@ begin
       Add(Label20.Caption);
 
       Add(' , , , , ');
+      Add('Name, Formula, Amount, Units, Cost');
 
       for i := 0 to StringGrid2.RowCount - 1 do
 
@@ -1277,6 +1279,7 @@ begin
       end;
 
       Add(' , , , , ');
+      Add('Element, Results(ppm), GE, IE, Water (ppm)');
 
       for i := 0 to StringGrid1.RowCount - 1 do
 
@@ -1315,20 +1318,20 @@ procedure TForm1.Button15Click(Sender: TObject);
 begin
   Edit1.Text  := '0';
   Edit3.Text  := '0';
-  Edit2.Text  := '0';
   Edit4.Text  := '0';
   Edit5.Text  := '0';
   Edit6.Text  := '0';
   Edit7.Text  := '0';
-  Edit9.Text  := '0';
   Edit8.Text  := '0';
-  Edit10.Text := '0';
-  Edit11.Text := '0';
+  Edit10.Text  := '0';
+  Edit9.Text  := '0';
   Edit12.Text := '0';
-  Edit15.Text := '0';
   Edit13.Text := '0';
   Edit14.Text := '0';
+  Edit11.Text := '0';
+  Edit15.Text := '0';
   Edit16.Text := '0';
+  Edit2.Text := '0';
 end;
 
 procedure TForm1.Button16Click(Sender: TObject);
@@ -1656,41 +1659,42 @@ begin
   if RadioButton15.Checked = True then
   begin
     ec_contribution[0]  := 0.403791;
-    ec_contribution[1]  := -0.110791;
+    ec_contribution[1] := -0.308967;
     ec_contribution[2]  := 0.142525;
-    ec_contribution[3]  := -0.358782;
-    ec_contribution[4]  := -0.283549;
-    ec_contribution[5]  := 0.276118;
-    ec_contribution[6]  := 0;
+    ec_contribution[3]  := -0.110791;
+    ec_contribution[4]  := -0.358782;
+    ec_contribution[5]  := -0.283549;
+    ec_contribution[6]  := 0.276118;
     ec_contribution[7]  := 0;
     ec_contribution[8]  := 0;
     ec_contribution[9]  := 0;
-    ec_contribution[10] := 0;
+    ec_contribution[10]  := 0;
     ec_contribution[11] := 0;
     ec_contribution[12] := 0;
     ec_contribution[13] := 0;
     ec_contribution[14] := 0;
-    ec_contribution[15] := -0.308967;
+    ec_contribution[15] := 0;
+
   end;
 
   if RadioButton14.Checked = True then
   begin
     ec_contribution[0]  := 71.46 ;
-    ec_contribution[1]  := 73 ;
+    ec_contribution[1] := 73.5;
     ec_contribution[2]  := 57 ;
-    ec_contribution[3]  := 106 ;
-    ec_contribution[4]  := 119 ;
-    ec_contribution[5]  := 160 ;
-    ec_contribution[6]  := 108.0;
-    ec_contribution[7]  := 0;
+    ec_contribution[3]  := 73 ;
+    ec_contribution[4]  := 106 ;
+    ec_contribution[5]  := 119 ;
+    ec_contribution[6]  := 160 ;
+    ec_contribution[7]  := 108.0;
     ec_contribution[8]  := 0;
     ec_contribution[9]  := 0;
-    ec_contribution[10] := 0;
-    ec_contribution[11] := 50.01 ;
+    ec_contribution[10]  := 0;
+    ec_contribution[11] := 0;
     ec_contribution[12] := 0; // at the pH used in hydroponics, silicon does not conduct
     ec_contribution[13] := 76.35 ;
-    ec_contribution[14] := 0;
-    ec_contribution[15] := 73.5;
+    ec_contribution[14] := 50.01 ;
+    ec_contribution[15] := 0;
   end;
 
 
@@ -3195,22 +3199,23 @@ begin
   MyDbf.Insert;
 
   MyDbf.FieldByName('Name').AsString := Edit19.Text;
-  MyDbf.FieldByName('P').AsFloat     := StrtoFloat(Edit3.Text);
-  MyDbf.FieldByName('K').AsFloat     := StrtoFloat(Edit2.Text);
   MyDbf.FieldByName('N (NO3-)').AsFloat := StrtoFloat(Edit1.Text);
-  MyDbf.FieldByName('N (NH4+)').AsFloat := StrtoFloat(Edit16.Text);
-  MyDbf.FieldByName('Mg').AsFloat    := StrtoFloat(Edit4.Text);
-  MyDbf.FieldByName('Ca').AsFloat    := StrtoFloat(Edit5.Text);
-  MyDbf.FieldByName('S').AsFloat     := StrtoFloat(Edit6.Text);
-  MyDbf.FieldByName('B').AsFloat     := StrtoFloat(Edit9.Text);
-  MyDbf.FieldByName('Fe').AsFloat    := StrtoFloat(Edit7.Text);
-  MyDbf.FieldByName('Zn').AsFloat    := StrtoFloat(Edit8.Text);
-  MyDbf.FieldByName('Cu').AsFloat    := StrtoFloat(Edit10.Text);
-  MyDbf.FieldByName('Mo').AsFloat    := StrtoFloat(Edit11.Text);
-  MyDbf.FieldByName('Na').AsFloat    := StrtoFloat(Edit12.Text);
+  MyDbf.FieldByName('N (NH4+)').AsFloat := StrtoFloat(Edit2.Text);
+  MyDbf.FieldByName('P').AsFloat     := StrtoFloat(Edit3.Text);
+  MyDbf.FieldByName('K').AsFloat     := StrtoFloat(Edit4.Text);
+  MyDbf.FieldByName('Mg').AsFloat    := StrtoFloat(Edit5.Text);
+  MyDbf.FieldByName('Ca').AsFloat    := StrtoFloat(Edit6.Text);
+  MyDbf.FieldByName('S').AsFloat     := StrtoFloat(Edit7.Text);
+  MyDbf.FieldByName('Fe').AsFloat    := StrtoFloat(Edit8.Text);
+  MyDbf.FieldByName('Mn').AsFloat    := StrtoFloat(Edit9.Text);
+  MyDbf.FieldByName('Zn').AsFloat    := StrtoFloat(Edit10.Text);
+  MyDbf.FieldByName('B').AsFloat     := StrtoFloat(Edit11.Text);
+  MyDbf.FieldByName('Cu').AsFloat    := StrtoFloat(Edit12.Text);
   MyDbf.FieldByName('Si').AsFloat    := StrtoFloat(Edit13.Text);
-  MyDbf.FieldByName('Cl').AsFloat    := StrtoFloat(Edit14.Text);
-  MyDbf.FieldByName('Mn').AsFloat    := StrtoFloat(Edit15.Text);
+  MyDbf.FieldByName('Mo').AsFloat    := StrtoFloat(Edit14.Text);
+  MyDbf.FieldByName('Na').AsFloat    := StrtoFloat(Edit15.Text);
+  MyDbf.FieldByName('Cl').AsFloat    := StrtoFloat(Edit16.Text);
+
 
   if RadioButton10.Checked then
   MyDbf.FieldByName('Units').AsString := 'ppm' ;
@@ -3485,6 +3490,11 @@ begin
 
 end;
 
+procedure TForm1.ComboBox1Change(Sender: TObject);
+begin
+
+end;
+
 
 procedure TForm1.ComboBox1Select(Sender: TObject);
 var
@@ -3521,22 +3531,21 @@ begin
 
   Edit19.Text := MyDbf.FieldByName('Name').AsString;
   Edit1.Text  := MyDbf.FieldByName('N (NO3-)').AsString;
+  Edit2.Text := MyDbf.FieldByName('N (NH4+)').AsString;
   Edit3.Text  := MyDbf.FieldByName('P').AsString;
-  Edit2.Text  := MyDbf.FieldByName('K').AsString;
-  Edit4.Text  := MyDbf.FieldByName('Mg').AsString;
-  Edit5.Text  := MyDbf.FieldByName('Ca').AsString;
-  Edit6.Text  := MyDbf.FieldByName('S').AsString;
-  Edit7.Text  := MyDbf.FieldByName('Fe').AsString;
-  Edit9.Text  := MyDbf.FieldByName('B').AsString;
-  Edit8.Text  := MyDbf.FieldByName('Zn').AsString;
-  Edit10.Text := MyDbf.FieldByName('Cu').AsString;
-  Edit11.Text := MyDbf.FieldByName('Mo').AsString;
-  Edit12.Text := MyDbf.FieldByName('Na').AsString;
-  Edit15.Text := MyDbf.FieldByName('Mn').AsString;
+  Edit4.Text  := MyDbf.FieldByName('K').AsString;
+  Edit5.Text  := MyDbf.FieldByName('Mg').AsString;
+  Edit6.Text  := MyDbf.FieldByName('Ca').AsString;
+  Edit7.Text  := MyDbf.FieldByName('S').AsString;
+  Edit8.Text  := MyDbf.FieldByName('Fe').AsString;
+  Edit9.Text := MyDbf.FieldByName('Mn').AsString;
+  Edit10.Text  := MyDbf.FieldByName('Zn').AsString;
+  Edit11.Text  := MyDbf.FieldByName('B').AsString;
+  Edit12.Text := MyDbf.FieldByName('Cu').AsString;
   Edit13.Text := MyDbf.FieldByName('Si').AsString;
-  Edit14.Text := MyDbf.FieldByName('Cl').AsString;
-  Edit16.Text := MyDbf.FieldByName('N (NH4+)').AsString;
-
+  Edit14.Text := MyDbf.FieldByName('Mo').AsString;
+  Edit15.Text := MyDbf.FieldByName('Na').AsString;
+  Edit16.Text := MyDbf.FieldByName('Cl').AsString;
 
   MyDbf.Close;
 

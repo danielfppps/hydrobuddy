@@ -18,41 +18,41 @@ type
     Button3: TButton;
     ComboBox4: TComboBox;
     Edit1: TEdit;
-    Edit10: TEdit;
     Edit11: TEdit;
     Edit12: TEdit;
     Edit13: TEdit;
-    Edit14: TEdit;
-    Edit17: TEdit;
     Edit15: TEdit;
     Edit16: TEdit;
+    Edit17: TEdit;
+    Edit14: TEdit;
     Edit2: TEdit;
-    Edit3: TEdit;
     Edit4: TEdit;
+    Edit3: TEdit;
     Edit5: TEdit;
     Edit6: TEdit;
     Edit7: TEdit;
     Edit8: TEdit;
     Edit9: TEdit;
+    Edit10: TEdit;
     Label1: TLabel;
-    Label10: TLabel;
-    Label11: TLabel;
     Label12: TLabel;
-    Label13: TLabel;
     Label14: TLabel;
+    Label15: TLabel;
+    Label13: TLabel;
+    Label16: TLabel;
     Label17: TLabel;
     Label29: TLabel;
-    Label15: TLabel;
-    Label16: TLabel;
+    Label9: TLabel;
     Label2: TLabel;
-    Label20: TLabel;
     Label3: TLabel;
+    Label20: TLabel;
     Label4: TLabel;
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
     Label8: TLabel;
-    Label9: TLabel;
+    Label10: TLabel;
+    Label11: TLabel;
     Panel1: TPanel ;
     CheckBox1: TCheckBox;
     RadioButton3: TRadioButton;
@@ -243,10 +243,8 @@ for i := 1 to 16 do
 
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 0] := ComboBox4.Items[ComboBox4.ItemIndex] ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 1] := FloattoStr(result[0]) ;
-
-    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 2] := FloattoStr(result[2]) ;
-    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 3] := FloattoStr(result[1]) ;
-    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 14] := FloattoStr(result[13]);
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 2] := FloattoStr(result[1]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 3] := FloattoStr(result[2]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 4] := FloattoStr(result[3]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 5] := FloattoStr(result[4]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 6] := FloattoStr(result[5]) ;
@@ -257,6 +255,7 @@ for i := 1 to 16 do
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 11] := FloattoStr(result[10]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 12] := FloattoStr(result[11]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 13] := FloattoStr(result[12]) ;
+    hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 14] := FloattoStr(result[13]);
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 15] := FloattoStr(result[14]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 16] := FloattoStr(result[15]) ;
     hb_comparison.Form15.StringGrid1.Cells[ColCount-1, 17] := Edit17.Text + addition_units ;
@@ -295,21 +294,22 @@ begin
     MyDbf.First;                  // moves the the first filtered data
 
     Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
+    Edit2.text := MyDbf.FieldByName('N (NH4+)').AsString ;
     Edit3.text := MyDbf.FieldByName('P').AsString ;
-    Edit2.text := MyDbf.FieldByName('K').AsString ;
-    Edit4.text := MyDbf.FieldByName('Mg').AsString ;
-    Edit5.text := MyDbf.FieldByName('Ca').AsString ;
-    Edit6.text := MyDbf.FieldByName('S').AsString ;
-    Edit7.text := MyDbf.FieldByName('Fe').AsString ;
-    Edit9.text := MyDbf.FieldByName('B').AsString ;
-    Edit8.text := MyDbf.FieldByName('Zn').AsString ;
-    Edit10.text := MyDbf.FieldByName('Cu').AsString ;
-    Edit11.text := MyDbf.FieldByName('Mo').AsString ;
-    Edit12.text := MyDbf.FieldByName('Na').AsString ;
-    Edit15.text := MyDbf.FieldByName('Mn').AsString ;
+    Edit4.text := MyDbf.FieldByName('K').AsString ;
+    Edit5.text := MyDbf.FieldByName('Mg').AsString ;
+    Edit6.text := MyDbf.FieldByName('Ca').AsString ;
+    Edit7.text := MyDbf.FieldByName('S').AsString ;
+    Edit8.text := MyDbf.FieldByName('Fe').AsString ;
+    Edit9.text := MyDbf.FieldByName('Mn').AsString ;
+    Edit10.text := MyDbf.FieldByName('Zn').AsString ;
+    Edit11.text := MyDbf.FieldByName('B').AsString ;
+    Edit12.text := MyDbf.FieldByName('Cu').AsString ;
     Edit13.text := MyDbf.FieldByName('Si').AsString ;
-    Edit14.text := MyDbf.FieldByName('Cl').AsString ;
-    Edit16.text := MyDbf.FieldByName('N (NH4+)').AsString ;
+    Edit14.text := MyDbf.FieldByName('Mo').AsString ;
+    Edit15.text := MyDbf.FieldByName('Na').AsString ;
+    Edit16.text := MyDbf.FieldByName('Cl').AsString ;
+
 
     if MyDbf.FieldByName('IsLiquid').AsInteger = 0 then
     begin

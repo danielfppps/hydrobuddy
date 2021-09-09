@@ -21,7 +21,7 @@ object Form5: TForm5
     Caption = 'N (NO3-)'
     ParentColor = False
   end
-  object Label2: TLabel
+  object Label3: TLabel
     Left = 64
     Height = 15
     Top = 135
@@ -29,7 +29,7 @@ object Form5: TForm5
     Caption = 'P'
     ParentColor = False
   end
-  object Label3: TLabel
+  object Label4: TLabel
     Left = 64
     Height = 15
     Top = 166
@@ -37,7 +37,7 @@ object Form5: TForm5
     Caption = 'K'
     ParentColor = False
   end
-  object Label4: TLabel
+  object Label5: TLabel
     Left = 53
     Height = 15
     Top = 198
@@ -45,7 +45,7 @@ object Form5: TForm5
     Caption = 'Mg'
     ParentColor = False
   end
-  object Label5: TLabel
+  object Label6: TLabel
     Left = 57
     Height = 15
     Top = 229
@@ -53,71 +53,71 @@ object Form5: TForm5
     Caption = 'Ca'
     ParentColor = False
   end
-  object Label6: TLabel
-    Left = 188
+  object Label7: TLabel
+    Left = 189
     Height = 15
     Top = 74
     Width = 6
     Caption = 'S'
     ParentColor = False
   end
-  object Label7: TLabel
+  object Label8: TLabel
     Left = 182
     Height = 15
-    Top = 105
+    Top = 104
     Width = 12
     Caption = 'Fe'
     ParentColor = False
   end
-  object Label8: TLabel
-    Left = 180
+  object Label10: TLabel
+    Left = 184
     Height = 15
-    Top = 135
+    Top = 168
     Width = 14
     Caption = 'Zn'
     ParentColor = False
   end
-  object Label9: TLabel
-    Left = 187
+  object Label11: TLabel
+    Left = 188
     Height = 15
-    Top = 166
+    Top = 195
     Width = 7
     Caption = 'B'
     ParentColor = False
   end
-  object Label10: TLabel
-    Left = 179
+  object Label12: TLabel
+    Left = 180
     Height = 15
-    Top = 198
+    Top = 229
     Width = 15
     Caption = 'Cu'
     ParentColor = False
   end
-  object Label11: TLabel
-    Left = 176
+  object Label14: TLabel
+    Left = 338
     Height = 15
-    Top = 229
+    Top = 105
     Width = 18
     Caption = 'Mo'
     ParentColor = False
   end
-  object Label12: TLabel
+  object Label15: TLabel
     Left = 341
     Height = 15
-    Top = 74
+    Top = 136
     Width = 15
     Caption = 'Na'
     ParentColor = False
   end
   object Label13: TLabel
-    Left = 345
+    Left = 347
     Height = 15
-    Top = 135
+    Top = 74
     Width = 9
     Caption = 'Si'
     ParentColor = False
   end
-  object Label14: TLabel
+  object Label16: TLabel
     Left = 345
     Height = 15
     Top = 168
@@ -125,15 +125,15 @@ object Form5: TForm5
     Caption = 'Cl'
     ParentColor = False
   end
-  object Label15: TLabel
-    Left = 338
+  object Label9: TLabel
+    Left = 177
     Height = 15
-    Top = 105
+    Top = 136
     Width = 18
     Caption = 'Mn'
     ParentColor = False
   end
-  object Label16: TLabel
+  object Label2: TLabel
     Left = 19
     Height = 15
     Top = 105
@@ -165,7 +165,7 @@ object Form5: TForm5
     TabOrder = 1
     Text = '0'
   end
-  object Edit2: TEdit
+  object Edit4: TEdit
     Left = 93
     Height = 23
     Top = 163
@@ -173,7 +173,7 @@ object Form5: TForm5
     TabOrder = 2
     Text = '0'
   end
-  object Edit4: TEdit
+  object Edit5: TEdit
     Left = 93
     Height = 23
     Top = 195
@@ -181,7 +181,7 @@ object Form5: TForm5
     TabOrder = 3
     Text = '0'
   end
-  object Edit5: TEdit
+  object Edit6: TEdit
     Left = 93
     Height = 23
     Top = 226
@@ -189,7 +189,7 @@ object Form5: TForm5
     TabOrder = 4
     Text = '0'
   end
-  object Edit6: TEdit
+  object Edit7: TEdit
     Left = 216
     Height = 23
     Top = 71
@@ -197,7 +197,7 @@ object Form5: TForm5
     TabOrder = 5
     Text = '0'
   end
-  object Edit7: TEdit
+  object Edit8: TEdit
     Left = 216
     Height = 23
     Top = 102
@@ -205,7 +205,7 @@ object Form5: TForm5
     TabOrder = 6
     Text = '0'
   end
-  object Edit8: TEdit
+  object Edit9: TEdit
     Left = 216
     Height = 23
     Top = 132
@@ -213,7 +213,7 @@ object Form5: TForm5
     TabOrder = 7
     Text = '0'
   end
-  object Edit9: TEdit
+  object Edit10: TEdit
     Left = 216
     Height = 23
     Top = 163
@@ -221,7 +221,7 @@ object Form5: TForm5
     TabOrder = 8
     Text = '0'
   end
-  object Edit10: TEdit
+  object Edit11: TEdit
     Left = 216
     Height = 23
     Top = 195
@@ -229,7 +229,7 @@ object Form5: TForm5
     TabOrder = 9
     Text = '0'
   end
-  object Edit11: TEdit
+  object Edit12: TEdit
     Left = 216
     Height = 23
     Top = 226
@@ -237,7 +237,7 @@ object Form5: TForm5
     TabOrder = 10
     Text = '0'
   end
-  object Edit12: TEdit
+  object Edit13: TEdit
     Left = 376
     Height = 23
     Top = 72
@@ -245,7 +245,7 @@ object Form5: TForm5
     TabOrder = 11
     Text = '0'
   end
-  object Edit13: TEdit
+  object Edit15: TEdit
     Left = 376
     Height = 23
     Top = 132
@@ -253,7 +253,7 @@ object Form5: TForm5
     TabOrder = 12
     Text = '0'
   end
-  object Edit14: TEdit
+  object Edit16: TEdit
     Left = 376
     Height = 23
     Top = 163
@@ -261,15 +261,15 @@ object Form5: TForm5
     TabOrder = 13
     Text = '0'
   end
-  object Edit15: TEdit
+  object Edit14: TEdit
     Left = 376
     Height = 23
-    Top = 102
+    Top = 104
     Width = 72
     TabOrder = 14
     Text = '0'
   end
-  object Edit16: TEdit
+  object Edit2: TEdit
     Left = 93
     Height = 23
     Top = 102

@@ -10,13 +10,13 @@ LazarusResources.Add('TForm15','FORMDATA',[
   +'ColCount'#2#1#9'FixedRows'#2#0#7'Options'#11#15'goFixedVertLine'#15'goFixed'
   +'HorzLine'#10'goVertLine'#10'goHorzLine'#13'goRangeSelect'#11'goColSizing'#14
   +'goSmoothScroll'#0#8'RowCount'#2#18#8'TabOrder'#2#0#5'Cells'#1#2#17#2#0#2#1#6
-  +#8'N (NO3-)'#2#0#2#2#6#1'P'#2#0#2#3#6#1'K'#2#0#2#4#6#2'Mg'#2#0#2#5#6#2'Ca'#2
-  +#0#2#6#6#1'S'#2#0#2#7#6#2'Fe'#2#0#2#8#6#2'Zn'#2#0#2#9#6#1'B'#2#0#2#10#6#2'Cu'
-  +#2#0#2#11#6#2'Mo'#2#0#2#12#6#2'Na'#2#0#2#13#6#2'Si'#2#0#2#14#6#2'Cl'#2#0#2#15
-  +#6#2'Mn'#2#0#2#16#6#8'N (NH4+)'#2#0#2#17#6#8'Addition'#0#0#0#7'TButton'#7'Bu'
-  +'tton1'#4'Left'#3'-'#3#6'Height'#2#25#3'Top'#3#176#1#5'Width'#2'K'#7'Caption'
-  +#6#5'Close'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#7'TButton'#7'B'
-  +'utton2'#4'Left'#3'`'#2#6'Height'#2#25#3'Top'#3#176#1#5'Width'#3#179#0#7'Cap'
-  +'tion'#6#22'Clear Comparison Chart'#7'OnClick'#7#12'Button2Click'#8'TabOrder'
-  +#2#2#0#0#0
+  +#8'N (NO3-)'#2#0#2#2#6#8'N (NH4+)'#2#0#2#3#6#1'P'#2#0#2#4#6#1'K'#2#0#2#5#6#2
+  +'Mg'#2#0#2#6#6#2'Ca'#2#0#2#7#6#1'S'#2#0#2#8#6#2'Fe'#2#0#2#9#6#2'Mn'#2#0#2#10
+  +#6#2'Zn'#2#0#2#11#6#1'B'#2#0#2#12#6#2'Cu'#2#0#2#13#6#2'Si'#2#0#2#14#6#2'Mo'#2
+  +#0#2#15#6#2'Na'#2#0#2#16#6#2'Cl'#2#0#2#17#6#8'Addition'#0#0#0#7'TButton'#7'B'
+  +'utton1'#4'Left'#3'-'#3#6'Height'#2#25#3'Top'#3#176#1#5'Width'#2'K'#7'Captio'
+  +'n'#6#5'Close'#7'OnClick'#7#12'Button1Click'#8'TabOrder'#2#1#0#0#7'TButton'#7
+  +'Button2'#4'Left'#3'`'#2#6'Height'#2#25#3'Top'#3#176#1#5'Width'#3#179#0#7'Ca'
+  +'ption'#6#22'Clear Comparison Chart'#7'OnClick'#7#12'Button2Click'#8'TabOrde'
+  +'r'#2#2#0#0#0
 ]);

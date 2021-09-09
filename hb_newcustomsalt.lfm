@@ -1,7 +1,7 @@
 object Form3: TForm3
-  Left = 643
+  Left = 418
   Height = 436
-  Top = 213
+  Top = 394
   Width = 461
   HorzScrollBar.Page = 471
   HorzScrollBar.Range = 437
@@ -71,17 +71,17 @@ object Form3: TForm3
     ParentColor = False
   end
   object Label8: TLabel
-    Left = 181
+    Left = 182
     Height = 15
-    Top = 237
+    Top = 269
     Width = 14
     Caption = 'Zn'
     ParentColor = False
   end
   object Label9: TLabel
-    Left = 181
+    Left = 184
     Height = 15
-    Top = 269
+    Top = 304
     Width = 7
     Caption = 'B'
     ParentColor = False
@@ -89,37 +89,37 @@ object Form3: TForm3
   object Label10: TLabel
     Left = 181
     Height = 15
-    Top = 303
+    Top = 332
     Width = 15
     Caption = 'Cu'
     ParentColor = False
   end
   object Label11: TLabel
-    Left = 181
+    Left = 305
     Height = 15
-    Top = 335
+    Top = 208
     Width = 18
     Caption = 'Mo'
     ParentColor = False
   end
   object Label12: TLabel
-    Left = 301
+    Left = 305
     Height = 15
-    Top = 171
+    Top = 237
     Width = 15
     Caption = 'Na'
     ParentColor = False
   end
   object Label13: TLabel
-    Left = 301
+    Left = 305
     Height = 15
-    Top = 237
+    Top = 171
     Width = 9
     Caption = 'Si'
     ParentColor = False
   end
   object Label14: TLabel
-    Left = 301
+    Left = 305
     Height = 15
     Top = 269
     Width = 11
@@ -151,9 +151,9 @@ object Form3: TForm3
     ParentColor = False
   end
   object Label17: TLabel
-    Left = 301
+    Left = 181
     Height = 15
-    Top = 203
+    Top = 237
     Width = 18
     Caption = 'Mn'
     ParentColor = False
@@ -209,7 +209,7 @@ object Form3: TForm3
   object Edit2: TEdit
     Left = 93
     Height = 23
-    Top = 266
+    Top = 200
     Width = 64
     TabOrder = 6
     Text = '0'
@@ -217,7 +217,7 @@ object Form3: TForm3
   object Edit4: TEdit
     Left = 93
     Height = 23
-    Top = 300
+    Top = 269
     Width = 64
     TabOrder = 7
     Text = '0'
@@ -225,80 +225,80 @@ object Form3: TForm3
   object Edit5: TEdit
     Left = 93
     Height = 23
-    Top = 332
+    Top = 300
     Width = 64
     TabOrder = 8
     Text = '0'
   end
   object Edit6: TEdit
-    Left = 205
+    Left = 93
     Height = 23
-    Top = 168
-    Width = 72
+    Top = 332
+    Width = 64
     TabOrder = 9
     Text = '0'
   end
   object Edit7: TEdit
-    Left = 205
+    Left = 213
     Height = 23
-    Top = 200
-    Width = 72
+    Top = 168
+    Width = 64
     TabOrder = 10
     Text = '0'
   end
   object Edit8: TEdit
-    Left = 205
+    Left = 213
     Height = 23
-    Top = 234
-    Width = 72
+    Top = 200
+    Width = 64
     TabOrder = 11
     Text = '0'
   end
   object Edit9: TEdit
-    Left = 205
+    Left = 213
     Height = 23
-    Top = 266
-    Width = 72
+    Top = 232
+    Width = 64
     TabOrder = 12
     Text = '0'
   end
   object Edit10: TEdit
-    Left = 205
+    Left = 213
     Height = 23
-    Top = 300
-    Width = 72
+    Top = 269
+    Width = 64
     TabOrder = 13
     Text = '0'
   end
   object Edit11: TEdit
-    Left = 205
+    Left = 213
     Height = 23
-    Top = 332
-    Width = 72
+    Top = 303
+    Width = 64
     TabOrder = 14
     Text = '0'
   end
   object Edit12: TEdit
-    Left = 368
+    Left = 213
     Height = 23
-    Top = 168
-    Width = 72
+    Top = 332
+    Width = 66
     TabOrder = 15
     Text = '0'
   end
   object Edit13: TEdit
     Left = 368
     Height = 23
-    Top = 234
-    Width = 72
+    Top = 168
+    Width = 64
     TabOrder = 17
     Text = '0'
   end
   object Edit14: TEdit
     Left = 368
     Height = 23
-    Top = 266
-    Width = 72
+    Top = 203
+    Width = 64
     TabOrder = 18
     Text = '0'
   end
@@ -314,7 +314,7 @@ object Form3: TForm3
     Left = 368
     Height = 23
     Top = 300
-    Width = 72
+    Width = 64
     TabOrder = 19
     Text = '100'
   end
@@ -329,15 +329,15 @@ object Form3: TForm3
   object Edit18: TEdit
     Left = 368
     Height = 23
-    Top = 200
-    Width = 72
+    Top = 232
+    Width = 64
     TabOrder = 16
     Text = '0'
   end
   object Edit19: TEdit
-    Left = 93
+    Left = 368
     Height = 23
-    Top = 200
+    Top = 264
     Width = 64
     TabOrder = 4
     Text = '0'
@@ -354,7 +354,7 @@ object Form3: TForm3
     Left = 368
     Height = 23
     Top = 332
-    Width = 72
+    Width = 66
     TabOrder = 20
     Text = '100'
   end
@@ -489,7 +489,7 @@ object Form3: TForm3
     Left = 248
     Height = 41
     Top = 376
-    Width = 192
+    Width = 184
     Caption = 'Update'
     Enabled = False
     Glyph.Data = {
@@ -588,7 +588,7 @@ object Form3: TForm3
   object ComboBox3: TComboBox
     Left = 301
     Height = 23
-    Top = 232
+    Top = 168
     Width = 53
     ItemHeight = 15
     ItemIndex = 0

@@ -1,7 +1,7 @@
 object Form6: TForm6
-  Left = 351
+  Left = 766
   Height = 416
-  Top = 194
+  Top = 283
   Width = 448
   HorzScrollBar.Page = 426
   HorzScrollBar.Range = 403
@@ -72,7 +72,7 @@ object Form6: TForm6
   object Label8: TLabel
     Left = 181
     Height = 15
-    Top = 170
+    Top = 202
     Width = 14
     Caption = 'Zn'
     ParentColor = False
@@ -80,7 +80,7 @@ object Form6: TForm6
   object Label9: TLabel
     Left = 181
     Height = 15
-    Top = 202
+    Top = 236
     Width = 7
     Caption = 'B'
     ParentColor = False
@@ -88,15 +88,15 @@ object Form6: TForm6
   object Label10: TLabel
     Left = 181
     Height = 15
-    Top = 231
+    Top = 262
     Width = 15
     Caption = 'Cu'
     ParentColor = False
   end
   object Label11: TLabel
-    Left = 181
+    Left = 301
     Height = 15
-    Top = 262
+    Top = 142
     Width = 18
     Caption = 'Mo'
     ParentColor = False
@@ -104,7 +104,7 @@ object Form6: TForm6
   object Label12: TLabel
     Left = 301
     Height = 15
-    Top = 107
+    Top = 170
     Width = 15
     Caption = 'Na'
     ParentColor = False
@@ -112,7 +112,7 @@ object Form6: TForm6
   object Label13: TLabel
     Left = 301
     Height = 15
-    Top = 170
+    Top = 112
     Width = 9
     Caption = 'Si'
     ParentColor = False
@@ -126,9 +126,9 @@ object Form6: TForm6
     ParentColor = False
   end
   object Label15: TLabel
-    Left = 301
+    Left = 177
     Height = 15
-    Top = 137
+    Top = 170
     Width = 18
     Caption = 'Mn'
     ParentColor = False
@@ -173,7 +173,7 @@ object Form6: TForm6
     TabOrder = 1
     Text = '0'
   end
-  object Edit2: TEdit
+  object Edit4: TEdit
     Left = 93
     Height = 23
     Top = 199
@@ -181,7 +181,7 @@ object Form6: TForm6
     TabOrder = 2
     Text = '0'
   end
-  object Edit4: TEdit
+  object Edit5: TEdit
     Left = 93
     Height = 23
     Top = 228
@@ -189,7 +189,7 @@ object Form6: TForm6
     TabOrder = 3
     Text = '0'
   end
-  object Edit5: TEdit
+  object Edit6: TEdit
     Left = 93
     Height = 23
     Top = 259
@@ -197,7 +197,7 @@ object Form6: TForm6
     TabOrder = 4
     Text = '0'
   end
-  object Edit6: TEdit
+  object Edit7: TEdit
     Left = 205
     Height = 23
     Top = 104
@@ -205,7 +205,7 @@ object Form6: TForm6
     TabOrder = 5
     Text = '0'
   end
-  object Edit7: TEdit
+  object Edit8: TEdit
     Left = 205
     Height = 23
     Top = 134
@@ -213,42 +213,42 @@ object Form6: TForm6
     TabOrder = 6
     Text = '0'
   end
-  object Edit8: TEdit
-    Left = 205
-    Height = 23
-    Top = 167
-    Width = 72
-    TabOrder = 7
-    Text = '0'
-  end
-  object Edit9: TEdit
+  object Edit10: TEdit
     Left = 205
     Height = 23
     Top = 199
     Width = 72
-    TabOrder = 8
-    Text = '0'
-  end
-  object Edit10: TEdit
-    Left = 205
-    Height = 23
-    Top = 228
-    Width = 72
-    TabOrder = 9
+    TabOrder = 7
     Text = '0'
   end
   object Edit11: TEdit
     Left = 205
     Height = 23
+    Top = 228
+    Width = 72
+    TabOrder = 8
+    Text = '0'
+  end
+  object Edit12: TEdit
+    Left = 205
+    Height = 23
     Top = 259
+    Width = 72
+    TabOrder = 9
+    Text = '0'
+  end
+  object Edit14: TEdit
+    Left = 331
+    Height = 23
+    Top = 136
     Width = 72
     TabOrder = 10
     Text = '0'
   end
-  object Edit12: TEdit
+  object Edit15: TEdit
     Left = 331
     Height = 23
-    Top = 104
+    Top = 167
     Width = 72
     TabOrder = 11
     Text = '0'
@@ -256,12 +256,12 @@ object Form6: TForm6
   object Edit13: TEdit
     Left = 331
     Height = 23
-    Top = 167
+    Top = 107
     Width = 72
     TabOrder = 12
     Text = '0'
   end
-  object Edit14: TEdit
+  object Edit16: TEdit
     Left = 331
     Height = 23
     Top = 199
@@ -269,15 +269,15 @@ object Form6: TForm6
     TabOrder = 13
     Text = '0'
   end
-  object Edit15: TEdit
-    Left = 331
+  object Edit9: TEdit
+    Left = 205
     Height = 23
-    Top = 134
+    Top = 168
     Width = 72
     TabOrder = 14
     Text = '0'
   end
-  object Edit16: TEdit
+  object Edit2: TEdit
     Left = 93
     Height = 23
     Top = 134
@@ -299,6 +299,7 @@ object Form6: TForm6
     Top = 312
     Width = 277
     ItemHeight = 15
+    OnChange = ComboBox1Change
     OnSelect = ComboBox1Select
     TabOrder = 17
     Text = 'Select Water Quality Data from DB'

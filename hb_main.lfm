@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 542
+  Left = 492
   Height = 675
-  Top = 173
+  Top = 163
   Width = 834
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
@@ -22397,7 +22397,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label2: TLabel
+      object Label4: TLabel
         Left = 86
         Height = 15
         Top = 196
@@ -22407,7 +22407,7 @@ object Form1: TForm1
         ParentFont = False
       end
       object Label3: TLabel
-        Left = 86
+        Left = 87
         Height = 15
         Top = 164
         Width = 7
@@ -22415,7 +22415,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label4: TLabel
+      object Label5: TLabel
         Left = 75
         Height = 15
         Top = 228
@@ -22424,7 +22424,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label5: TLabel
+      object Label6: TLabel
         Left = 79
         Height = 15
         Top = 260
@@ -22433,7 +22433,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label6: TLabel
+      object Label7: TLabel
         Left = 87
         Height = 15
         Top = 292
@@ -22442,7 +22442,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label7: TLabel
+      object Label8: TLabel
         Left = 81
         Height = 15
         Top = 324
@@ -22451,25 +22451,25 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label8: TLabel
-        Left = 79
+      object Label10: TLabel
+        Left = 81
         Height = 15
-        Top = 356
+        Top = 388
         Width = 14
         Caption = 'Zn'
         ParentColor = False
         ParentFont = False
       end
-      object Label9: TLabel
+      object Label11: TLabel
         Left = 86
         Height = 15
-        Top = 388
+        Top = 424
         Width = 7
         Caption = 'B'
         ParentColor = False
         ParentFont = False
       end
-      object Label10: TLabel
+      object Label12: TLabel
         Left = 78
         Height = 15
         Top = 452
@@ -22478,35 +22478,35 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label11: TLabel
-        Left = 75
+      object Label14: TLabel
+        Left = 80
         Height = 15
-        Top = 484
+        Top = 516
         Width = 18
         Caption = 'Mo'
         ParentColor = False
         ParentFont = False
       end
-      object Label12: TLabel
-        Left = 78
+      object Label15: TLabel
+        Left = 81
         Height = 15
-        Top = 516
+        Top = 548
         Width = 15
         Caption = 'Na'
         ParentColor = False
         ParentFont = False
       end
       object Label13: TLabel
-        Left = 84
+        Left = 82
         Height = 15
-        Top = 548
+        Top = 484
         Width = 9
         Caption = 'Si'
         ParentColor = False
         ParentFont = False
         Visible = False
       end
-      object Label14: TLabel
+      object Label16: TLabel
         Left = 82
         Height = 15
         Top = 580
@@ -22551,7 +22551,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel2: TLabel
+      object RLabel4: TLabel
         Left = 254
         Height = 15
         Top = 196
@@ -22560,7 +22560,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel4: TLabel
+      object RLabel5: TLabel
         Left = 254
         Height = 15
         Top = 228
@@ -22569,7 +22569,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel5: TLabel
+      object RLabel6: TLabel
         Left = 254
         Height = 15
         Top = 260
@@ -22578,7 +22578,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel6: TLabel
+      object RLabel7: TLabel
         Left = 254
         Height = 15
         Top = 292
@@ -22587,7 +22587,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel7: TLabel
+      object RLabel8: TLabel
         Left = 254
         Height = 15
         Top = 324
@@ -22596,7 +22596,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel8: TLabel
+      object RLabel9: TLabel
         Left = 254
         Height = 15
         Top = 356
@@ -22605,7 +22605,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel9: TLabel
+      object RLabel10: TLabel
         Left = 254
         Height = 15
         Top = 388
@@ -22614,7 +22614,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel10: TLabel
+      object RLabel12: TLabel
         Left = 254
         Height = 15
         Top = 452
@@ -22623,7 +22623,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel11: TLabel
+      object RLabel13: TLabel
         Left = 254
         Height = 15
         Top = 484
@@ -22632,7 +22632,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel12: TLabel
+      object RLabel14: TLabel
         Left = 254
         Height = 15
         Top = 516
@@ -22641,7 +22641,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel13: TLabel
+      object RLabel15: TLabel
         Left = 254
         Height = 15
         Top = 548
@@ -22650,7 +22650,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel14: TLabel
+      object RLabel16: TLabel
         Left = 254
         Height = 15
         Top = 580
@@ -22686,16 +22686,16 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label15: TLabel
-        Left = 75
+      object Label9: TLabel
+        Left = 72
         Height = 15
-        Top = 420
+        Top = 356
         Width = 18
         Caption = 'Mn'
         ParentColor = False
         ParentFont = False
       end
-      object RLabel15: TLabel
+      object RLabel11: TLabel
         Left = 254
         Height = 15
         Top = 420
@@ -22704,7 +22704,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object Label16: TLabel
+      object Label2: TLabel
         Left = 44
         Height = 15
         Top = 132
@@ -22713,7 +22713,7 @@ object Form1: TForm1
         ParentColor = False
         ParentFont = False
       end
-      object RLabel16: TLabel
+      object RLabel2: TLabel
         Left = 254
         Height = 15
         Top = 132
@@ -22729,7 +22729,7 @@ object Form1: TForm1
         Width = 88
         ParentFont = False
         TabOrder = 0
-        Text = '260'
+        Text = '210'
       end
       object Edit3: TEdit
         Left = 132
@@ -22740,7 +22740,7 @@ object Form1: TForm1
         TabOrder = 2
         Text = '31'
       end
-      object Edit2: TEdit
+      object Edit4: TEdit
         Left = 132
         Height = 23
         Top = 192
@@ -22749,7 +22749,7 @@ object Form1: TForm1
         TabOrder = 3
         Text = '235'
       end
-      object Edit4: TEdit
+      object Edit5: TEdit
         Left = 132
         Height = 23
         Top = 224
@@ -22758,7 +22758,7 @@ object Form1: TForm1
         TabOrder = 4
         Text = '48'
       end
-      object Edit5: TEdit
+      object Edit6: TEdit
         Left = 132
         Height = 23
         Top = 256
@@ -22767,7 +22767,7 @@ object Form1: TForm1
         TabOrder = 5
         Text = '200'
       end
-      object Edit6: TEdit
+      object Edit7: TEdit
         Left = 132
         Height = 23
         Top = 288
@@ -22776,34 +22776,34 @@ object Form1: TForm1
         TabOrder = 6
         Text = '64'
       end
-      object Edit7: TEdit
+      object Edit8: TEdit
         Left = 132
         Height = 23
         Top = 320
         Width = 88
         ParentFont = False
         TabOrder = 7
-        Text = '2.5'
+        Text = '2.9'
       end
-      object Edit8: TEdit
+      object Edit9: TEdit
         Left = 132
         Height = 23
         Top = 352
         Width = 88
         ParentFont = False
         TabOrder = 8
-        Text = '0.05'
+        Text = '0.5'
       end
-      object Edit9: TEdit
+      object Edit10: TEdit
         Left = 132
         Height = 23
         Top = 384
         Width = 88
         ParentFont = False
         TabOrder = 9
-        Text = '0.5'
+        Text = '0.05'
       end
-      object Edit10: TEdit
+      object Edit12: TEdit
         Left = 132
         Height = 23
         Top = 448
@@ -22812,25 +22812,25 @@ object Form1: TForm1
         TabOrder = 11
         Text = '0.02'
       end
-      object Edit11: TEdit
+      object Edit13: TEdit
         Left = 132
         Height = 23
         Top = 480
         Width = 88
         ParentFont = False
         TabOrder = 12
-        Text = '0.01'
+        Text = '0.0'
       end
-      object Edit12: TEdit
+      object Edit14: TEdit
         Left = 132
         Height = 23
         Top = 512
         Width = 88
         ParentFont = False
         TabOrder = 13
-        Text = '0'
+        Text = '0.05'
       end
-      object Edit13: TEdit
+      object Edit15: TEdit
         Left = 132
         Height = 23
         Top = 544
@@ -22839,7 +22839,7 @@ object Form1: TForm1
         TabOrder = 14
         Text = '0'
       end
-      object Edit14: TEdit
+      object Edit16: TEdit
         Left = 132
         Height = 23
         Top = 576
@@ -23166,7 +23166,7 @@ object Form1: TForm1
         TabOrder = 19
         Visible = False
       end
-      object Edit15: TEdit
+      object Edit11: TEdit
         Left = 132
         Height = 23
         Top = 416
@@ -23198,7 +23198,7 @@ object Form1: TForm1
         TabOrder = 21
         Visible = False
       end
-      object Edit16: TEdit
+      object Edit2: TEdit
         Left = 132
         Height = 23
         Top = 128
@@ -23250,7 +23250,7 @@ object Form1: TForm1
       object Panel5: TPanel
         Left = 312
         Height = 176
-        Top = 97
+        Top = 96
         Width = 481
         ClientHeight = 176
         ClientWidth = 481
@@ -23302,6 +23302,7 @@ object Form1: TForm1
           Top = 142
           Width = 190
           ItemHeight = 15
+          OnChange = ComboBox1Change
           OnSelect = ComboBox1Select
           Sorted = True
           TabOrder = 4
@@ -23318,10 +23319,10 @@ object Form1: TForm1
           TabOrder = 5
         end
         object Button1: TButton
-          Left = 222
+          Left = 224
           Height = 24
           Hint = 'Select the substances which will be used for the calculations'
-          Top = 15
+          Top = 16
           Width = 246
           Caption = 'Substance Selection'
           Color = clInactiveBorder
@@ -23448,9 +23449,9 @@ object Form1: TForm1
         Visible = False
       end
       object ComboBox3: TComboBox
-        Left = 48
+        Left = 44
         Height = 23
-        Top = 544
+        Top = 480
         Width = 53
         ItemHeight = 15
         ItemIndex = 0

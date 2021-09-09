@@ -493,6 +493,7 @@ begin
   hb_newcustomsalt.Form3.Edit22.Text := '1.0' ;
   hb_newcustomsalt.Form3.Edit16.Text := '100' ;
   hb_newcustomsalt.Form3.Edit21.Text := '100' ;
+
   hb_newcustomsalt.Form3.Edit1.Text := '0' ;
   hb_newcustomsalt.Form3.Edit19.Text := '0' ;
   hb_newcustomsalt.Form3.Edit3.Text := '0' ;

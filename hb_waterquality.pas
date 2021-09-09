@@ -20,22 +20,22 @@ type
     Button5: TButton;
     ComboBox1: TComboBox;
     Edit1: TEdit;
-    Edit10: TEdit;
-    Edit11: TEdit;
     Edit12: TEdit;
-    Edit13: TEdit;
     Edit14: TEdit;
-    Edit25: TEdit;
     Edit15: TEdit;
+    Edit13: TEdit;
     Edit16: TEdit;
+    Edit25: TEdit;
+    Edit9: TEdit;
     Edit2: TEdit;
-    Edit3: TEdit;
     Edit4: TEdit;
+    Edit3: TEdit;
     Edit5: TEdit;
     Edit6: TEdit;
     Edit7: TEdit;
     Edit8: TEdit;
-    Edit9: TEdit;
+    Edit10: TEdit;
+    Edit11: TEdit;
     Label1: TLabel;
     Label10: TLabel;
     Label11: TLabel;
@@ -59,6 +59,7 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure Button5Click(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
     procedure ComboBox1Select(Sender: TObject);
   private
     { private declarations }
@@ -88,22 +89,24 @@ MyDbf.Active := true ;
 MyDbf.Insert ;
 
 MyDbf.FieldByName('Name').AsString:= Edit25.Text ;
-MyDbf.FieldByName('P').AsFloat:=StrtoFloat(Edit3.Text);
-MyDbf.FieldByName('K').AsFloat:=StrtoFloat(Edit2.Text);
+
 MyDbf.FieldByName('N (NO3-)').AsFloat:=StrtoFloat(Edit1.Text);
-MyDbf.FieldByName('N (NH4+)').AsFloat:=StrtoFloat(Edit16.Text);
-MyDbf.FieldByName('Mg').AsFloat:=StrtoFloat(Edit4.Text);
-MyDbf.FieldByName('Ca').AsFloat:=StrtoFloat(Edit5.Text);
-MyDbf.FieldByName('S').AsFloat:=StrtoFloat(Edit6.Text);
-MyDbf.FieldByName('B').AsFloat:=StrtoFloat(Edit9.Text);
-MyDbf.FieldByName('Fe').AsFloat:=StrtoFloat(Edit7.Text);
-MyDbf.FieldByName('Zn').AsFloat:=StrtoFloat(Edit8.Text);
-MyDbf.FieldByName('Cu').AsFloat:=StrtoFloat(Edit10.Text);
-MyDbf.FieldByName('Mo').AsFloat:=StrtoFloat(Edit11.Text);
-MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit12.Text);
+MyDbf.FieldByName('N (NH4+)').AsFloat:=StrtoFloat(Edit2.Text);
+MyDbf.FieldByName('P').AsFloat:=StrtoFloat(Edit3.Text);
+MyDbf.FieldByName('K').AsFloat:=StrtoFloat(Edit4.Text);
+MyDbf.FieldByName('Mg').AsFloat:=StrtoFloat(Edit5.Text);
+MyDbf.FieldByName('Ca').AsFloat:=StrtoFloat(Edit6.Text);
+MyDbf.FieldByName('S').AsFloat:=StrtoFloat(Edit7.Text);
+MyDbf.FieldByName('Fe').AsFloat:=StrtoFloat(Edit8.Text);
+MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit9.Text);
+MyDbf.FieldByName('Zn').AsFloat:=StrtoFloat(Edit10.Text);
+MyDbf.FieldByName('B').AsFloat:=StrtoFloat(Edit11.Text);
+MyDbf.FieldByName('Cu').AsFloat:=StrtoFloat(Edit12.Text);
 MyDbf.FieldByName('Si').AsFloat:=StrtoFloat(Edit13.Text);
-MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit14.Text);
-MyDbf.FieldByName('Mn').AsFloat:=StrtoFloat(Edit15.Text);
+MyDbf.FieldByName('Mo').AsFloat:=StrtoFloat(Edit14.Text);
+MyDbf.FieldByName('Na').AsFloat:=StrtoFloat(Edit15.Text);
+MyDbf.FieldByName('Cl').AsFloat:=StrtoFloat(Edit16.Text);
+
 
 
 MyDbf.FieldByName('Default').AsInteger := 0;
@@ -216,6 +219,11 @@ begin
   hb_ph.Form13.Visible := true ;
 end;
 
+procedure TForm6.ComboBox1Change(Sender: TObject);
+begin
+
+end;
+
 
 procedure TForm6.ComboBox1Select(Sender: TObject);
 var
@@ -237,22 +245,21 @@ begin
 
     Edit25.text := MyDbf.FieldByName('Name').AsString;
     Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
+    Edit2.text := MyDbf.FieldByName('N (NH4+)').AsString ;
     Edit3.text := MyDbf.FieldByName('P').AsString ;
-    Edit2.text := MyDbf.FieldByName('K').AsString ;
-    Edit4.text := MyDbf.FieldByName('Mg').AsString ;
-    Edit5.text := MyDbf.FieldByName('Ca').AsString ;
-    Edit6.text := MyDbf.FieldByName('S').AsString ;
-    Edit7.text := MyDbf.FieldByName('Fe').AsString ;
-    Edit9.text := MyDbf.FieldByName('B').AsString ;
-    Edit8.text := MyDbf.FieldByName('Zn').AsString ;
-    Edit10.text := MyDbf.FieldByName('Cu').AsString ;
-    Edit11.text := MyDbf.FieldByName('Mo').AsString ;
-    Edit12.text := MyDbf.FieldByName('Na').AsString ;
-    Edit15.text := MyDbf.FieldByName('Mn').AsString ;
+    Edit4.text := MyDbf.FieldByName('K').AsString ;
+    Edit5.text := MyDbf.FieldByName('Mg').AsString ;
+    Edit6.text := MyDbf.FieldByName('Ca').AsString ;
+    Edit7.text := MyDbf.FieldByName('S').AsString ;
+    Edit8.text := MyDbf.FieldByName('Fe').AsString ;
+    Edit9.text := MyDbf.FieldByName('Mn').AsString ;
+    Edit10.text := MyDbf.FieldByName('Zn').AsString ;
+    Edit11.text := MyDbf.FieldByName('B').AsString ;
+    Edit12.text := MyDbf.FieldByName('Cu').AsString ;
     Edit13.text := MyDbf.FieldByName('Si').AsString ;
-    Edit14.text := MyDbf.FieldByName('Cl').AsString ;
-    Edit16.text := MyDbf.FieldByName('N (NH4+)').AsString ;
-
+    Edit14.text := MyDbf.FieldByName('Mo').AsString ;
+    Edit15.text := MyDbf.FieldByName('Na').AsString ;
+    Edit16.text := MyDbf.FieldByName('Cl').AsString ;
 
     MyDbf.Close ;
 
