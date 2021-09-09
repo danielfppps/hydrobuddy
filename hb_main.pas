@@ -653,43 +653,43 @@ begin
   if RadioButton15.Checked = True then
   begin
     ec_contribution[0]  := 0.403791;
-    ec_contribution[1]  := -0.110791;
+    ec_contribution[1] := -0.308967;
     ec_contribution[2]  := 0.142525;
-    ec_contribution[3]  := -0.358782;
-    ec_contribution[4]  := -0.283549;
-    ec_contribution[5]  := 0.276118;
-    ec_contribution[6]  := 0;
+    ec_contribution[3]  := -0.110791;
+    ec_contribution[4]  := -0.358782;
+    ec_contribution[5]  := -0.283549;
+    ec_contribution[6]  := 0.276118;
     ec_contribution[7]  := 0;
     ec_contribution[8]  := 0;
     ec_contribution[9]  := 0;
-    ec_contribution[10] := 0;
+    ec_contribution[10]  := 0;
     ec_contribution[11] := 0;
     ec_contribution[12] := 0;
     ec_contribution[13] := 0;
     ec_contribution[14] := 0;
-    ec_contribution[15] := -0.308967;
+    ec_contribution[15] := 0;
+
   end;
 
   if RadioButton14.Checked = True then
   begin
     ec_contribution[0]  := 71.46 ;
-    ec_contribution[1]  := 73 ;
+    ec_contribution[1] := 73.5;
     ec_contribution[2]  := 57 ;
-    ec_contribution[3]  := 106 ;
-    ec_contribution[4]  := 119 ;
-    ec_contribution[5]  := 160;
-    ec_contribution[6]  := 108.0;
-    ec_contribution[7]  := 0;
+    ec_contribution[3]  := 73 ;
+    ec_contribution[4]  := 106 ;
+    ec_contribution[5]  := 119 ;
+    ec_contribution[6]  := 160 ;
+    ec_contribution[7]  := 108.0;
     ec_contribution[8]  := 0;
     ec_contribution[9]  := 0;
-    ec_contribution[10] := 0;
-    ec_contribution[11] := 50.01;
-    ec_contribution[12] := 100 ;
+    ec_contribution[10]  := 0;
+    ec_contribution[11] := 0;
+    ec_contribution[12] := 0; // at the pH used in hydroponics, silicon does not conduct
     ec_contribution[13] := 76.35 ;
-    ec_contribution[14] := 0;
-    ec_contribution[15] := 73.5;
+    ec_contribution[14] := 50.01 ;
+    ec_contribution[15] := 0;
   end;
-
   // define water quality parameters
 
   SetLength(waterquality, 16);
