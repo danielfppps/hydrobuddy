@@ -592,22 +592,23 @@ begin
     hb_newcustomsalt.Form3.Edit23.text := MyDbf.FieldByName('Source').AsString;
     hb_newcustomsalt.Form3.Edit16.text := FloattoStr(MyDbf.FieldByName('Purity').AsFloat*100) ;
     hb_newcustomsalt.Form3.Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
+    hb_newcustomsalt.Form3.Edit2.text := MyDbf.FieldByName('N (NH4+)').AsString ;
     hb_newcustomsalt.Form3.Edit3.text := MyDbf.FieldByName('P').AsString ;
-    hb_newcustomsalt.Form3.Edit2.text := MyDbf.FieldByName('K').AsString ;
-    hb_newcustomsalt.Form3.Edit4.text := MyDbf.FieldByName('Mg').AsString ;
-    hb_newcustomsalt.Form3.Edit5.text := MyDbf.FieldByName('Ca').AsString ;
-    hb_newcustomsalt.Form3.Edit6.text := MyDbf.FieldByName('S').AsString ;
-    hb_newcustomsalt.Form3.Edit7.text := MyDbf.FieldByName('Fe').AsString ;
-    hb_newcustomsalt.Form3.Edit9.text := MyDbf.FieldByName('B').AsString ;
-    hb_newcustomsalt.Form3.Edit8.text := MyDbf.FieldByName('Zn').AsString ;
-    hb_newcustomsalt.Form3.Edit10.text := MyDbf.FieldByName('Cu').AsString ;
-    hb_newcustomsalt.Form3.Edit11.text := MyDbf.FieldByName('Mo').AsString ;
-    hb_newcustomsalt.Form3.Edit12.text := MyDbf.FieldByName('Na').AsString ;
-    hb_newcustomsalt.Form3.Edit18.text := MyDbf.FieldByName('Mn').AsString ;
+    hb_newcustomsalt.Form3.Edit4.text := MyDbf.FieldByName('K').AsString ;
+    hb_newcustomsalt.Form3.Edit5.text := MyDbf.FieldByName('Mg').AsString ;
+    hb_newcustomsalt.Form3.Edit6.text := MyDbf.FieldByName('Ca').AsString ;
+    hb_newcustomsalt.Form3.Edit7.text := MyDbf.FieldByName('S').AsString ;
+    hb_newcustomsalt.Form3.Edit8.text := MyDbf.FieldByName('Fe').AsString ;
+    hb_newcustomsalt.Form3.Edit9.text := MyDbf.FieldByName('Mn').AsString ;
+    hb_newcustomsalt.Form3.Edit10.text := MyDbf.FieldByName('Zn').AsString ;
+    hb_newcustomsalt.Form3.Edit11.text := MyDbf.FieldByName('B').AsString ;
+    hb_newcustomsalt.Form3.Edit12.text := MyDbf.FieldByName('Cu').AsString ;
     hb_newcustomsalt.Form3.Edit13.text := MyDbf.FieldByName('Si').AsString ;
-    hb_newcustomsalt.Form3.Edit14.text := MyDbf.FieldByName('Cl').AsString ;
+    hb_newcustomsalt.Form3.Edit14.text := MyDbf.FieldByName('Mo').AsString ;
+    hb_newcustomsalt.Form3.Edit18.text := MyDbf.FieldByName('Na').AsString ;
+    hb_newcustomsalt.Form3.Edit19.text := MyDbf.FieldByName('Cl').AsString ;
     hb_newcustomsalt.Form3.Edit21.text := MyDbf.FieldByName('Cost').AsString ;
-    hb_newcustomsalt.Form3.Edit19.text := MyDbf.FieldByName('N (NH4+)').AsString ;
+
     hb_newcustomsalt.Form3.Edit20.text := MyDbf.FieldByName('ConcType').AsString ;
     hb_newcustomsalt.Form3.Edit22.text := MyDbf.FieldByName('Density').AsString ;
 
