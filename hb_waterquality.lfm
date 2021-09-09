@@ -210,7 +210,6 @@ object Form6: TForm6
     Height = 23
     Top = 134
     Width = 72
-    NumbersOnly = True
     TabOrder = 6
     Text = '0'
   end

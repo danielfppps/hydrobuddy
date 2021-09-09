@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <Compiler Value="C:\lazarus\fpc\bin\x86_64-win64\fpc.exe" Date="1382191644"/>
-  <Params Value=" -MObjFPC -Scgi -O1 -g -gl -WG -l -vewnhibq -FuC:\lazarus\lazarus\components\tachart\lib\x86_64-win64\win32 -FuC:\lazarus\lazarus\components\ideintf\units\x86_64-win64\win32 -FuC:\lazarus\lazarus\components\lazcontrols\lib\x86_64-win64\win32 -FuC:\lazarus\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\lazarus\packager\units\x86_64-win64 -FuD:\hydrobuddy\ -oD:\hydrobuddy\hydrobuddy.exe -dLCL -dLCLwin32 hydrobuddy.lpr"/>
+  <Params Value=" -Twin32 -Pi386 -MObjFPC -Scgi -O1 -g -gl -WG -l -vewnhibq -FuC:\lazarus\lazarus\components\tachart\lib\i386-win32\win32 -FuC:\lazarus\lazarus\components\ideintf\units\i386-win32\win32 -FuC:\lazarus\lazarus\components\lazcontrols\lib\i386-win32\win32 -FuC:\lazarus\lazarus\lcl\units\i386-win32\win32 -FuC:\lazarus\lazarus\lcl\units\i386-win32 -FuC:\lazarus\lazarus\components\lazutils\lib\i386-win32 -FuC:\lazarus\lazarus\packager\units\i386-win32 -FuD:\hydrobuddy\ -oD:\hydrobuddy\hydrobuddy.exe -dLCL -dLCLwin32 hydrobuddy.lpr"/>
 </CONFIG>

@@ -234,6 +234,7 @@ type
     procedure ToggleBox1Change(Sender: TObject);
   private
     { private declarations }
+    procedure GridShowHint(Sender: TObject; HintInfo: PHintInfo);
   public
     { public declarations }
     const
@@ -1261,29 +1262,35 @@ begin
 
       Add(Label20.Caption);
 
-      Add(' , , , ');
+      Add(' , , , , ');
 
       for i := 0 to StringGrid2.RowCount - 1 do
 
       begin
 
-        Add(StringGrid2.Cells[NAME_IDX,i] + ',' + StringGrid2.Cells[FORMULA_IDX,i] + ',' + StringGrid2.Cells[AMOUNT_IDX,i] +
-          ',' + StringGrid2.Cells[COST_IDX,i]);
+        Add(StringGrid2.Cells[NAME_IDX,i]    + ',' +
+            StringGrid2.Cells[FORMULA_IDX,i] + ',' +
+            StringGrid2.Cells[AMOUNT_IDX,i]  + ',' +
+            StringGrid2.Cells[UNIT_IDX,i]    + ',' +
+            StringGrid2.Cells[COST_IDX,i]);
 
       end;
 
-      Add(' , , , ');
+      Add(' , , , , ');
 
       for i := 0 to StringGrid1.RowCount - 1 do
 
       begin
 
-        Add(StringGrid1.Cells[0,i] + ',' + StringGrid1.Cells[1,i] + ',' + StringGrid1.Cells[2,i] +
-          ',' + StringGrid1.Cells[3,i]);
+        Add(StringGrid1.Cells[0,i] + ',' +
+            StringGrid1.Cells[1,i] + ',' +
+            StringGrid1.Cells[2,i] + ',' +
+            StringGrid1.Cells[3,i] + ',' +
+            StringGrid1.Cells[4,i]);
 
       end;
 
-      Add(' , , , ');
+      Add(' , , , ,');
       Add(Panel6.Caption);
 
       if SaveDialog1.Execute then
@@ -1940,6 +1947,9 @@ if RadioButton13.Checked then
         all_element_contributions[j][i] :=
         0.01 * MyDbf.FieldByName(all_element_names[j]).AsFloat * MyDbf.FieldByName('Purity').AsFloat / Volume;
 
+       // if all_element_contributions[j][i] <> 0 then
+       // ShowMessage(all_element_names[j] + ' ' +FloatToStr(all_element_contributions[j][i]));
+
       end;
 
 
@@ -2229,7 +2239,7 @@ if RadioButton13.Checked then
           (2 * StrtoFloat(Edit17.Text));
 
       if all_element_targets[i] <> 0 then
-      gross_error[i] := (test * 100 / all_element_targets[i]) - 100;
+      gross_error[i] := ((test+waterquality[i]) * 100 / (all_element_targets[i])) - 100;
 
 
       if   all_element_targets[i] = 0 then
@@ -2745,6 +2755,8 @@ if RadioButton13.Checked then
     SetLength(varnames, 16);
     SetLength(Result, 16);
     SetLength(name_array, arraysize, 2);
+    SetLength(IsLiquid, 2, arraysize) ;
+    SetLength(all_element_contributions, 16, arraysize);
 
     for j := 1 to 16 do
     begin
@@ -2772,6 +2784,19 @@ if RadioButton13.Checked then
     begin
       name_array[i][0] := MyDbf.FieldByName('Name').AsString;
       name_array[i][1] := MyDbf.FieldByName('Formula').AsString;
+
+      IsLiquid[0][i] := MyDbf.FieldByName('IsLiquid').AsFloat ;
+      IsLiquid[1][i] := MyDbf.FieldByName('Density').AsFloat ;
+
+      for j := 0 to 15 do
+      begin
+        if IsLiquid[0][i] = 1 then all_solids := False;
+        all_element_contributions[j][i] :=
+        0.01 * MyDbf.FieldByName((FindComponent('Label' + IntToStr(j+1)) as TLabel).Caption).AsFloat * MyDbf.FieldByName('Purity').AsFloat / Volume;
+      end;
+
+      if IsLiquid[0][i] = 0 then StringGrid2.Cells[UNIT_IDX,i+1] := mass_unit;
+      if IsLiquid[0][i] = 1 then StringGrid2.Cells[UNIT_IDX,i+1] := 'mL';
 
       for j := 0 to 15 do
 
@@ -2877,27 +2902,38 @@ if RadioButton13.Checked then
 
 
 
-    // CALCULATION OF EC
-
-
-    predicted_ec := 0;
-
-    for i := 1 to 16 do
-
+    // calculation of EC by empirical model
+    if RadioButton15.Checked = True then
     begin
-
-      begin
-
-        predicted_ec := (conc_factor[i-1])*StrtoFloat(
-          (FindComponent('RLabel' + IntToStr(i)) as TLabel).Caption) *
-          ec_contribution[i - 1] + predicted_ec;
-
-      end;
-
+        predicted_ec := 0;
+        for i := 1 to 16 do
+        begin
+            predicted_ec := conc_factor[i-1]*StrtoFloat(
+              (FindComponent('RLabel' + IntToStr(i)) as TLabel).Caption) *
+              ec_contribution[i - 1] + predicted_ec;
+        end;
+        predicted_ec := round2(predicted_ec+0.39661671, 3);
     end;
 
-    if RadioButton14.Checked = True then predicted_ec := round2((predicted_ec - 0.35 * predicted_ec) / 1000, 3);
-    if RadioButton15.Checked = True then predicted_ec := round2(predicted_ec+0.39661671, 3);
+    // Calculation of EC by LMCv2 model
+    if RadioButton14.Checked = True then
+    begin
+
+        // calculate ionic strength used for conductivity model
+        ionic_strength := 0;
+        for i := 1 to 16 do ionic_strength := zi[i-1]*zi[i-1]*(StrtoFloat((FindComponent('RLabel' + IntToStr(i)) as TLabel).Caption) /(1000*molar_mass[i-1])) + ionic_strength;
+
+        predicted_ec := 0;
+        for i := 1 to 16 do
+        begin
+            predicted_ec := conc_factor[i-1]
+                            * (StrtoFloat((FindComponent('RLabel' + IntToStr(i)) as TLabel).Caption)/(1000*molar_mass[i-1]))
+                            * ec_contribution[i - 1]
+                            * exp(-0.7025187*sqrt(ionic_strength)*power(zi[i-1],1.5))
+                            + predicted_ec;
+        end;
+        predicted_ec := round2(predicted_ec, 3);
+    end;
 
     Panel6.Caption := 'EC=' + FloattoStr(predicted_ec) + ' mS/cm';
 
@@ -2953,11 +2989,11 @@ if RadioButton13.Checked then
    end;
 
    for j := 1 to 16 do
-    begin
+   begin
         hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(100*mixContribution[j-1]/totalWeight,3));
         if hb_analysis.Form11.StringGrid1.Cells[0,j] = 'K2O' then hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(1.2047*100*mixContribution[j-1]/totalWeight,3));
         if hb_analysis.Form11.StringGrid1.Cells[0,j] = 'P2O5' then hb_analysis.Form11.StringGrid1.Cells[1,j] := FloatToStr(round2(2.290*100*mixContribution[j-1]/totalWeight,3));
-    end;
+   end;
 
    if all_solids then Button19.Enabled := True;
 
@@ -2982,6 +3018,8 @@ if RadioButton13.Checked then
    // enable or disable stock solution analysis button
   if RadioButton6.Checked then Button12.Enabled := True else  Button12.Enabled := False;
 
+  // set water quality values
+  for j := 1 to 16 do StringGrid1.Cells[4,j] := FloatToStr(waterquality[j-1]);
 
   if CheckBox3.Checked = false then
   ShowMessage('Calculation carried out successfully :o)');
@@ -3573,7 +3611,22 @@ end;
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
+  StringGrid1.ShowHint:=True;
+  StringGrid1.OnShowHint:=@GridShowHint;
+end;
 
+procedure TForm1.GridShowHint(Sender: TObject; HintInfo: PHintInfo);
+var
+  col: integer = -1;
+  row: integer = -1;
+  grid: TStringGrid absolute Sender;
+begin
+  grid.MouseToCell(HintInfo^.CursorPos.X, HintInfo^.CursorPos.Y, col, row);
+  if col = 1 then HintInfo^.HintStr:='Final ppm of solution';
+  if col = 2 then HintInfo^.HintStr:='Gross Error';
+  if col = 3 then HintInfo^.HintStr:='Instrumental Error';
+  if col = 4 then HintInfo^.HintStr:='Source water ppm contribution';
+  HintInfo^.HideTimeout:=5000; // long-lasting hint
 end;
 
 
