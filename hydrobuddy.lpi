@@ -66,11 +66,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="HB_Main"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="1431"/>
-        <CursorPos X="28" Y="1438"/>
+        <TopLine Value="1403"/>
+        <CursorPos X="7" Y="1405"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
           <Item0 X="34" Y="835"/>
@@ -227,6 +226,7 @@
         <ComponentName Value="Form11"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="12"/>
         <WindowIndex Value="1"/>
         <TopLine Value="12"/>
@@ -400,99 +400,99 @@
       </Position6>
       <Position7>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="19" Column="69" TopLine="66"/>
+        <Caret Line="1343" Column="3" TopLine="1338"/>
       </Position7>
       <Position8>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1343" Column="3" TopLine="1338"/>
+        <Caret Line="1352" Column="13" TopLine="1338"/>
       </Position8>
       <Position9>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1352" Column="13" TopLine="1338"/>
+        <Caret Line="1353" Column="89" TopLine="1338"/>
       </Position9>
       <Position10>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1353" Column="89" TopLine="1338"/>
+        <Caret Line="1372" Column="65" TopLine="1344"/>
       </Position10>
       <Position11>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1372" Column="65" TopLine="1344"/>
+        <Caret Line="4137" Column="76" TopLine="4108"/>
       </Position11>
       <Position12>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="4137" Column="76" TopLine="4108"/>
+        <Caret Line="272" Column="29" TopLine="258"/>
       </Position12>
       <Position13>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="272" Column="29" TopLine="258"/>
+        <Caret Line="279" Column="52" TopLine="258"/>
       </Position13>
       <Position14>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="279" Column="52" TopLine="258"/>
+        <Caret Line="669" Column="52" TopLine="658"/>
       </Position14>
       <Position15>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="669" Column="52" TopLine="658"/>
+        <Caret Line="682" Column="21" TopLine="667"/>
       </Position15>
       <Position16>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="682" Column="21" TopLine="667"/>
+        <Caret Line="3876" Column="80" TopLine="3859"/>
       </Position16>
       <Position17>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3876" Column="80" TopLine="3859"/>
+        <Caret Line="3874" Column="92" TopLine="3859"/>
       </Position17>
       <Position18>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3874" Column="92" TopLine="3859"/>
+        <Caret Line="3863" Column="3" TopLine="3857"/>
       </Position18>
       <Position19>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3863" Column="3" TopLine="3857"/>
+        <Caret Line="16" Column="41"/>
       </Position19>
       <Position20>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="16" Column="41"/>
+        <Caret Line="3940" Column="3" TopLine="3914"/>
       </Position20>
       <Position21>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3940" Column="3" TopLine="3914"/>
+        <Caret Line="3941" Column="56" TopLine="3914"/>
       </Position21>
       <Position22>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3941" Column="56" TopLine="3914"/>
+        <Caret Line="3940" Column="12" TopLine="3914"/>
       </Position22>
       <Position23>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3940" Column="12" TopLine="3914"/>
+        <Caret Line="278" Column="33" TopLine="263"/>
       </Position23>
       <Position24>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="278" Column="33" TopLine="263"/>
+        <Caret Line="279" Column="77" TopLine="263"/>
       </Position24>
       <Position25>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="279" Column="77" TopLine="263"/>
+        <Caret Line="764" Column="51" TopLine="737"/>
       </Position25>
       <Position26>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="764" Column="51" TopLine="737"/>
+        <Caret Line="1418" Column="53" TopLine="1402"/>
       </Position26>
       <Position27>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1418" Column="53" TopLine="1402"/>
+        <Caret Line="21" Column="41"/>
       </Position27>
       <Position28>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="21" Column="41"/>
+        <Caret Line="280" Column="46" TopLine="255"/>
       </Position28>
       <Position29>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="280" Column="46" TopLine="255"/>
+        <Caret Line="763" Column="36" TopLine="738"/>
       </Position29>
       <Position30>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="763" Column="36" TopLine="738"/>
+        <Caret Line="1446" Column="37" TopLine="1431"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>

@@ -357,7 +357,7 @@ LazarusResources.Add('TForm1','FORMDATA',[
   +'teChange'#7#21'FormWindowStateChange'#14'ParentBiDiMode'#8#8'Position'#7#15
   +'poDesktopCenter'#10'LCLVersion'#6#8'2.0.13.0'#7'Visible'#9#0#12'TPageContro'
   +'l'#12'PageControl1'#4'Left'#2#0#6'Height'#3#161#2#3'Top'#2#0#5'Width'#3'B'#3
-  +#10'ActivePage'#7#9'TabSheet1'#10'ParentFont'#8#8'TabIndex'#2#1#8'TabOrder'#2
+  +#10'ActivePage'#7#9'TabSheet2'#10'ParentFont'#8#8'TabIndex'#2#2#8'TabOrder'#2
   +#0#6'OnExit'#7#16'PageControl1Exit'#0#9'TTabSheet'#9'TabSheet4'#7'Caption'#6
   +#7'Welcome'#12'ClientHeight'#3#133#2#11'ClientWidth'#3':'#3#0#12'TPageContro'
   +'l'#12'PageControl2'#4'Left'#2#0#6'Height'#3#136#2#3'Top'#2#0#5'Width'#3'<'#3
