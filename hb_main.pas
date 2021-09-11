@@ -253,6 +253,8 @@ type
       1,
       1,
       1,
+      1,
+      2,
       2,
       2,
       2,
@@ -262,8 +264,6 @@ type
       2,
       2,
       2,
-      1,
-      1,
       1,
       1) ;
     var
@@ -1409,21 +1409,23 @@ procedure TForm1.getmolarmasses(var molar_mass: array of double) ;
 begin
 
   molar_mass[0] :=  14.007 ;
-  molar_mass[1] :=  39.098 ;
+  molar_mass[1] := 14.007  ;
   molar_mass[2] :=  30.974 ;
-  molar_mass[3] :=  24.305 ;
-  molar_mass[4] :=  40.078 ;
-  molar_mass[5] :=  32.066 ;
-  molar_mass[6] :=  55.845 ;
-  molar_mass[7] :=  65.409 ;
-  molar_mass[8] :=  10.811 ;
-  molar_mass[9] :=  63.546 ;
-  molar_mass[10] := 95.94  ;
-  molar_mass[11] := 22.990  ;
+  molar_mass[3] :=  39.098 ;
+  molar_mass[4] :=  24.305 ;
+  molar_mass[5] :=  40.078 ;
+  molar_mass[6] :=  32.066 ;
+  molar_mass[7] :=  55.845 ;
+  molar_mass[8] := 54.938  ;
+  molar_mass[9] :=  65.409 ;
+  molar_mass[10] :=  10.811 ;
+  molar_mass[11] :=  63.546 ;
   molar_mass[12] := 28.086  ;
-  molar_mass[13] := 35.453  ;
-  molar_mass[14] := 54.938  ;
-  molar_mass[15] := 14.007  ;
+  molar_mass[13] := 95.94  ;
+  molar_mass[14] := 22.990  ;
+  molar_mass[15] := 35.453  ;
+
+
 
 end ;
 
@@ -1433,18 +1435,18 @@ begin
   equivalents[0] := 1 ;
   equivalents[1] := 1 ;
   equivalents[2] := 3 ;
-  equivalents[3] := 2 ;
+  equivalents[3] := 1 ;
   equivalents[4] := 2 ;
   equivalents[5] := 2 ;
   equivalents[6] := 2 ;
   equivalents[7] := 2 ;
-  equivalents[8] := 1 ;
+  equivalents[8] := 2 ;
   equivalents[9] := 2 ;
-  equivalents[10] :=2  ;
-  equivalents[11] :=1  ;
+  equivalents[10] :=1  ;
+  equivalents[11] :=2  ;
   equivalents[12] := 2  ;
   equivalents[13] := 2  ;
-  equivalents[14] := 2  ;
+  equivalents[14] := 1  ;
   equivalents[15] := 1  ;
 
 end;

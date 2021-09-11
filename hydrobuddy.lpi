@@ -53,8 +53,8 @@
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="133"/>
-        <CursorPos X="9" Y="160"/>
+        <TopLine Value="111"/>
+        <CursorPos X="38" Y="131"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -69,12 +69,12 @@
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="8"/>
         <WindowIndex Value="1"/>
-        <TopLine Value="291"/>
-        <CursorPos X="10" Y="692"/>
+        <TopLine Value="1431"/>
+        <CursorPos X="28" Y="1438"/>
         <UsageCount Value="200"/>
         <Bookmarks Count="2">
           <Item0 X="34" Y="835"/>
-          <Item1 X="3" Y="1624" ID="1"/>
+          <Item1 X="3" Y="1626" ID="1"/>
         </Bookmarks>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -110,7 +110,7 @@
         <Filename Value="D:\lazarus\lcl\interfaces\win32\win32listsl.inc"/>
         <TopLine Value="158"/>
         <CursorPos Y="172"/>
-        <UsageCount Value="49"/>
+        <UsageCount Value="40"/>
       </Unit4>
       <Unit5>
         <Filename Value="densesolver.pas"/>
@@ -123,7 +123,7 @@
         <Filename Value="D:\lazarus\lcl\include\control.inc"/>
         <TopLine Value="2270"/>
         <CursorPos X="74" Y="2283"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="25"/>
       </Unit6>
       <Unit7>
         <Filename Value="hb_addweight.pas"/>
@@ -240,7 +240,7 @@
         <UnitName Value="DefineTemplates"/>
         <TopLine Value="1054"/>
         <CursorPos X="9" Y="1071"/>
-        <UsageCount Value="46"/>
+        <UsageCount Value="37"/>
       </Unit15>
       <Unit16>
         <Filename Value="descriptivestatistics.pas"/>
@@ -255,13 +255,13 @@
         <Filename Value="D:\lazarus\lcl\include\customcombobox.inc"/>
         <TopLine Value="181"/>
         <CursorPos Y="214"/>
-        <UsageCount Value="43"/>
+        <UsageCount Value="34"/>
       </Unit17>
       <Unit18>
         <Filename Value="D:\lazarus\lcl\include\buttoncontrol.inc"/>
         <TopLine Value="44"/>
         <CursorPos X="11" Y="51"/>
-        <UsageCount Value="34"/>
+        <UsageCount Value="25"/>
       </Unit18>
       <Unit19>
         <Filename Value="hb_freedom.pas"/>
@@ -287,13 +287,13 @@
       <Unit21>
         <Filename Value="pingsend.pas"/>
         <CursorPos X="3" Y="76"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="41"/>
       </Unit21>
       <Unit22>
         <Filename Value="D:\lazarus\fpc\2.4.3\source\packages\fcl-db\src\base\db.pas"/>
         <TopLine Value="370"/>
         <CursorPos X="14" Y="389"/>
-        <UsageCount Value="27"/>
+        <UsageCount Value="18"/>
       </Unit22>
       <Unit23>
         <Filename Value="hb_ph.pas"/>
@@ -375,124 +375,124 @@
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="1747" Column="41" TopLine="1732"/>
+        <Filename Value="hb_newcustomsalt.pas"/>
+        <Caret Line="311" Column="3" TopLine="307"/>
       </Position1>
       <Position2>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3622" Column="68" TopLine="3598"/>
+        <Caret Line="1297" Column="29" TopLine="1272"/>
       </Position2>
       <Position3>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="919" Column="95" TopLine="905"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3566" Column="3" TopLine="3563"/>
       </Position3>
       <Position4>
         <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="202" Column="32" TopLine="184"/>
+        <Caret Line="351" Column="61" TopLine="333"/>
       </Position4>
       <Position5>
         <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="155" Column="43" TopLine="155"/>
+        <Caret Line="362" Column="3" TopLine="356"/>
       </Position5>
       <Position6>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="250" Column="28" TopLine="251"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="303" Column="5" TopLine="279"/>
       </Position6>
       <Position7>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="142" Column="50" TopLine="136"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="19" Column="69" TopLine="66"/>
       </Position7>
       <Position8>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="244" Column="11" TopLine="221"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="1343" Column="3" TopLine="1338"/>
       </Position8>
       <Position9>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1276" Column="148" TopLine="1249"/>
+        <Caret Line="1352" Column="13" TopLine="1338"/>
       </Position9>
       <Position10>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3389" Column="3" TopLine="3387"/>
+        <Caret Line="1353" Column="89" TopLine="1338"/>
       </Position10>
       <Position11>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1707" Column="59" TopLine="1692"/>
+        <Caret Line="1372" Column="65" TopLine="1344"/>
       </Position11>
       <Position12>
-        <Filename Value="hb_commercialnutrient.pas"/>
-        <Caret Line="100" Column="48" TopLine="80"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="4137" Column="76" TopLine="4108"/>
       </Position12>
       <Position13>
-        <Filename Value="hb_commercialnutrient.pas"/>
-        <Caret Line="317" Column="24" TopLine="68"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="272" Column="29" TopLine="258"/>
       </Position13>
       <Position14>
-        <Filename Value="hb_commercialnutrient.pas"/>
-        <Caret Line="254" Column="35" TopLine="236"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="279" Column="52" TopLine="258"/>
       </Position14>
       <Position15>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3365" Column="3" TopLine="3364"/>
+        <Caret Line="669" Column="52" TopLine="658"/>
       </Position15>
       <Position16>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3214" Column="58" TopLine="3194"/>
+        <Caret Line="682" Column="21" TopLine="667"/>
       </Position16>
       <Position17>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1376" Column="3" TopLine="1369"/>
+        <Caret Line="3876" Column="80" TopLine="3859"/>
       </Position17>
       <Position18>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3327" Column="3" TopLine="3327"/>
+        <Caret Line="3874" Column="92" TopLine="3859"/>
       </Position18>
       <Position19>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3546" Column="4" TopLine="3532"/>
+        <Caret Line="3863" Column="3" TopLine="3857"/>
       </Position19>
       <Position20>
-        <Filename Value="hb_waterquality.pas"/>
-        <Caret Line="237" Column="28" TopLine="206"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="16" Column="41"/>
       </Position20>
       <Position21>
-        <Filename Value="hb_waterquality.pas"/>
-        <Caret Line="258" Column="52" TopLine="237"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3940" Column="3" TopLine="3914"/>
       </Position21>
       <Position22>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="294" Column="137" TopLine="286"/>
+        <Caret Line="3941" Column="56" TopLine="3914"/>
       </Position22>
       <Position23>
-        <Filename Value="hb_load_salts.pas"/>
-        <Caret Line="496" Column="3" TopLine="489"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="3940" Column="12" TopLine="3914"/>
       </Position23>
       <Position24>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="97" Column="3" TopLine="129"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="278" Column="33" TopLine="263"/>
       </Position24>
       <Position25>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="311" Column="3" TopLine="307"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="279" Column="77" TopLine="263"/>
       </Position25>
       <Position26>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="1297" Column="29" TopLine="1272"/>
+        <Caret Line="764" Column="51" TopLine="737"/>
       </Position26>
       <Position27>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3566" Column="3" TopLine="3563"/>
+        <Caret Line="1418" Column="53" TopLine="1402"/>
       </Position27>
       <Position28>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="351" Column="61" TopLine="333"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="21" Column="41"/>
       </Position28>
       <Position29>
-        <Filename Value="hb_newcustomsalt.pas"/>
-        <Caret Line="362" Column="3" TopLine="356"/>
+        <Filename Value="hb_main.pas"/>
+        <Caret Line="280" Column="46" TopLine="255"/>
       </Position29>
       <Position30>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="303" Column="5" TopLine="279"/>
+        <Caret Line="763" Column="36" TopLine="738"/>
       </Position30>
     </JumpHistory>
   </ProjectOptions>
@@ -507,10 +507,6 @@
         <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
-    <CodeGeneration>
-      <TargetCPU Value="i386"/>
-      <TargetOS Value="win32"/>
-    </CodeGeneration>
     <Linking>
       <Options>
         <Win32>

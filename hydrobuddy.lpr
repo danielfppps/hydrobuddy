@@ -125,10 +125,10 @@ begin
   Application.CreateForm(TForm1, Form1);
 
   {$IFDEF UNIX}
-  Form1.water_quality_db = 'waterquality_unix.dbf';
-  Form1.formulations_db = 'formulations_unix.dbf' ;
-  Form1.substances_db = 'substances_unix.dbf';
-  Form1.substances_used_db = 'substances_used_unix.dbf';
+  Form1.water_quality_db := 'waterquality_unix.dbf';
+  Form1.formulations_db := 'formulations_unix.dbf' ;
+  Form1.substances_db := 'substances_unix.dbf';
+  Form1.substances_used_db := 'substances_used_unix.dbf';
   {$ENDIF}
 
   {$IFDEF WINDOWS}
