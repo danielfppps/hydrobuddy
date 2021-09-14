@@ -247,6 +247,8 @@ type
     COST_IDX     : integer = 4;
     SOURCE_IDX   : integer = 5;
 
+    VERSION      : string = '1.97';
+
 
     zi : array[0..15] of double =
     (
@@ -1265,17 +1267,45 @@ begin
       Add(Label20.Caption);
 
       Add(' , , , , ');
-      Add('Name, Formula, Amount, Units, Cost');
+      Add('Name, Formula, Amount, Units, Amount, Units, Cost');
 
       for i := 0 to StringGrid2.RowCount - 1 do
 
       begin
 
+      if StringGrid2.Cells[UNIT_IDX,i] = 'oz' then
+      begin
         Add(StringGrid2.Cells[NAME_IDX,i]    + ',' +
             StringGrid2.Cells[FORMULA_IDX,i] + ',' +
             StringGrid2.Cells[AMOUNT_IDX,i]  + ',' +
             StringGrid2.Cells[UNIT_IDX,i]    + ',' +
+            FloatToStr(StrToFloat(StringGrid2.Cells[AMOUNT_IDX,i])/16)  + ',' +
+            'lb'    + ',' +
             StringGrid2.Cells[COST_IDX,i]);
+      end;
+
+      if StringGrid2.Cells[UNIT_IDX,i] = 'g' then
+      begin
+        Add(StringGrid2.Cells[NAME_IDX,i]    + ',' +
+            StringGrid2.Cells[FORMULA_IDX,i] + ',' +
+            StringGrid2.Cells[AMOUNT_IDX,i]  + ',' +
+            StringGrid2.Cells[UNIT_IDX,i]    + ',' +
+            FloatToStr(StrToFloat(StringGrid2.Cells[AMOUNT_IDX,i])/1000)   + ',' +
+            'kg'    + ',' +
+            StringGrid2.Cells[COST_IDX,i]);
+      end;
+
+      if StringGrid2.Cells[UNIT_IDX,i] = 'mL' then
+      begin
+        Add(StringGrid2.Cells[NAME_IDX,i]    + ',' +
+            StringGrid2.Cells[FORMULA_IDX,i] + ',' +
+            StringGrid2.Cells[AMOUNT_IDX,i]  + ',' +
+            StringGrid2.Cells[UNIT_IDX,i]    + ',' +
+            FloatToStr(StrToFloat(StringGrid2.Cells[AMOUNT_IDX,i])/1000)   + ',' +
+            'L'    + ',' +
+            StringGrid2.Cells[COST_IDX,i]);
+      end;
+
 
       end;
 
@@ -1295,7 +1325,7 @@ begin
       end;
 
       Add(' , , , ,');
-      Add(Panel6.Caption);
+      Add(Panel6.Caption + ' +/- 10%');
 
       if SaveDialog1.Execute then
         SaveToFile(SaveDialog1.filename);
@@ -2680,28 +2710,12 @@ if RadioButton13.Checked then
     begin
 
         if (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 6]) > 0) and
-           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 5]) > 0)  then
+           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 7]) > 0)  then
            ShowMessage('Your stock solutions have not been properly designed. Currently there is calcium and sulfate within the same solution (a big problem). Please do NOT carry out this preparation');
 
         if (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[2, 6]) > 0) and
-           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[2, 5]) > 0)  then
+           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[2, 7]) > 0)  then
            ShowMessage('Your stock solutions have not been properly designed. Currently there is calcium and sulfate within the same solution (a big problem). Please do NOT carry out this preparation');
-
-         if (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 7]) > 0) and
-           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 6]) > 0)  then
-           ShowMessage('Your stock solutions have not been properly designed. To avoid precipitation problems please keep sulfate and iron appart');
-
-          if (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 6]) > 0) and
-           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 7]) > 0)  then
-           ShowMessage('Your stock solutions have not been properly designed. To avoid precipitation problems please keep sulfate and iron appart');
-
-          if (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 7]) > 0) and
-           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 3]) > 0)  then
-           ShowMessage('Your stock solutions have not been properly designed. To avoid precipitation problems please keep phosphate and iron appart');
-
-          if (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 7]) > 0) and
-           (StrtoFloat(hb_stockanalysis.Form8.StringGrid1.Cells[1, 3]) > 0)  then
-           ShowMessage('Your stock solutions have not been properly designed. To avoid precipitation problems please keep phosphate and iron appart');
 
           temp1 :=  0 ;
 
@@ -3575,6 +3589,7 @@ begin
     for j := 1 to 34 do Sett.WriteString('Main', 'Form1.Label' + IntToStr(j), (FindComponent('Label' + IntToStr(j)) as TLabel).Caption);
     for j := 1 to 15 do Sett.WriteBool('Main', 'Form1.RadioButton' + IntToStr(j), (FindComponent('RadioButton' + IntToStr(j)) as TRadioButton).Checked);
 
+    Sett.WriteString('Main', 'version', VERSION);
     Sett.WriteString('Main', 'prev_conc', prev_conc);
     Sett.WriteString('Main', 'Form1.Label20', Label20.Caption);
     Sett.WriteString('Main', 'Form1.Label18', Label18.Caption);
@@ -3602,6 +3617,10 @@ var
 begin
     //load program variables
     Sett := TIniFile.Create(IniFile);
+
+    // if the setting files are from an old version ignore them and stop loading
+    if Sett.ReadString('Main', 'version', '-1') <> VERSION then exit;
+
     for j := 1 to 19 do (FindComponent('Edit' + IntToStr(j)) as TEdit).Text := Sett.ReadString('Main', 'Form1.Edit' + IntToStr(j), (FindComponent('Edit' + IntToStr(j)) as TEdit).Text);
     for j := 1 to 16 do (FindComponent('RLabel' + IntToStr(j)) as TLabel).Caption := Sett.ReadString('Main', 'Form1.RLabel' + IntToStr(j), '0');
     for j := 1 to 34 do (FindComponent('Label' + IntToStr(j)) as TLabel).Caption := Sett.ReadString('Main', 'Form1.Label' + IntToStr(j), (FindComponent('Label' + IntToStr(j)) as TLabel).Caption);

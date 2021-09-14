@@ -9,7 +9,7 @@ object Form1: TForm1
   VertScrollBar.Range = 673
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'HydroBuddy v1.96- Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
+  Caption = 'HydroBuddy v1.97- Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
   ClientHeight = 675
   ClientWidth = 834
   DragKind = dkDock
@@ -23800,6 +23800,7 @@ object Form1: TForm1
       object Panel6: TPanel
         Left = 456
         Height = 56
+        Hint = 'This EC value has an accuracy of +/- 10%'
         Top = 472
         Width = 132
         Caption = 'EC = 0'
@@ -23810,6 +23811,8 @@ object Form1: TForm1
         Font.Pitch = fpVariable
         Font.Quality = fqDraft
         ParentFont = False
+        ParentShowHint = False
+        ShowHint = True
         TabOrder = 0
         OnClick = Panel6Click
       end
