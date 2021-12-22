@@ -2860,8 +2860,6 @@ if RadioButton13.Checked then
 
       end;
 
-      StringGrid2.RowCount := i+2 ;
-
       StringGrid2.Cells[NAME_IDX,i+1] := (name_array[i][0]);
       StringGrid2.Cells[FORMULA_IDX,i+1] := (name_array[i][1]);
       StringGrid2.Cells[COST_IDX,i+1] := (FloattoStr(
