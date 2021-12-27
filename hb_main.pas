@@ -2860,15 +2860,12 @@ if RadioButton13.Checked then
 
       end;
 
-      StringGrid2.RowCount := i+2 ;
-
       StringGrid2.Cells[NAME_IDX,i+1] := (name_array[i][0]);
       StringGrid2.Cells[FORMULA_IDX,i+1] := (name_array[i][1]);
       StringGrid2.Cells[COST_IDX,i+1] := (FloattoStr(
         round2(MyDbf.FieldByName('Weight').AsFloat * MyDbf.FieldByName('Cost').AsFloat * 0.001 *
         (1 / weight_factor), 1)));
       StringGrid2.Cells[AMOUNT_IDX,i+1] := (MyDbf.FieldByName('Weight').AsString);
-
 
       i := i + 1;
       MyDbf.Next;                                     // use .next here NOT .findnext!

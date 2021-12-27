@@ -1,7 +1,7 @@
 object Form11: TForm11
-  Left = 721
+  Left = 284
   Height = 440
-  Top = 327
+  Top = 414
   Width = 266
   BorderStyle = bsToolWindow
   Caption = 'Data Analysis'

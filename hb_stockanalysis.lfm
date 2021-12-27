@@ -1,39 +1,39 @@
 object Form8: TForm8
-  Left = 120
-  Height = 431
-  Top = 258
-  Width = 414
+  Left = 844
+  Height = 395
+  Top = 278
+  Width = 368
   HorzScrollBar.Page = 412
   HorzScrollBar.Range = 376
   VertScrollBar.Page = 429
   VertScrollBar.Range = 401
   BorderStyle = bsToolWindow
   Caption = 'Stock Solution Analysis'
-  ClientHeight = 431
-  ClientWidth = 414
+  ClientHeight = 395
+  ClientWidth = 368
   FormStyle = fsStayOnTop
   LCLVersion = '2.0.13.0'
   object Label3: TLabel
-    Left = 56
+    Left = 16
     Height = 15
-    Top = 23
+    Top = 8
     Width = 249
     Caption = 'Composition values below are given as (W/V)%'
     ParentColor = False
   end
   object Button1: TButton
-    Left = 296
+    Left = 264
     Height = 25
-    Top = 392
+    Top = 360
     Width = 96
     Caption = 'Close'
     OnClick = Button1Click
     TabOrder = 0
   end
   object StringGrid1: TStringGrid
-    Left = 48
+    Left = 16
     Height = 312
-    Top = 64
+    Top = 40
     Width = 344
     ColCount = 3
     Columns = <    

@@ -19,6 +19,7 @@ type
     Label1: TLabel;
     Label18: TLabel;
     procedure Button1Click(Sender: TObject);
+    procedure ComboBox1Change(Sender: TObject);
   private
     { private declarations }
   public
@@ -53,7 +54,7 @@ begin
   if ComboBox1.ItemIndex = 1 then
   begin
        ppm_contribution := total_alkalinity*0.23*(0.033814/1)*(43.6);
-       Form1.Edit6.Text := FloatToStr(StrToFloat(Form1.Edit6.Text)+ppm_contribution);
+       Form1.Edit7.Text := FloatToStr(StrToFloat(Form1.Edit7.Text)+ppm_contribution);
   end;
 
   if ComboBox1.ItemIndex = 2 then
@@ -64,6 +65,11 @@ begin
 
 
   Form13.Visible := false ;
+end;
+
+procedure TForm13.ComboBox1Change(Sender: TObject);
+begin
+
 end;
 
 initialization

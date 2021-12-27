@@ -1,7 +1,7 @@
 object Form9: TForm9
-  Left = 653
+  Left = 216
   Height = 479
-  Top = 294
+  Top = 425
   Width = 531
   HorzScrollBar.Page = 531
   HorzScrollBar.Range = 489
@@ -12,7 +12,7 @@ object Form9: TForm9
   ClientHeight = 479
   ClientWidth = 531
   FormStyle = fsStayOnTop
-  LCLVersion = '0.9.31'
+  LCLVersion = '2.0.13.0'
   object Button1: TButton
     Left = 392
     Height = 25

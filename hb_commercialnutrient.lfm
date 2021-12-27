@@ -1,8 +1,8 @@
 object Form5: TForm5
-  Left = 611
+  Left = 511
   Height = 336
-  Top = 334
-  Width = 780
+  Top = 391
+  Width = 750
   HorzScrollBar.Page = 744
   HorzScrollBar.Range = 715
   VertScrollBar.Page = 336
@@ -10,7 +10,7 @@ object Form5: TForm5
   BorderStyle = bsToolWindow
   Caption = 'Copy Commercial Nutrient Formulation'
   ClientHeight = 336
-  ClientWidth = 780
+  ClientWidth = 750
   FormStyle = fsStayOnTop
   LCLVersion = '2.0.13.0'
   object Label1: TLabel

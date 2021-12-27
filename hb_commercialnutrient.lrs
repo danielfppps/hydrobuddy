@@ -1,22 +1,22 @@
 { This is an automatically generated lazarus resource file }
 
 LazarusResources.Add('TForm5','FORMDATA',[
-  'TPF0'#6'TForm5'#5'Form5'#4'Left'#3'c'#2#6'Height'#3'P'#1#3'Top'#3'N'#1#5'Wid'
-  +'th'#3#12#3#18'HorzScrollBar.Page'#3#232#2#19'HorzScrollBar.Range'#3#203#2#18
-  +'VertScrollBar.Page'#3'P'#1#19'VertScrollBar.Range'#3'0'#1#11'BorderStyle'#7
-  +#12'bsToolWindow'#7'Caption'#6'$Copy Commercial Nutrient Formulation'#12'Cli'
-  +'entHeight'#3'P'#1#11'ClientWidth'#3#12#3#9'FormStyle'#7#11'fsStayOnTop'#10
-  +'LCLVersion'#6#8'2.0.13.0'#0#6'TLabel'#6'Label1'#4'Left'#2#22#6'Height'#2#15
-  +#3'Top'#2'J'#5'Width'#2'1'#7'Caption'#6#8'N (NO3-)'#11'ParentColor'#8#0#0#6
-  +'TLabel'#6'Label3'#4'Left'#2'@'#6'Height'#2#15#3'Top'#3#135#0#5'Width'#2#7#7
-  +'Caption'#6#1'P'#11'ParentColor'#8#0#0#6'TLabel'#6'Label4'#4'Left'#2'@'#6'He'
-  +'ight'#2#15#3'Top'#3#166#0#5'Width'#2#7#7'Caption'#6#1'K'#11'ParentColor'#8#0
-  +#0#6'TLabel'#6'Label5'#4'Left'#2'5'#6'Height'#2#15#3'Top'#3#198#0#5'Width'#2
-  +#18#7'Caption'#6#2'Mg'#11'ParentColor'#8#0#0#6'TLabel'#6'Label6'#4'Left'#2'9'
-  +#6'Height'#2#15#3'Top'#3#229#0#5'Width'#2#14#7'Caption'#6#2'Ca'#11'ParentCol'
-  +'or'#8#0#0#6'TLabel'#6'Label7'#4'Left'#3#189#0#6'Height'#2#15#3'Top'#2'J'#5
-  +'Width'#2#6#7'Caption'#6#1'S'#11'ParentColor'#8#0#0#6'TLabel'#6'Label8'#4'Le'
-  +'ft'#3#182#0#6'Height'#2#15#3'Top'#2'h'#5'Width'#2#12#7'Caption'#6#2'Fe'#11
+  'TPF0'#6'TForm5'#5'Form5'#4'Left'#3#255#1#6'Height'#3'P'#1#3'Top'#3#135#1#5'W'
+  +'idth'#3#238#2#18'HorzScrollBar.Page'#3#232#2#19'HorzScrollBar.Range'#3#203#2
+  +#18'VertScrollBar.Page'#3'P'#1#19'VertScrollBar.Range'#3'0'#1#11'BorderStyle'
+  +#7#12'bsToolWindow'#7'Caption'#6'$Copy Commercial Nutrient Formulation'#12'C'
+  +'lientHeight'#3'P'#1#11'ClientWidth'#3#238#2#9'FormStyle'#7#11'fsStayOnTop'
+  +#10'LCLVersion'#6#8'2.0.13.0'#0#6'TLabel'#6'Label1'#4'Left'#2#22#6'Height'#2
+  +#15#3'Top'#2'J'#5'Width'#2'1'#7'Caption'#6#8'N (NO3-)'#11'ParentColor'#8#0#0
+  +#6'TLabel'#6'Label3'#4'Left'#2'@'#6'Height'#2#15#3'Top'#3#135#0#5'Width'#2#7
+  +#7'Caption'#6#1'P'#11'ParentColor'#8#0#0#6'TLabel'#6'Label4'#4'Left'#2'@'#6
+  +'Height'#2#15#3'Top'#3#166#0#5'Width'#2#7#7'Caption'#6#1'K'#11'ParentColor'#8
+  +#0#0#6'TLabel'#6'Label5'#4'Left'#2'5'#6'Height'#2#15#3'Top'#3#198#0#5'Width'
+  +#2#18#7'Caption'#6#2'Mg'#11'ParentColor'#8#0#0#6'TLabel'#6'Label6'#4'Left'#2
+  +'9'#6'Height'#2#15#3'Top'#3#229#0#5'Width'#2#14#7'Caption'#6#2'Ca'#11'Parent'
+  +'Color'#8#0#0#6'TLabel'#6'Label7'#4'Left'#3#189#0#6'Height'#2#15#3'Top'#2'J'
+  +#5'Width'#2#6#7'Caption'#6#1'S'#11'ParentColor'#8#0#0#6'TLabel'#6'Label8'#4
+  +'Left'#3#182#0#6'Height'#2#15#3'Top'#2'h'#5'Width'#2#12#7'Caption'#6#2'Fe'#11
   +'ParentColor'#8#0#0#6'TLabel'#7'Label10'#4'Left'#3#184#0#6'Height'#2#15#3'To'
   +'p'#3#168#0#5'Width'#2#14#7'Caption'#6#2'Zn'#11'ParentColor'#8#0#0#6'TLabel'
   +#7'Label11'#4'Left'#3#188#0#6'Height'#2#15#3'Top'#3#195#0#5'Width'#2#7#7'Cap'

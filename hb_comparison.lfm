@@ -1,11 +1,11 @@
 object Form15: TForm15
-  Left = 190
-  Height = 470
-  Top = 265
+  Left = 341
+  Height = 466
+  Top = 355
   Width = 899
   BorderStyle = bsToolWindow
   Caption = 'Commercial Nutrient Contribution Comparison'
-  ClientHeight = 470
+  ClientHeight = 466
   ClientWidth = 899
   PopupMode = pmExplicit
   PopupParent = Form5.Owner

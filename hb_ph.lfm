@@ -1,7 +1,7 @@
 object Form13: TForm13
-  Left = 887
+  Left = 853
   Height = 143
-  Top = 290
+  Top = 415
   Width = 353
   BorderStyle = bsToolWindow
   Caption = 'Alkalinity adjustment'
@@ -58,6 +58,7 @@ object Form13: TForm13
       'Sulfuric acid'
       'Nitric acid'
     )
+    OnChange = ComboBox1Change
     Style = csDropDownList
     TabOrder = 2
     Text = 'Phosphoric acid'

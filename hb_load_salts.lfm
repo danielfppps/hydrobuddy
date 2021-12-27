@@ -1,7 +1,7 @@
 object Form2: TForm2
-  Left = 640
+  Left = 178
   Height = 449
-  Top = 313
+  Top = 423
   Width = 689
   HorzScrollBar.Page = 618
   HorzScrollBar.Range = 592

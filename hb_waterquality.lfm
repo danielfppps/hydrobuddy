@@ -1,7 +1,7 @@
 object Form6: TForm6
-  Left = 766
+  Left = 449
   Height = 416
-  Top = 283
+  Top = 374
   Width = 448
   HorzScrollBar.Page = 426
   HorzScrollBar.Range = 403
