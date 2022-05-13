@@ -1,7 +1,7 @@
 object Form5: TForm5
-  Left = 511
+  Left = 842
   Height = 336
-  Top = 391
+  Top = 376
   Width = 750
   HorzScrollBar.Page = 744
   HorzScrollBar.Range = 715

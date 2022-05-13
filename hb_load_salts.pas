@@ -43,6 +43,7 @@ type
     procedure Button9Click(Sender: TObject);
     procedure CheckBox1Change(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure ListBox1Click(Sender: TObject);
     procedure ListBox1SelectionChange(Sender: TObject; User: boolean);
     procedure ListBox2SelectionChange(Sender: TObject; User: boolean);
   private
@@ -61,6 +62,11 @@ uses HB_Main, hb_addweight, hb_analysis ;
 { TForm2 }
 
 procedure TForm2.FormCreate(Sender: TObject);
+begin
+
+end;
+
+procedure TForm2.ListBox1Click(Sender: TObject);
 begin
 
 end;

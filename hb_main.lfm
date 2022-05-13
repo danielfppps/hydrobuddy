@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 359
+  Left = 673
   Height = 670
-  Top = 149
+  Top = 527
   Width = 831
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
@@ -9,7 +9,7 @@ object Form1: TForm1
   VertScrollBar.Range = 673
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'HydroBuddy v1.98- Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
+  Caption = 'HydroBuddy v1.99- Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
   ClientHeight = 670
   ClientWidth = 831
   DragKind = dkDock
@@ -23257,19 +23257,19 @@ object Form1: TForm1
         ParentFont = False
         TabOrder = 23
         object Button7: TButton
-          Left = 222
+          Left = 224
           Height = 25
-          Top = 56
+          Top = 46
           Width = 246
           Caption = 'Substance Analysis'
           OnClick = Button7Click
           TabOrder = 0
         end
         object Button8: TButton
-          Left = 222
+          Left = 224
           Height = 24
           Hint = 'Click this button to open up the Water Quality parameters dialogue'
-          Top = 100
+          Top = 79
           Width = 246
           Caption = 'Set Water Quality Parameters'
           OnClick = Button8Click
@@ -23309,10 +23309,10 @@ object Form1: TForm1
           Text = 'Select formulation from DB'
         end
         object Button9: TButton
-          Left = 222
+          Left = 224
           Height = 25
           Hint = 'Click this button to open up the instrument precision settings dialogue'
-          Top = 142
+          Top = 110
           Width = 246
           Caption = 'Set Instrument Precision Values'
           OnClick = Button9Click
@@ -23350,6 +23350,16 @@ object Form1: TForm1
           Caption = 'Set current values to default'
           OnClick = Button18Click
           TabOrder = 7
+        end
+        object Button21: TButton
+          Left = 224
+          Height = 25
+          Hint = 'Click this button to open up the instrument precision settings dialogue'
+          Top = 142
+          Width = 246
+          Caption = 'Tissue Analysis'
+          OnClick = Button9Click
+          TabOrder = 9
         end
       end
       object CheckBox3: TCheckBox
@@ -23720,7 +23730,7 @@ object Form1: TForm1
       object Button15: TButton
         Left = 312
         Height = 18
-        Top = 77
+        Top = 74
         Width = 120
         Caption = 'Zero all targets'
         OnClick = Button15Click

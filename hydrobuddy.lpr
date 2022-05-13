@@ -7,12 +7,12 @@ uses
   cthreads,
   {$ENDIF}{$ENDIF}
   Interfaces, // this includes the LCL widgetset
-  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs,
-  ComCtrls, StdCtrls, Menus, ExtCtrls, tachartlazaruspkg, HB_Main,
-  hb_load_salts, hb_newcustomsalt, densesolver, hb_addweight,
-  hb_commercialnutrient, hb_waterquality, hb_insprecision, hb_stockanalysis,
-  Dbf, db, hb_persubstance, hb_datasetname, hb_analysis,
-  hb_freedom, dbf_fields, hb_ph, hb_ratios, hb_comparison;
+  Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, ComCtrls,
+  StdCtrls, Menus, ExtCtrls, tachartlazaruspkg, HB_Main, hb_load_salts,
+  hb_newcustomsalt, densesolver, hb_addweight, hb_commercialnutrient,
+  hb_waterquality, hb_insprecision, hb_stockanalysis, Dbf, db, hb_persubstance,
+  hb_datasetname, hb_analysis, hb_freedom, dbf_fields, hb_ph, hb_ratios,
+  hb_comparison, hb_tissue_analysis;
 
 procedure AssignValues ;
 
@@ -96,7 +96,7 @@ end ;
 procedure CheckDatabaseFiles;
 begin
 
-     if (FileExists(Form1.formulations_db) = false) or (FileExists(Form1.water_quality_db) = false) or (FileExists(Form1.substances_db) = false) or (FileExists(Form1.substances_used_db) = false) then
+     if (FileExists(Form1.formulations_db) = false) or (FileExists(Form1.water_quality_db) = false) or (FileExists(Form1.substances_db) = false) or (FileExists(Form1.substances_used_db) = false) or (FileExists(Form1.tissue_analysis_db) = false) then
      begin
           ShowMessage('Database files not found, please select HydroBuddy''s installation folder.' );
           if Form1.SelectDirectoryDialog1.Execute then
@@ -108,7 +108,7 @@ begin
           end;
      end;
 
-     if (FileExists(Form1.formulations_db) = false) or (FileExists(Form1.water_quality_db) = false) or (FileExists(Form1.substances_db) = false) or (FileExists(Form1.substances_used_db) = false) then
+     if (FileExists(Form1.formulations_db) = false) or (FileExists(Form1.water_quality_db) = false) or (FileExists(Form1.substances_db) = false) or (FileExists(Form1.substances_used_db) = false) or (FileExists(Form1.tissue_analysis_db) = false) then
      begin
      ShowMessage('Selected folder does not contain database files, please reinstall HydroBuddy');
      Application.Terminate;
@@ -129,6 +129,7 @@ begin
   Form1.formulations_db := 'formulations_unix.dbf' ;
   Form1.substances_db := 'substances_unix.dbf';
   Form1.substances_used_db := 'substances_used_unix.dbf';
+  Form1.tissue_analysis_db := 'tissue_analysis_unix.dbf' ;
   {$ENDIF}
 
   {$IFDEF WINDOWS}
@@ -136,6 +137,7 @@ begin
   Form1.formulations_db := 'formulations_win.dbf' ;
   Form1.substances_db := 'substances_win.dbf'    ;
   Form1.substances_used_db := 'substances_used_win.dbf' ;
+  Form1.tissue_analysis_db := 'tissue_analysis_win.dbf' ;
   {$ENDIF}
 
   Application.CreateForm(TForm2, Form2);
@@ -158,7 +160,7 @@ begin
   AssignValues ;
   UpdateComboBoxes ;
   Form1.LoadValues;
-
+  Application.CreateForm(TForm16, Form16);
   Application.Run;
 end.
 

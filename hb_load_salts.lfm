@@ -42,6 +42,7 @@ object Form2: TForm2
     Width = 240
     ItemHeight = 0
     MultiSelect = True
+    OnClick = ListBox1Click
     OnSelectionChange = ListBox1SelectionChange
     ParentShowHint = False
     ScrollWidth = 238

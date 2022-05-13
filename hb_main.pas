@@ -9,7 +9,7 @@ uses
   ComCtrls, StdCtrls, Menus, ExtCtrls, Buttons, Grids, TAGraph, TASeries,
   hb_load_salts, Dbf, DB, Math, densesolver, hb_commercialnutrient, hb_comparison,
   hb_waterquality, hb_addweight, hb_insprecision, hb_stockanalysis,
-  hb_persubstance, hb_datasetname, hb_analysis,
+  hb_persubstance, hb_datasetname, hb_analysis, hb_tissue_analysis,
   hb_freedom, dbf_fields, hb_ratios,LCLIntf, Types,IniFiles;
 
 const
@@ -33,6 +33,7 @@ type
     Button19: TBitBtn;
     Button2: TBitBtn;
     Button20: TButton;
+    Button21: TButton;
     Button22: TButton;
     Button23: TButton;
     Button24: TButton;
@@ -269,7 +270,7 @@ type
       1,
       1) ;
     var
-        water_quality_db,formulations_db,substances_db,substances_used_db: string;
+        water_quality_db,formulations_db,substances_db,substances_used_db,tissue_analysis_db: string;
         IsLiquid: array of array of double ;
         procedure weightFineTunning;
         procedure UpdateList;
@@ -3278,7 +3279,7 @@ begin
     { we want to use Visual dBase VII compatible tables }
     MyDbf.TableLevel := 7;
     MyDbf.Exclusive  := True;
-    MyDbf.TableName  := 'substances_used_win.dbf';
+    MyDbf.TableName  := 'tissue_analysis_win.dbf';
     with MyDbf.FieldDefs do
     begin
    {   Add('Name', ftString, 80, False);
@@ -3290,12 +3291,12 @@ begin
       Add('Default', ftString, 80, False);
       }
       Add('Name', ftString, 80, False);
-      Add('Formula', ftString, 80, False);
-      Add('Source', ftString, 80, False);
-      Add('Purity', ftFloat, 0, False);
-      Add('Cost', ftFloat, 0, False);
-      Add('Weight', ftFloat, 0, False);
-      Add('N (NO3-)', ftFloat, 0, False);
+      //Add('Formula', ftString, 80, False);
+      //Add('Source', ftString, 80, False);
+      //Add('Purity', ftFloat, 0, False);
+      //Add('Cost', ftFloat, 0, False);
+      //Add('Weight', ftFloat, 0, False);
+      Add('N', ftFloat, 0, False);
       Add('P', ftFloat, 0, False);
       Add('K', ftFloat, 0, False);
       Add('Mg', ftFloat, 0, False);
@@ -3310,11 +3311,11 @@ begin
       Add('Na', ftFloat, 0, False);
       Add('Si', ftFloat, 0, False);
       Add('Cl', ftFloat, 0, False);
-      Add('N (NH4+)', ftFloat, 0, False);
+   //   Add('N (NH4+)', ftFloat, 0, False);
    //  Add('Default', ftInteger, 0, False);
-      Add('isLiquid', ftFloat, 0, False);
-      Add('Density', ftFloat, 0, False);
-      Add('ConcType', ftString, 80, False);
+   //   Add('isLiquid', ftFloat, 0, False);
+   //   Add('Density', ftFloat, 0, False);
+   //   Add('ConcType', ftString, 80, False);
     end;
     MyDbf.CreateTable;
     MyDbf.FieldDefs.Clear;
@@ -3424,7 +3425,8 @@ end;
 procedure TForm1.Button9Click(Sender: TObject);
 begin
 
-  hb_insprecision.Form7.Visible := True;
+  hb_tissue_analysis.Form16.UpdateTissueList;
+  hb_tissue_analysis.Form16.Visible := True;
 
 end;
 
