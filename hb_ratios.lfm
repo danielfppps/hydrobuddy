@@ -1,7 +1,7 @@
 object Form14: TForm14
-  Left = 2386
+  Left = 1604
   Height = 338
-  Top = 497
+  Top = 515
   Width = 320
   BorderStyle = bsToolWindow
   Caption = 'Nutrient Ratios'
