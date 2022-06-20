@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 673
+  Left = 401
   Height = 670
-  Top = 527
+  Top = 496
   Width = 831
   HorzScrollBar.Page = 841
   HorzScrollBar.Range = 824
@@ -9,7 +9,7 @@ object Form1: TForm1
   VertScrollBar.Range = 673
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
-  Caption = 'HydroBuddy v1.99- Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
+  Caption = 'HydroBuddy v1.100- Programmed and Designed by Dr. Daniel Fernandez Ph.D at http://scienceinhydroponics.com'
   ClientHeight = 670
   ClientWidth = 831
   DragKind = dkDock

@@ -51,10 +51,11 @@
       <Unit0>
         <Filename Value="hydrobuddy.lpr"/>
         <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="6"/>
         <WindowIndex Value="1"/>
         <TopLine Value="91"/>
-        <CursorPos X="43" Y="115"/>
+        <CursorPos X="76" Y="106"/>
         <UsageCount Value="200"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -326,13 +327,13 @@
         <Filename Value="hb_tissue_analysis.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form16"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="9"/>
         <WindowIndex Value="1"/>
         <TopLine Value="373"/>
-        <CursorPos X="19" Y="389"/>
-        <UsageCount Value="153"/>
+        <CursorPos X="37" Y="382"/>
+        <UsageCount Value="169"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit23>
@@ -343,50 +344,42 @@
         <EditorIndex Value="-1"/>
         <WindowIndex Value="1"/>
         <CursorPos X="63" Y="9"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit24>
     </Units>
-    <JumpHistory Count="10" HistoryIndex="9">
+    <JumpHistory Count="8" HistoryIndex="7">
       <Position1>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3290" Column="20" TopLine="4148"/>
+        <Caret Line="3291" Column="20" TopLine="3291"/>
       </Position1>
       <Position2>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3291" Column="20" TopLine="3291"/>
+        <Caret Line="3290" Column="20" TopLine="3290"/>
       </Position2>
       <Position3>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3290" Column="20" TopLine="3290"/>
+        <Caret Line="3291" Column="20" TopLine="3291"/>
       </Position3>
       <Position4>
         <Filename Value="hb_main.pas"/>
-        <Caret Line="3291" Column="20" TopLine="3291"/>
+        <Caret Line="3428" Column="43" TopLine="3425"/>
       </Position4>
       <Position5>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="12" Column="65" TopLine="246"/>
-      </Position5>
-      <Position6>
-        <Filename Value="hb_main.pas"/>
-        <Caret Line="3428" Column="43" TopLine="3425"/>
-      </Position6>
-      <Position7>
         <Filename Value="hb_newcustomsalt.pas"/>
         <Caret Line="261" Column="5" TopLine="252"/>
+      </Position5>
+      <Position6>
+        <Filename Value="hb_tissue_analysis.pas"/>
+        <Caret Line="388" Column="19" TopLine="372"/>
+      </Position6>
+      <Position7>
+        <Filename Value="hb_tissue_analysis.pas"/>
+        <Caret Line="389" Column="19" TopLine="373"/>
       </Position7>
       <Position8>
         <Filename Value="hb_tissue_analysis.pas"/>
         <Caret Line="388" Column="19" TopLine="372"/>
       </Position8>
-      <Position9>
-        <Filename Value="hb_tissue_analysis.pas"/>
-        <Caret Line="389" Column="19" TopLine="373"/>
-      </Position9>
-      <Position10>
-        <Filename Value="hb_tissue_analysis.pas"/>
-        <Caret Line="388" Column="19" TopLine="372"/>
-      </Position10>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
@@ -400,10 +393,6 @@
         <UseAnsiStrings Value="False"/>
       </SyntaxOptions>
     </Parsing>
-    <CodeGeneration>
-      <TargetCPU Value="i386"/>
-      <TargetOS Value="win32"/>
-    </CodeGeneration>
     <Linking>
       <Options>
         <Win32>

@@ -38,21 +38,21 @@ DefaultFormatSettings.DecimalSeparator := '.'    ;
 
     Form6.Edit25.text := MyDbf.FieldByName('Name').AsString;
     Form6.Edit1.text := MyDbf.FieldByName('N (NO3-)').AsString ;
+    Form6.Edit2.text := MyDbf.FieldByName('N (NH4+)').AsString ;
     Form6.Edit3.text := MyDbf.FieldByName('P').AsString ;
-    Form6.Edit2.text := MyDbf.FieldByName('K').AsString ;
-    Form6.Edit4.text := MyDbf.FieldByName('Mg').AsString ;
-    Form6.Edit5.text := MyDbf.FieldByName('Ca').AsString ;
-    Form6.Edit6.text := MyDbf.FieldByName('S').AsString ;
-    Form6.Edit7.text := MyDbf.FieldByName('Fe').AsString ;
-    Form6.Edit9.text := MyDbf.FieldByName('B').AsString ;
-    Form6.Edit8.text := MyDbf.FieldByName('Zn').AsString ;
-    Form6.Edit10.text := MyDbf.FieldByName('Cu').AsString ;
-    Form6.Edit11.text := MyDbf.FieldByName('Mo').AsString ;
-    Form6.Edit12.text := MyDbf.FieldByName('Na').AsString ;
-    Form6.Edit15.text := MyDbf.FieldByName('Mn').AsString ;
+    Form6.Edit4.text := MyDbf.FieldByName('K').AsString ;
+    Form6.Edit5.text := MyDbf.FieldByName('Mg').AsString ;
+    Form6.Edit6.text := MyDbf.FieldByName('Ca').AsString ;
+    Form6.Edit7.text := MyDbf.FieldByName('S').AsString ;
+    Form6.Edit8.text := MyDbf.FieldByName('Fe').AsString ;
+    Form6.Edit9.text := MyDbf.FieldByName('Mn').AsString ;
+    Form6.Edit10.text := MyDbf.FieldByName('Zn').AsString ;
+    Form6.Edit11.text := MyDbf.FieldByName('B').AsString ;
+    Form6.Edit12.text := MyDbf.FieldByName('Cu').AsString ;
     Form6.Edit13.text := MyDbf.FieldByName('Si').AsString ;
-    Form6.Edit14.text := MyDbf.FieldByName('Cl').AsString ;
-    Form6.Edit16.text := MyDbf.FieldByName('N (NH4+)').AsString ;
+    Form6.Edit14.text := MyDbf.FieldByName('Mo').AsString ;
+    Form6.Edit15.text := MyDbf.FieldByName('Na').AsString ;
+    Form6.Edit16.text := MyDbf.FieldByName('Cl').AsString ;
 
         end;
 
@@ -105,6 +105,7 @@ begin
                Form1.formulations_db := Form1.SelectDirectoryDialog1.FileName + '/' + Form1.formulations_db;
                Form1.substances_db := Form1.SelectDirectoryDialog1.FileName + '/' +  Form1.substances_db ;
                Form1.substances_used_db := Form1.SelectDirectoryDialog1.FileName + '/' + Form1.substances_used_db;
+               Form1.tissue_analysis_db := Form1.SelectDirectoryDialog1.FileName + '/' + Form1.tissue_analysis_db;
           end;
      end;
 
