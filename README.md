@@ -3,4 +3,4 @@ This open source calculator can be used for the calculation of hydroponic nutrie
 
 If you want to build hydrobuddy from source you will need to download Lazarus >= 1.6.4. Previous complicated requirements have been removed and the program should now build just by opening the project file in Lazarus and compiling it. For more information about hydrobuddy and hydroponics please visit [my blog](http://scienceinhydroponics.com).
 
-If you want binaries for Windows/Linux you can find them [here](http://scienceinhydroponics.com/2010/06/the-first-free-hydroponic-nutrient-calculator-program-o.html).
+If you want binaries for Windows/Linux you can find them [here](https://scienceinhydroponics.com/2016/03/the-first-free-hydroponic-nutrient-calculator-program-o.html).
