@@ -188,6 +188,7 @@ type
     procedure Button19Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
     procedure Button20Click(Sender: TObject);
+    procedure Button21Click(Sender: TObject);
     procedure Button22Click(Sender: TObject);
     procedure Button23Click(Sender: TObject);
     procedure Button24Click(Sender: TObject);
@@ -427,6 +428,12 @@ var
   i: integer;
 begin
     for i := 1 to 16 do (FindComponent('Edit' + IntToStr(i)) as TEdit).Text := StringGrid1.cells[1,i];
+end;
+
+procedure TForm1.Button21Click(Sender: TObject);
+begin
+  hb_tissue_analysis.Form16.UpdateTissueList;
+  hb_tissue_analysis.Form16.Visible := True;
 end;
 
 procedure TForm1.Button22Click(Sender: TObject);
@@ -3424,10 +3431,7 @@ end;
 
 procedure TForm1.Button9Click(Sender: TObject);
 begin
-
-  hb_tissue_analysis.Form16.UpdateTissueList;
-  hb_tissue_analysis.Form16.Visible := True;
-
+  Form7.Show;
 end;
 
 procedure TForm1.CheckBox1Change(Sender: TObject);
