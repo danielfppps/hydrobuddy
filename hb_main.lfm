@@ -23354,11 +23354,11 @@ object Form1: TForm1
         object Button21: TButton
           Left = 224
           Height = 25
-          Hint = 'Click this button to open up the instrument precision settings dialogue'
+          Hint = 'Click this button to open up the tissue analysis dialogue'
           Top = 142
           Width = 246
           Caption = 'Tissue Analysis'
-          OnClick = Button9Click
+          OnClick = Button21Click
           TabOrder = 9
         end
       end
